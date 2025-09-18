@@ -48,8 +48,8 @@ const WineOnWheels: React.FC = () => {
   };
 
   return (
-    <section className="py-20 md:py-28 lg:py-36 bg-gray-50">
-      <div className="container max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+    <section className="section relative bg-gray-50">
+      <div className="container max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center">
           <div className="wow-image fade-in">
             <div className="bg-cream rounded-3xl p-8 md:p-12 flex justify-center items-center">

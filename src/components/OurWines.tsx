@@ -75,7 +75,7 @@ const OurWines: React.FC = () => {
         }}
       />
       
-      <div className="container max-w-content mx-auto px-6 md:px-8 lg:px-12 relative z-10">
+      <div className="container max-w-content mx-auto relative z-10">
         <div className="section-header mb-24">
         <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider mb-4 block">OUR WINES</span>
         <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-6">SHOP OUR CATALOG</h2>

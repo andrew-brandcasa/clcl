@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="hero-section">
+    <section className="section relative hero-section">
       {/* Video Background */}
       <video
         className="hero-video"
@@ -103,7 +103,7 @@ const Hero: React.FC = () => {
       </header>
 
       {/* Hero Content */}
-      <div className="hero-content">
+      <div className="hero-content pb-16 md:pb-20">
         <div className="container">
           <div className="hero-text">
             <span className="hero-eyebrow">ITALIAN HERITAGE</span>
