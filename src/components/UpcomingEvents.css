@@ -146,10 +146,12 @@
 }
 
 .transition-graphic {
-  margin-top: 60px;
+  position: relative;
+  margin-top: -100px;
   width: 100%;
   display: flex;
   justify-content: center;
+  z-index: 1;
 }
 
 .transition-image {
