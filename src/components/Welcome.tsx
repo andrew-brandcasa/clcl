@@ -2,7 +2,7 @@ import React from 'react';
 
 const Welcome: React.FC = () => {
   return (
-    <section id="down" className="container max-w-content mx-auto py-16 md:py-24">
+    <section id="down" className="container max-w-content mx-auto py-16 md:py-24 lg:py-28">
       <div className="max-w-3xl mx-auto text-center space-y-3">
         <h2 className="h2">Welcome to Casa Larga</h2>
         <p className="sub">
