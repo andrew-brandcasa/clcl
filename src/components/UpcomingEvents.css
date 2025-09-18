@@ -1,6 +1,6 @@
 /* Section wrapper */
 .upcoming-events-section {
-  padding: 96px 0 180px;     /* extra bottom to make room for curve overlap */
+  padding-bottom: 180px;     /* extra bottom to make room for curve overlap */
   background-color: #F8F6F6; /* section bg */
   position: relative;
   overflow: hidden;          /* hides the top of the illustration if needed */
@@ -69,52 +69,10 @@
   color: var(--ast-global-color-3);
 }
 
-.events-container {
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-.events-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-bottom: 50px;
-}
-
-.event-card {
-  background: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.event-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
 .event-image {
   width: 100%;
   height: 200px;
   overflow: hidden;
-}
-
-.event-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.event-card:hover .event-image img {
-  transform: scale(1.05);
-}
-
-.event-content {
-  padding: 25px;
-  text-align: center;
 }
 
 .event-title {
@@ -174,31 +132,13 @@
   color: white;
 }
 
-.section-footer {
-  text-align: center;
-}
-
 /* Responsive */
 @media (max-width: 1024px) {
-  .upcoming-events-section {
-    padding: 64px 0 120px;
-  }
-  
-  .events-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
+  .upcoming-events-section { padding-bottom: 120px; }
 }
 
 @media (max-width: 768px) {
-  .upcoming-events-section {
-    padding: 48px 0 100px;
-  }
-  
-  .events-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
+  .upcoming-events-section { padding-bottom: 100px; }
   
   .section-header .section-title {
     font-size: 28px;
@@ -210,10 +150,6 @@
   
   .event-image {
     height: 180px;
-  }
-  
-  .event-content {
-    padding: 20px;
   }
 }
 

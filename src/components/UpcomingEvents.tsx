@@ -32,7 +32,7 @@ const events: Event[] = [
 
 const UpcomingEvents: React.FC = () => {
   return (
-    <section className="upcoming-events-section relative">
+    <section className="upcoming-events-section relative py-20 md:py-28 lg:py-36">
       {/* full-bleed illustration behind the section */}
       <div className="transition-graphic">
         <img
@@ -43,7 +43,7 @@ const UpcomingEvents: React.FC = () => {
       </div>
 
       {/* content container */}
-      <div className="events-container relative z-10">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 relative z-10">
         <div className="section-header">
           <span className="section-subtitle">JOIN US!</span>
           <h2 className="section-title">Upcoming Events</h2>
@@ -54,13 +54,13 @@ const UpcomingEvents: React.FC = () => {
           </p>
         </div>
 
-        <div className="events-grid">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16 mb-16">
           {events.map((event) => (
-            <div key={event.id} className="event-card">
+            <div key={event.id} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
               <div className="event-image">
                 <img src={event.image} alt={event.title} />
               </div>
-              <div className="event-content">
+              <div className="p-8 md:p-10 lg:p-12 text-center space-y-6 md:space-y-8">
                 <h3 className="event-title">{event.title}</h3>
                 <p className="event-date">{event.date}</p>
                 <a href="#" className="event-button elementor-button">
@@ -71,7 +71,7 @@ const UpcomingEvents: React.FC = () => {
           ))}
         </div>
 
-        <div className="section-footer">
+        <div className="text-center">
           <a href="#" className="elementor-button">
             VIEW EVENT CALENDAR
           </a>
