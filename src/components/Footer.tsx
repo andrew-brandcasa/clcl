@@ -5,23 +5,19 @@ import './Footer.css';
 const Footer: React.FC = () => {
   return (
     <>
-      {/* Brand Section with Logo */}
-      <div className="brand-section">
-        <div className="container">
-          <div className="brand-logo">
-            <img 
-              src="https://casalarga.casasite.com/wp-content/uploads/2025/08/casalargalogo-1.svg" 
-              alt="Casa Larga Vineyards and Winery" 
-              className="brand-image"
-            />
-          </div>
-        </div>
-      </div>
-
       {/* Footer */}
       <footer className="site-footer">
         <div className="container">
           <div className="footer-content">
+            {/* Brand Logo */}
+            <div className="footer-brand">
+              <img 
+                src="https://casalarga.casasite.com/wp-content/uploads/2025/08/casalargalogo-1.svg" 
+                alt="Casa Larga Vineyards and Winery" 
+                className="footer-logo"
+              />
+            </div>
+
             {/* Footer Info */}
             <div className="footer-info">
               {/* Quick Links */}
