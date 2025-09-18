@@ -1,42 +1,172 @@
-import React from 'react';
+.welcome-section {
+  background-color: var(--ast-global-color-4);
+}
 
-const OurHistory: React.FC = () => {
-  return (
-    <section id="history" className="section relative">
-      <div className="container max-w-content mx-auto px-6 md:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center">
-        {/* Copy */}
-          <div className="space-y-6 md:space-y-8 pr-0 lg:pr-8 xl:pr-12">
-          <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider">OUR HISTORY</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900">New York's 21st Winery</h2>
-          <p className="text-base md:text-lg leading-relaxed text-gray-600">
-            In 1974, our founder planted the first vines at Casa Larga, symbolizing his dedication 
-            to his Italian Heritage. By 1978, our initial vintages earned rewards and we became 
-            New York's 21st licensed winery.
-          </p>
-          <div className="mt-6 flex gap-3">
-            <a href="#" className="custom-catalog-button">
-              <span className="button-content-wrapper">
-              ABOUT CASA LARGA
-              </span>
-            </a>
-          </div>
-        </div>
-        
-        {/* Media */}
-          <div className="pl-0 lg:pl-8 xl:pl-12">
-          <div className="relative rounded-2xl overflow-hidden">
-            <img 
-              src="https://casalarga.casasite.com/wp-content/uploads/2025/08/mr-casa.png" 
-              alt="Casa Larga Founder" 
-              className="aspect-[16/10] w-full object-cover"
-            />
-          </div>
-        </div>
-        </div>
-      </div>
-    </section>
-  );
-};
+.stamp-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-export default OurHistory;
+.stamp-icon img {
+  width: 100px;
+  height: 100px;
+}
+
+.welcome-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 18px;
+  color: #000000;
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-transform: uppercase;
+  opacity: 0.85;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+
+
+
+
+.welcome-navigation {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.nav-item {
+  text-align: left;
+  padding: 0 10px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: flex-start;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  padding: 20px 0;
+}
+
+.nav-link:hover {
+  transform: translateY(-3px);
+}
+
+.nav-icon {
+  margin-right: 24px;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.nav-icon svg {
+  width: 55px;
+  height: auto;
+}
+
+.nav-content h3 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 20px;
+  color: var(--brown-dark);
+  margin-bottom: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.nav-content p {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 15px;
+  color: var(--brown-primary);
+  font-style: italic;
+  margin: 0;
+  line-height: 1.4;
+}
+
+#space-icon-box .nav-icon {
+  margin-top: 3px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .welcome-section {
+    padding: 64px 0;
+  }
+  
+  .welcome-navigation {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome-section {
+    padding: 48px 0;
+  }
+  
+  .welcome-description {
+    margin-bottom: 60px;
+    font-size: 18px;
+  }
+  
+  .welcome-navigation {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .nav-item {
+    text-align: center;
+    padding: 0;
+  }
+  
+  .nav-link {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  
+  .nav-icon {
+    margin-right: 0;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+  
+  #space-icon-box .nav-icon {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-title {
+    font-size: 13px;
+    margin-bottom: 30px;
+  }
+  
+  .welcome-description {
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+  
+  .stamp-icon {
+    margin-bottom: 30px;
+  }
+  
+  .stamp-icon img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .nav-icon svg {
+    width: 45px;
+  }
+  
+  .nav-content h3 {
+    font-size: 18px;
+  }
+  
+  .nav-content p {
+    font-size: 14px;
+  }
+}
