@@ -1,5 +1,5 @@
 .welcome-section {
-  padding: 120px 0;
+  padding: 100px 0;
   background-color: var(--ast-global-color-4);
 }
 
@@ -7,7 +7,7 @@
   text-align: center;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
 }
 
 .stamp-icon {
@@ -104,7 +104,11 @@
 /* Responsive */
 @media (max-width: 1024px) {
   .welcome-section {
-    padding: 100px 0;
+    padding: 80px 0;
+  }
+  
+  .welcome-content {
+    padding: 0 30px;
   }
   
   .welcome-navigation {
@@ -114,11 +118,11 @@
 
 @media (max-width: 768px) {
   .welcome-section {
-    padding: 80px 0;
+    padding: 60px 0;
   }
   
   .welcome-content {
-    padding: 0 30px;
+    padding: 0 20px;
   }
   
   .welcome-description {
@@ -157,11 +161,11 @@
 
 @media (max-width: 480px) {
   .welcome-section {
-    padding: 60px 0;
+    padding: 40px 0;
   }
   
   .welcome-content {
-    padding: 0 20px;
+    padding: 0 15px;
   }
   
   .welcome-title {

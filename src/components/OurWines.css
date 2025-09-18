@@ -5,9 +5,9 @@
 }
 
 .wines-container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
 }
 
 .section-header {
@@ -246,12 +246,28 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
+  .our-wines-section {
+    padding: 80px 0;
+  }
+  
+  .wines-container {
+    padding: 0 30px;
+  }
+  
   .wine-card-wrapper {
     flex: 0 0 250px;
   }
 }
 
 @media (max-width: 768px) {
+  .our-wines-section {
+    padding: 60px 0;
+  }
+  
+  .wines-container {
+    padding: 0 20px;
+  }
+  
   .wine-card-wrapper {
     flex: 0 0 220px;
   }
@@ -269,6 +285,14 @@
 }
 
 @media (max-width: 480px) {
+  .our-wines-section {
+    padding: 40px 0;
+  }
+  
+  .wines-container {
+    padding: 0 15px;
+  }
+  
   .wine-card-wrapper {
     flex: 0 0 200px;
   }

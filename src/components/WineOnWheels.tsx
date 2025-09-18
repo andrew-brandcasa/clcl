@@ -49,7 +49,7 @@ const WineOnWheels: React.FC = () => {
 
   return (
     <section className="wine-on-wheels-section">
-      <div className="container">
+      <div className="wow-container">
         <div className="wow-content">
           <div className="wow-image fade-in">
             <img 

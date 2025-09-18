@@ -4,7 +4,7 @@ import './OurHistory.css';
 const OurHistory: React.FC = () => {
   return (
     <section id="history" className="our-history-section">
-      <div className="container">
+      <div className="history-container">
         <div className="history-content">
           <div className="history-text fade-in-up">
             <span className="section-subtitle">OUR HISTORY</span>
