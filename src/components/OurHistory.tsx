@@ -2,10 +2,11 @@ import React from 'react';
 
 const OurHistory: React.FC = () => {
   return (
-    <section id="history" className="container max-w-content mx-auto py-16 md:py-24">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
+    <section id="history" className="py-20 md:py-28 lg:py-36">
+      <div className="container max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center">
         {/* Copy */}
-        <div className="lg:col-span-6 space-y-4">
+          <div className="space-y-6 md:space-y-8 pr-0 lg:pr-8 xl:pr-12">
           <span className="section-subtitle">OUR HISTORY</span>
           <h2 className="section-title">New York's 21st Winery</h2>
           <p className="section-description">
@@ -23,7 +24,7 @@ const OurHistory: React.FC = () => {
         </div>
         
         {/* Media */}
-        <div className="lg:col-span-6">
+          <div className="pl-0 lg:pl-8 xl:pl-12">
           <div className="relative rounded-2xl overflow-hidden">
             <img 
               src="https://casalarga.casasite.com/wp-content/uploads/2025/08/mr-casa.png" 
@@ -32,6 +33,8 @@ const OurHistory: React.FC = () => {
             />
           </div>
         </div>
+        </div>
+      </div>
       </div>
     </section>
   );
