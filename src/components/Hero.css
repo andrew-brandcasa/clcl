@@ -23,8 +23,8 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(90% 70% at 50% 60%, rgba(0,0,0,0) 0%, rgba(0,0,0,.35) 70%),
-    linear-gradient(to top, rgba(0,0,0,.45), rgba(0,0,0,.08) 30%, rgba(0,0,0,0) 60%);
+    radial-gradient(90% 70% at 50% 60%, rgba(0,0,0,0) 0%, rgba(0,0,0,.5) 70%),
+    linear-gradient(to top, rgba(0,0,0,.5), rgba(0,0,0,.2) 30%, rgba(0,0,0,.1) 60%);
   z-index: -1;
 }
 
@@ -240,25 +240,44 @@
   place-items: center;
   z-index: 5;
   text-align: center;
-  padding: 0 20px;
-  padding-top: 180px;
+  padding: 8rem 2rem;
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+    padding: 10rem 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-content {
+    padding: 12rem 4rem;
+  }
 }
 
 /* Neutralize the container inside the hero so it can't pull left */
 .hero-content .container {
-  max-width: none;
+  max-width: 56rem;
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   display: block;
 }
 
 /* Center the actual text block */
 .hero-text {
-  width: min(900px, 92vw);
+  width: 100%;
   margin-inline: auto;
   text-align: center;
-  transform: translateY(40px);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .hero-text {
+    gap: 2rem;
+  }
 }
 
 /* Typography */
@@ -269,9 +288,7 @@
   letter-spacing: 0.3em;
   text-transform: uppercase;
   opacity: 0.85;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0;
   color: white;
 }
 
@@ -280,14 +297,13 @@
   font-weight: 400;
   font-size: 50px;
   line-height: 1.15;
-  margin: 0 auto;
+  margin: 0;
   text-transform: uppercase;
   text-shadow: 0 1px 2px rgba(0,0,0,.35);
   color: white;
+  max-width: 25ch;
   margin-left: auto;
   margin-right: auto;
-  max-width: 25ch;
-  margin-bottom: 2.5rem;
   letter-spacing: 0.015em;
 }
 
@@ -299,8 +315,6 @@
   color: white;
   opacity: 0.85;
   margin: 0;
-  margin-left: auto;
-  margin-right: auto;
   font-style: italic;
 }
 
