@@ -3,9 +3,8 @@ import './Welcome.css';
 
 const Welcome: React.FC = () => {
   return (
-    <section id="down" className="py-20 md:py-24 lg:py-32 fade-in-up">
-      <div>
-        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+    <section id="down" className="section relative fade-in-up">
+      <div className="container max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="stamp-icon mb-8 md:mb-12">
             <img src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Stamp.png" alt="Casa Larga Stamp" />
           </div>
@@ -62,7 +61,6 @@ const Welcome: React.FC = () => {
               </a>
             </div>
           </div>
-        </div>
       </div>
     </section>
   );
