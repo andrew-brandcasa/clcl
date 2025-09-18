@@ -1,42 +1,224 @@
-import React from 'react';
+/* CSS Variables - Define these at the root */
+:root {
+  --brown-primary: #AF6900;
+  --brown-dark: #8B5A00;
+  --brown-light: #D4A574;
+  --bg-cream: #FAFAF8;
+  --text-gray: #6B7280;
+}
 
-const OurHistory: React.FC = () => {
-  return (
-    <section id="history" className="section relative">
-      <div className="container max-w-content mx-auto px-6 md:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center">
-        {/* Copy */}
-          <div className="space-y-6 md:space-y-8 pr-0 lg:pr-8 xl:pr-12">
-          <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider">OUR HISTORY</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900">New York's 21st Winery</h2>
-          <p className="text-base md:text-lg leading-relaxed text-gray-600">
-            In 1974, our founder planted the first vines at Casa Larga, symbolizing his dedication 
-            to his Italian Heritage. By 1978, our initial vintages earned rewards and we became 
-            New York's 21st licensed winery.
-          </p>
-          <div className="mt-6 flex gap-3">
-            <a href="#" className="custom-catalog-button">
-              <span className="button-content-wrapper">
-              ABOUT CASA LARGA
-              </span>
-            </a>
-          </div>
-        </div>
-        
-        {/* Media */}
-          <div className="pl-0 lg:pl-8 xl:pl-12">
-          <div className="relative rounded-2xl overflow-hidden">
-            <img 
-              src="https://casalarga.casasite.com/wp-content/uploads/2025/08/mr-casa.png" 
-              alt="Casa Larga Founder" 
-              className="aspect-[16/10] w-full object-cover"
-            />
-          </div>
-        </div>
-        </div>
-      </div>
-    </section>
-  );
-};
+/* Container styling */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+  background-color: #FFFFFF;
+}
 
-export default OurHistory;
+/* Stamp icon styling */
+.stamp-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.stamp-icon img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+/* Welcome navigation grid */
+.welcome-navigation {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
+  max-width: 1000px;
+  margin: 80px auto 0;
+  padding: 0 20px;
+}
+
+/* Navigation items */
+.nav-item {
+  text-align: left;
+  position: relative;
+}
+
+.nav-link {
+  display: flex;
+  align-items: flex-start;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 20px;
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.nav-link:hover {
+  transform: translateY(-5px);
+  background-color: var(--bg-cream);
+  box-shadow: 0 10px 30px rgba(175, 105, 0, 0.1);
+}
+
+/* Icon styling */
+.nav-icon {
+  margin-right: 28px;
+  margin-top: 8px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover .nav-icon {
+  transform: scale(1.05);
+}
+
+.nav-icon svg {
+  width: 60px;
+  height: auto;
+  display: block;
+}
+
+.nav-icon svg path {
+  fill: var(--brown-primary);
+  transition: fill 0.3s ease;
+}
+
+.nav-link:hover .nav-icon svg path {
+  fill: var(--brown-dark);
+}
+
+/* Content styling */
+.nav-content h3 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 24px;
+  color: var(--brown-primary);
+  margin-bottom: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover .nav-content h3 {
+  color: var(--brown-dark);
+}
+
+.nav-content p {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 15px;
+  color: var(--text-gray);
+  font-style: normal;
+  margin: 0;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* Special spacing adjustments */
+#space-icon-box .nav-icon {
+  margin-top: 5px;
+}
+
+#top-space .nav-icon {
+  margin-top: 6px;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .welcome-navigation {
+    gap: 60px;
+    max-width: 900px;
+  }
+  
+  .nav-content h3 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stamp-icon {
+    margin-bottom: 36px;
+  }
+  
+  .welcome-navigation {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 60px;
+  }
+  
+  .nav-item {
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .nav-link {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  
+  .nav-icon {
+    margin-right: 0;
+    margin-bottom: 24px;
+    margin-top: 0;
+  }
+  
+  .nav-icon svg {
+    width: 50px;
+  }
+  
+  #space-icon-box .nav-icon,
+  #top-space .nav-icon {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .stamp-icon {
+    margin-bottom: 28px;
+  }
+  
+  .stamp-icon img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .welcome-navigation {
+    gap: 32px;
+    margin-top: 48px;
+  }
+  
+  .nav-link {
+    padding: 24px 16px;
+  }
+  
+  .nav-icon {
+    margin-bottom: 20px;
+  }
+  
+  .nav-icon svg {
+    width: 45px;
+  }
+  
+  .nav-content h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  
+  .nav-content p {
+    font-size: 14px;
+  }
+}
