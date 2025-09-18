@@ -23,7 +23,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center bottom;
-  opacity: 0.10;             /* subtle watermark */
+  opacity: 0.25;             /* more visible watermark */
   filter: grayscale(1);
 }
 
