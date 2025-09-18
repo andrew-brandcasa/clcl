@@ -195,42 +195,24 @@ html {
 /* Standardized Section/Content Wrapper System */
 .section-wrapper {
   width: 100%;
-  padding: 100px 0;
+  padding: 96px 0;
 }
 
 .content-wrapper {
-  max-width: 1000px;
+  max-width: 1024px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 24px;
 }
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   .section-wrapper {
-    padding: 80px 0;
-  }
-  
-  .content-wrapper {
-    padding: 0 30px;
+    padding: 64px 0;
   }
 }
 
 @media (max-width: 768px) {
   .section-wrapper {
-    padding: 60px 0;
-  }
-  
-  .content-wrapper {
-    padding: 0 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .section-wrapper {
-    padding: 40px 0;
-  }
-  
-  .content-wrapper {
-    padding: 0 15px;
+    padding: 48px 0;
   }
 }

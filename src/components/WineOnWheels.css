@@ -1,12 +1,12 @@
 .wine-on-wheels-section {
-  padding: 100px 0;
+  padding: 96px 0;
   background-color: var(--ast-global-color-4);
 }
 
 .wow-container {
-  max-width: 1000px;
+  max-width: 1024px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 24px;
 }
 
 .wow-content {
@@ -130,11 +130,7 @@
 /* Responsive */
 @media (max-width: 1024px) {
   .wine-on-wheels-section {
-    padding: 80px 0;
-  }
-  
-  .wow-container {
-    padding: 0 30px;
+    padding: 64px 0;
   }
   
   .wow-content {
@@ -154,11 +150,7 @@
 
 @media (max-width: 768px) {
   .wine-on-wheels-section {
-    padding: 60px 0;
-  }
-  
-  .wow-container {
-    padding: 0 20px;
+    padding: 48px 0;
   }
   
   .wow-image {
@@ -183,14 +175,6 @@
 }
 
 @media (max-width: 480px) {
-  .wine-on-wheels-section {
-    padding: 40px 0;
-  }
-  
-  .wow-container {
-    padding: 0 15px;
-  }
-  
   .wow-image {
     padding: 20px;
   }
