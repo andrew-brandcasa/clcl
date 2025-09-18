@@ -3,8 +3,8 @@ import './Welcome.css';
 
 const Welcome: React.FC = () => {
   return (
-    <section id="down" className="welcome-section fade-in-up">
-      <div className="container">
+    <section id="down" className="container max-w-content mx-auto py-16 md:py-24 lg:py-28 fade-in-up">
+      <div>
         <div className="welcome-content">
           <div className="stamp-icon">
             <img src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Stamp.png" alt="Casa Larga Stamp" />

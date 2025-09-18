@@ -48,8 +48,8 @@ const wines: Wine[] = [
 
 const OurWines: React.FC = () => {
   return (
-    <section id="wine" className="our-wines-section fade-in-up">
-      <div className="wines-container">
+    <section id="wine" className="container max-w-content mx-auto py-16 md:py-24 lg:py-28 fade-in-up">
+      <div>
         <div className="section-header">
           <span className="section-subtitle">OUR WINES</span>
           <h2 className="section-title">Shop Our Catalog</h2>

@@ -48,8 +48,8 @@ const WineOnWheels: React.FC = () => {
   };
 
   return (
-    <section className="wine-on-wheels-section">
-      <div className="wow-container">
+    <section className="container max-w-content mx-auto py-16 md:py-24 lg:py-28">
+      <div>
         <div className="wow-content">
           <div className="wow-image fade-in">
             <img 

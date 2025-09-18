@@ -31,8 +31,8 @@ const events: Event[] = [
 
 const UpcomingEvents: React.FC = () => {
   return (
-    <section className="upcoming-events-section fade-in-up">
-      <div className="events-container">
+    <section className="container max-w-content mx-auto py-16 md:py-24 lg:py-28 fade-in-up">
+      <div>
         <div className="section-header">
           <span className="section-subtitle">JOIN US!</span>
           <h2 className="section-title">Upcoming Events</h2>

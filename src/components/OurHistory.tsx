@@ -3,8 +3,8 @@ import './OurHistory.css';
 
 const OurHistory: React.FC = () => {
   return (
-    <section id="history" className="our-history-section">
-      <div className="history-container">
+    <section id="history" className="container max-w-content mx-auto py-16 md:py-24 lg:py-28">
+      <div>
         <div className="history-content">
           <div className="history-text fade-in-up">
             <span className="section-subtitle">OUR HISTORY</span>
