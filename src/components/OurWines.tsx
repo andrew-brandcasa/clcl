@@ -62,6 +62,19 @@ const OurWines: React.FC = () => {
         }}
       />
       
+      <div
+        className="absolute inset-0 bg-no-repeat bg-center bg-cover"
+        style={{
+          backgroundImage: "url('/Frame 1618873355.png')",
+          backgroundPosition: "bottom center",
+          backgroundSize: "1800px auto",
+          opacity: 0.08,
+          height: "70%",
+          top: "20%",
+          pointerEvents: "none"
+        }}
+      />
+      
       <div className="wine-carousel-track">
         {/* First set of wines */}
         {wines.map((wine) => (
