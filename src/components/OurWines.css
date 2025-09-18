@@ -45,23 +45,33 @@
   color: var(--ast-global-color-3);
 }
 
-.wines-grid {
-  display: flex;
-  overflow: visible;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 30px;
-  padding: 0 0 20px 0;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+.wine-carousel-container {
+  position: relative;
+  width: 100%;
 }
 
-.wines-grid::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+.wine-carousel-track {
+  display: flex;
+  gap: 30px;
+  animation: scroll-infinite 20s linear infinite;
+  width: fit-content;
+}
+
+.wine-carousel-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .wine-card-wrapper {
-  flex: 0 0 443px; /* Fixed width, no shrinking */
+  flex: 0 0 443px;
   overflow: visible;
   margin-bottom: 50px;
   display: flex;
@@ -251,7 +261,7 @@
   }
   
   .wine-card-wrapper {
-    flex: 0 0 250px;
+    flex: 0 0 350px;
   }
 }
 
@@ -261,7 +271,7 @@
   }
   
   .wine-card-wrapper {
-    flex: 0 0 220px;
+    flex: 0 0 300px;
   }
   
   .wine-bottle-image {
@@ -278,7 +288,7 @@
 
 @media (max-width: 480px) {
   .wine-card-wrapper {
-    flex: 0 0 200px;
+    flex: 0 0 280px;
   }
   
   .wine-bottle-image {
