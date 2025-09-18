@@ -26,25 +26,26 @@
   font-size: 18px;
   color: var(--brown-primary);
   letter-spacing: 2px;
-  margin-bottom: 20px;
   font-weight: 400;
   text-transform: uppercase;
+  margin: 0 0 20px 0;
 }
 
 .history-text .section-title {
   font-family: 'Libre Baskerville', serif;
   font-size: 36px;
   color: var(--brown-dark);
-  margin-bottom: 20px;
   font-weight: 400;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
 }
 
 .history-text .section-description {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  margin-bottom: 30px;
   color: var(--ast-global-color-3);
+  margin: 0 0 30px 0;
 }
 
 .history-image {
