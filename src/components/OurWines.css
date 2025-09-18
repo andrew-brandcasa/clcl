@@ -1,42 +1,37 @@
-import React from 'react';
+/* OurWines component styles */
 
-const OurHistory: React.FC = () => {
-  return (
-    <section id="history" className="section relative">
-      <div className="container max-w-content mx-auto px-6 md:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center">
-        {/* Copy */}
-          <div className="space-y-6 md:space-y-8 pr-0 lg:pr-8 xl:pr-12">
-          <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider">OUR HISTORY</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900">New York's 21st Winery</h2>
-          <p className="text-base md:text-lg leading-relaxed text-gray-600">
-            In 1974, our founder planted the first vines at Casa Larga, symbolizing his dedication 
-            to his Italian Heritage. By 1978, our initial vintages earned rewards and we became 
-            New York's 21st licensed winery.
-          </p>
-          <div className="mt-6 flex gap-3">
-            <a href="#" className="custom-catalog-button">
-              <span className="button-content-wrapper">
-              ABOUT CASA LARGA
-              </span>
-            </a>
-          </div>
-        </div>
-        
-        {/* Media */}
-          <div className="pl-0 lg:pl-8 xl:pl-12">
-          <div className="relative rounded-2xl overflow-hidden">
-            <img 
-              src="https://casalarga.casasite.com/wp-content/uploads/2025/08/mr-casa.png" 
-              alt="Casa Larga Founder" 
-              className="aspect-[16/10] w-full object-cover"
-            />
-          </div>
-        </div>
-        </div>
-      </div>
-    </section>
-  );
-};
+.wine-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-export default OurHistory;
+.wine-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
+}
+
+.wine-image {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  padding: 20px;
+}
+
+.wine-image img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+.wine-info {
+  padding: 20px 0 20px 20px;
+}
+
+.wine-price-info {
+  margin-top: 15px;
+}
