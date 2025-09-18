@@ -50,9 +50,12 @@ const OurWines: React.FC = () => {
   return (
     <section id="wine" className="relative container max-w-content mx-auto py-16 md:py-24 lg:py-28 fade-in-up">
       <div
-        className="absolute inset-0 bg-no-repeat bg-center bg-cover illustration-bg"
+        className="absolute inset-0 bg-no-repeat bg-center bg-cover"
         style={{
-          backgroundImage: "url('https://casalarga.casasite.com/wp-content/uploads/2025/08/aeba2179eb500024ec3a35d2d97c472c44a3745d-scaled.png')"
+          backgroundImage: "url('/Frame 1618873355.png')",
+          backgroundPosition: "bottom center",
+          backgroundSize: "1800px auto",
+          opacity: 0.08
         }}
       />
       <div className="relative z-10">
