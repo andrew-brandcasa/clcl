@@ -75,6 +75,15 @@ const OurWines: React.FC = () => {
         }}
       />
       
+      <div className="section-header">
+        <span className="section-subtitle">OUR WINES</span>
+        <h2 className="section-title">SHOP OUR CATALOG</h2>
+        <p className="section-description">
+          Discover our selection of award-winning wines through our online store: reds, whites, ice wines,
+          reserve wines, private cellar wines, personalized labels and gift sets.
+        </p>
+      </div>
+      
       <div className="wine-carousel-track">
         {/* First set of wines */}
         {wines.map((wine) => (
