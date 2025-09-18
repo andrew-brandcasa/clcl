@@ -9,13 +9,14 @@ const Footer: React.FC = () => {
       <footer className="site-footer">
         <div className="container">
           <div className="footer-content">
-            {/* Brand Logo */}
-            <div className="footer-brand">
-              <img 
-                src="https://casalarga.casasite.com/wp-content/uploads/2025/08/casalargalogo-1.svg" 
-                alt="Casa Larga Vineyards and Winery" 
-                className="footer-logo"
-              />
+            {/* Logo */}
+            <div className="footer-logo">
+              <a href="/">
+                <img 
+                  src="https://casalarga.casasite.com/wp-content/uploads/2025/08/casalargalogo-1.svg" 
+                  alt="Casa Larga Logo" 
+                />
+              </a>
             </div>
 
             {/* Footer Info */}
