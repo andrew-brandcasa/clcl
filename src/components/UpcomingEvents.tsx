@@ -31,9 +31,10 @@ const events: Event[] = [
 
 const UpcomingEvents: React.FC = () => {
   return (
-    <section className="container max-w-content mx-auto py-16 md:py-24 lg:py-28 fade-in-up">
+    <section className="upcoming-events-section">
       <div>
-        <div className="section-header">
+        <div className="events-container">
+          <div className="section-header">
           <span className="section-subtitle">JOIN US!</span>
           <h2 className="section-title">Upcoming Events</h2>
           <p className="section-description">
@@ -41,9 +42,9 @@ const UpcomingEvents: React.FC = () => {
             patio parties on our grounds, there's always something happening worth toasting to. 
             Take a look at what's coming up and join us for the next celebration.
           </p>
-        </div>
+          </div>
         
-        <div className="events-grid">
+          <div className="events-grid">
           {events.map((event) => (
             <div key={event.id} className="event-card">
               <div className="event-image">
@@ -58,12 +59,13 @@ const UpcomingEvents: React.FC = () => {
               </div>
             </div>
           ))}
-        </div>
+          </div>
         
-        <div className="section-footer">
+          <div className="section-footer">
           <a href="#" className="elementor-button">
             VIEW EVENT CALENDAR
           </a>
+          </div>
         </div>
       </div>
     </section>
