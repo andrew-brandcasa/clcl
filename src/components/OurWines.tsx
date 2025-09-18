@@ -48,7 +48,7 @@ const wines: Wine[] = [
 
 const OurWines: React.FC = () => {
   return (
-    <section id="wine" className="relative container max-w-content mx-auto py-16 md:py-24 lg:py-28 fade-in-up">
+    <section id="wine" className="relative py-16 md:py-24 lg:py-28 fade-in-up">
       <div
         className="absolute inset-0 bg-no-repeat bg-center bg-cover"
         style={{
@@ -75,7 +75,8 @@ const OurWines: React.FC = () => {
         }}
       />
       
-      <div className="section-header">
+      <div className="container max-w-content mx-auto">
+        <div className="section-header mb-16">
         <span className="section-subtitle">OUR WINES</span>
         <h2 className="section-title">SHOP OUR CATALOG</h2>
         <p className="section-description">
@@ -84,7 +85,7 @@ const OurWines: React.FC = () => {
         </p>
       </div>
       
-      <div className="wine-carousel-track">
+        <div className="wine-carousel-track">
         {/* First set of wines */}
         {wines.map((wine) => (
           <div key={wine.id} className="wine-card-wrapper">
@@ -157,10 +158,11 @@ const OurWines: React.FC = () => {
         ))}
       </div>
       
-      <div className="section-footer">
+        <div className="section-footer">
         <a href="#" className="custom-catalog-button">
           SHOP OUR CATALOG
         </a>
+      </div>
       </div>
     </section>
   );
