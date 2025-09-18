@@ -3,19 +3,21 @@ import './Welcome.css';
 
 const Welcome: React.FC = () => {
   return (
-    <section id="down" className="container max-w-content mx-auto py-16 md:py-24 lg:py-28 fade-in-up">
+    <section id="down" className="py-20 md:py-24 lg:py-32 fade-in-up">
       <div>
-        <div className="welcome-content">
-          <div className="stamp-icon">
+        <div className="container max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <div className="stamp-icon mb-8 md:mb-12">
             <img src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Stamp.png" alt="Casa Larga Stamp" />
           </div>
           
           <h2 className="welcome-title">WELCOME TO CASA LARGA</h2>
           
-          <p className="welcome-description">
-            Located in Fairport, NY. Celebrating 51 years of winemaking from graft to glass. 
-            Click below to explore our wines, uncover our history, and tour our venue.
-          </p>
+          <div className="max-w-3xl mx-auto space-y-6 mb-16">
+            <p className="text-base md:text-lg leading-relaxed text-gray-600">
+              Located in Fairport, NY. Celebrating 51 years of winemaking from graft to glass. 
+              Click below to explore our wines, uncover our history, and tour our venue.
+            </p>
+          </div>
           
           <div className="welcome-navigation">
             <div className="nav-item" id="space-icon-box">
