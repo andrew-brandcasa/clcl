@@ -6,16 +6,18 @@ const OurHistory: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
         {/* Copy */}
         <div className="lg:col-span-6 space-y-4">
-          <span className="kicker">OUR HISTORY</span>
-          <h2 className="h2">New York's 21st Winery</h2>
-          <p className="sub">
+          <span className="section-subtitle">OUR HISTORY</span>
+          <h2 className="section-title">New York's 21st Winery</h2>
+          <p className="section-description">
             In 1974, our founder planted the first vines at Casa Larga, symbolizing his dedication 
             to his Italian Heritage. By 1978, our initial vintages earned rewards and we became 
             New York's 21st licensed winery.
           </p>
           <div className="mt-6 flex gap-3">
-            <a href="#" className="elementor-button">
+            <a href="#" className="custom-catalog-button">
+              <span className="button-content-wrapper">
               ABOUT CASA LARGA
+              </span>
             </a>
           </div>
         </div>

@@ -79,6 +79,43 @@
   object-fit: contain;
 }
 
+.custom-catalog-button {
+  display: inline-block;
+  padding: 18px 45px;
+  border: none;
+  border-left: 4px solid var(--brown-dark);
+  border-radius: 0px;
+  background-color: rgba(158, 132, 92, 0.61);
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-catalog-button .button-content-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.custom-catalog-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.custom-catalog-button:hover::before {
+  left: -100%;
+}
+
+.custom-catalog-button:hover {
+  color: white;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .our-history-section {
