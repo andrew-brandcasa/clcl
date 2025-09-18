@@ -5,8 +5,7 @@
   align-items: flex-start;
   gap: 20px;
   position: relative;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
+  width: 100%;
   background-image: url("https://casalarga.casasite.com/wp-content/uploads/2025/08/7662debe55392745c26323d52af7183e2300478a.webp");
   background-size: cover;
   background-position: 50% 50%;

@@ -3,7 +3,7 @@ import './OurVenue.css';
 
 const OurVenue: React.FC = () => {
   return (
-    <section id="venu" className="container max-w-content mx-auto py-16 md:py-24 lg:py-28">
+    <section id="venu" className="py-16 md:py-24 lg:py-28">
       <div className="venue-content">
         <div className="venue-text">
           <span className="section-subtitle">OUR VENUE</span>
