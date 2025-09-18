@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <div className="hero-section">
+    <section className="hero-section">
       {/* Video Background */}
       <video
         className="hero-video"
@@ -128,7 +128,7 @@ const Hero: React.FC = () => {
           </svg>
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 
