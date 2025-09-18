@@ -56,21 +56,22 @@ const OurWines: React.FC = () => {
           backgroundPosition: "bottom center",
           backgroundSize: "1800px auto",
           opacity: 0.08,
+          height: "70%",
+          top: "20%",
+          pointerEvents: "none"
+        }}
+      />
+      <div
+        className="absolute inset-0 bg-no-repeat bg-center bg-cover"
+        style={{
+          backgroundImage: "url('/Frame 1618873355.png')",
+          backgroundPosition: "bottom center",
+          backgroundSize: "1800px auto",
+          opacity: 0.08,
           height: "100%",
           pointerEvents: "none"
         }}
       />
-      <div className="relative z-10">
-        <div className="section-header">
-          <span className="section-subtitle">OUR WINES</span>
-          <h2 className="section-title">Shop Our Catalog</h2>
-          <p className="section-description">
-            Discover our selection of award-winning wines through our online store: reds, whites, ice wines,
-            reserve wines, private cellar wines, personalized labels and gift sets.
-          </p>
-        </div>
-        
-        <div className="wine-carousel-container overflow-hidden mb-12">
           <div className="wine-carousel-track">
             {/* First set of wines */}
             {wines.map((wine) => (
