@@ -1,5 +1,6 @@
 import React from 'react';
 import './UpcomingEvents.css';
+import SectionCurve from './SectionCurve';
 
 interface Event {
   id: number;
@@ -31,10 +32,19 @@ const events: Event[] = [
 
 const UpcomingEvents: React.FC = () => {
   return (
-    <section className="upcoming-events-section">
-      <div>
-        <div className="events-container">
-          <div className="section-header">
+    <section className="upcoming-events-section relative">
+      {/* full-bleed illustration behind the section */}
+      <div className="transition-graphic">
+        <img
+          src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Group-1597885392.png"
+          alt=""
+          className="transition-image"
+        />
+      </div>
+
+      {/* content container */}
+      <div className="events-container relative z-10">
+        <div className="section-header">
           <span className="section-subtitle">JOIN US!</span>
           <h2 className="section-title">Upcoming Events</h2>
           <p className="section-description">
@@ -42,9 +52,9 @@ const UpcomingEvents: React.FC = () => {
             patio parties on our grounds, there's always something happening worth toasting to. 
             Take a look at what's coming up and join us for the next celebration.
           </p>
-          </div>
-        
-          <div className="events-grid">
+        </div>
+
+        <div className="events-grid">
           {events.map((event) => (
             <div key={event.id} className="event-card">
               <div className="event-image">
@@ -59,24 +69,17 @@ const UpcomingEvents: React.FC = () => {
               </div>
             </div>
           ))}
-          </div>
-        
-          <div className="section-footer">
+        </div>
+
+        <div className="section-footer">
           <a href="#" className="elementor-button">
             VIEW EVENT CALENDAR
           </a>
-          </div>
-        
-          {/* Transition Graphic */}
-          <div className="transition-graphic">
-            <img 
-              src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Group-1597885392.png" 
-              alt="Casa Larga Brand Elements" 
-              className="transition-image"
-            />
-          </div>
         </div>
       </div>
+
+      {/* bottom curve that "cuts" into the next section */}
+      <SectionCurve height={180} fill="#FFFFFF" />
     </section>
   );
 };

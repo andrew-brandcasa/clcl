@@ -1,46 +1,78 @@
+/* Section wrapper */
 .upcoming-events-section {
-  padding: 96px 0;
-  background-color: #F8F6F6;
+  padding: 96px 0 180px;     /* extra bottom to make room for curve overlap */
+  background-color: #F8F6F6; /* section bg */
   position: relative;
+  overflow: hidden;          /* hides the top of the illustration if needed */
+}
+
+/* Full-bleed illustration behind content */
+.transition-graphic {
+  position: absolute;
+  left: 50%;
+  bottom: -10px;             /* nudge to taste */
+  transform: translateX(-50%);
+  width: 100vw;              /* BLEED across browser */
+  height: 320px;
+  pointer-events: none;
+  z-index: 0;                /* behind content */
+}
+
+.transition-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  opacity: 0.10;             /* subtle watermark */
+  filter: grayscale(1);
+}
+
+/* Bottom curve */
+.section-curve {
+  position: absolute;
+  left: 50%;
+  bottom: -1px;              /* overlap to avoid hairline seam */
+  transform: translateX(-50%);
+  width: 100vw;              /* full-bleed shape */
+  z-index: 1;                /* above illustration, below next section */
+}
+
+/* Header polish to match your Figma style */
+.section-header { 
+  text-align: center; 
+  margin-bottom: 56px; 
+}
+
+.section-header .section-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 42px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brown-dark);
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.section-header .section-subtitle {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  letter-spacing: .18em;
+  color: var(--brown-primary);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.section-header .section-description {
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: var(--ast-global-color-3);
 }
 
 .events-container {
   max-width: 1024px;
   margin: 0 auto;
   padding: 0 24px;
-}
-
-.section-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.section-header .section-subtitle {
-  display: block;
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 18px;
-  color: var(--brown-primary);
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-.section-header .section-title {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 36px;
-  color: var(--brown-dark);
-  margin-bottom: 20px;
-  font-weight: 400;
-}
-
-.section-header .section-description {
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  max-width: 700px;
-  margin: 0 auto;
-  color: var(--ast-global-color-3);
 }
 
 .events-grid {
@@ -146,30 +178,10 @@
   text-align: center;
 }
 
-.transition-graphic {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.transition-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-  transform: translateY(-50px);
-}
-
 /* Responsive */
 @media (max-width: 1024px) {
   .upcoming-events-section {
-    padding: 64px 0;
+    padding: 64px 0 120px;
   }
   
   .events-grid {
@@ -180,7 +192,7 @@
 
 @media (max-width: 768px) {
   .upcoming-events-section {
-    padding: 48px 0;
+    padding: 48px 0 100px;
   }
   
   .events-grid {
