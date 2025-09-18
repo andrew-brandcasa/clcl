@@ -48,8 +48,18 @@ const wines: Wine[] = [
 
 const OurWines: React.FC = () => {
   return (
-    <section id="wine" className="container max-w-content mx-auto py-16 md:py-24 lg:py-28 fade-in-up">
-      <div>
+    <section 
+      id="wine" 
+      className="relative container max-w-content mx-auto py-16 md:py-24 lg:py-28 fade-in-up"
+      style={{
+        backgroundImage: "url('https://casalarga.casasite.com/wp-content/uploads/2025/08/aeba2179eb500024ec3a35d2d97c472c44a3745d-scaled.png')",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center bottom",
+        opacity: 0.15
+      }}
+    >
+      <div className="relative z-10">
         <div className="section-header">
           <span className="section-subtitle">OUR WINES</span>
           <h2 className="section-title">Shop Our Catalog</h2>
