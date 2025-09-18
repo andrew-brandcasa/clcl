@@ -99,7 +99,7 @@ const WineOnWheels: React.FC = () => {
             </div>
             
             <div className="pt-4">
-              <a href="#" className="inline-block px-8 py-4 bg-amber-800 text-white font-bold text-lg rounded-lg hover:bg-amber-900 transition-colors duration-300 shadow-lg hover:shadow-xl">
+              <a href="#" className="elementor-button">
                 BOOK WINE ON WHEELS
               </a>
             </div>
