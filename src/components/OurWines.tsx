@@ -76,7 +76,7 @@ const OurWines: React.FC = () => {
       />
       
       <div className="container max-w-content mx-auto">
-        <div className="section-header mb-16">
+        <div className="section-header mb-24">
         <span className="section-subtitle">OUR WINES</span>
         <h2 className="section-title">SHOP OUR CATALOG</h2>
         <p className="section-description">
