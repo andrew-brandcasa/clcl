@@ -32,7 +32,7 @@ const events: Event[] = [
 
 const UpcomingEvents: React.FC = () => {
   return (
-    <section className="upcoming-events-section section relative">
+    <section className="upcoming-events-section relative py-20 md:py-28 lg:py-36">
       {/* full-bleed illustration behind the section */}
       <div className="transition-graphic">
         <img
@@ -43,7 +43,7 @@ const UpcomingEvents: React.FC = () => {
       </div>
 
       {/* content container */}
-      <div className="container max-w-content mx-auto px-6 md:px-8 lg:px-12 relative z-10">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 relative z-10">
         <div className="section-header">
           <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider mb-4 block">JOIN US!</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-6">Upcoming Events</h2>

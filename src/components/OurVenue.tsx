@@ -3,9 +3,8 @@ import './OurVenue.css';
 
 const OurVenue: React.FC = () => {
   return (
-    <section id="venu" className="section relative venue-section">
-      <div className="container max-w-content mx-auto px-6 md:px-8 lg:px-12">
-        <div className="venue-content">
+    <section id="venu" className="py-16 md:py-24 lg:py-28">
+      <div className="venue-content">
         <div className="venue-text">
           <span className="text-sm md:text-base font-medium text-white uppercase tracking-wider mb-4 block">OUR VENUE</span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight font-serif text-white mb-6">
@@ -22,7 +21,6 @@ const OurVenue: React.FC = () => {
             BOOK A PRIVATE EVENT
           </a>
         </div>
-      </div>
       </div>
     </section>
   );
