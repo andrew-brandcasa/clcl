@@ -128,7 +128,7 @@ const Hero: React.FC = () => {
           </svg>
         </button>
       </div>
-    </section>
+    </div>
   );
 };
 
