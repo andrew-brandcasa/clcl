@@ -1,3 +1,14 @@
+.wine-on-wheels-section {
+  padding: 96px 0;
+  background-color: var(--ast-global-color-4);
+}
+
+.wow-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
 .wow-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -51,9 +62,77 @@
   color: var(--ast-global-color-3);
 }
 
+.wow-process {
+  margin-bottom: 40px;
+}
+
+.accordion-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.accordion-item.active {
+  border-color: var(--brown-primary);
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 20px;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: #f8f9fa;
+}
+
+.accordion-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--brown-dark);
+}
+
+.accordion-icon {
+  color: var(--brown-primary);
+  transition: transform 0.3s ease;
+}
+
+.accordion-icon.rotated {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-content.open {
+  max-height: 200px;
+  padding: 0 20px 20px;
+}
+
+.accordion-content p {
+  margin: 0;
+  color: var(--ast-global-color-3);
+  line-height: 1.6;
+}
 
 /* Responsive */
 @media (max-width: 1024px) {
+  .wine-on-wheels-section {
+    padding: 64px 0;
+  }
+  
   .wow-content {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -70,6 +149,10 @@
 }
 
 @media (max-width: 768px) {
+  .wine-on-wheels-section {
+    padding: 48px 0;
+  }
+  
   .wow-image {
     padding: 30px;
   }
@@ -81,10 +164,22 @@
   .wow-info .section-subtitle {
     font-size: 16px;
   }
+  
+  .accordion-header {
+    padding: 15px;
+  }
+  
+  .accordion-title {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 480px) {
   .wow-image {
     padding: 20px;
+  }
+  
+  .accordion-content.open {
+    padding: 0 15px 15px;
   }
 }

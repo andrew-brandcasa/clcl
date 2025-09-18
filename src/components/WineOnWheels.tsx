@@ -48,8 +48,8 @@ const WineOnWheels: React.FC = () => {
   };
 
   return (
-    <section className="bg-gray-50 py-20 md:py-28 lg:py-36">
-      <div className="container max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+    <section className="container max-w-content mx-auto py-16 md:py-24 lg:py-28">
+      <div>
         <div className="wow-content">
           <div className="wow-image fade-in">
             <img 
@@ -69,28 +69,23 @@ const WineOnWheels: React.FC = () => {
               when the party winds down.
             </p>
             
-            <div className="wow-process space-y-8 md:space-y-12 lg:space-y-16">
-              {accordionItems.map((item, index) => (
-                <div key={item.id} className="p-8 md:p-10 lg:p-12 bg-white rounded-2xl shadow-lg space-y-4 md:space-y-6">
-                  <div className="w-12 h-12 md:w-16 md:h-16 bg-brown-primary text-white rounded-full flex items-center justify-center text-xl md:text-2xl font-bold mb-6 md:mb-8">
-                    {index + 1}
-                  </div>
+            <div className="wow-process">
+              {accordionItems.map((item) => (
+                <div key={item.id} className={`accordion-item ${item.isOpen ? 'active' : ''}`}>
                   <button 
-                    className="w-full text-left"
+                    className="accordion-header"
                     onClick={() => toggleAccordion(item.id)}
                     aria-expanded={item.isOpen}
                   >
-                    <div className="flex justify-between items-center">
-                      <h3 className="text-lg md:text-xl font-semibold text-brown-dark">{item.title}</h3>
-                      <ChevronDown 
-                        className={`text-brown-primary transition-transform duration-300 ${item.isOpen ? 'rotate-180' : ''}`} 
-                        size={20}
-                      />
-                    </div>
+                    <span className="accordion-title">{item.title}</span>
+                    <ChevronDown 
+                      className={`accordion-icon ${item.isOpen ? 'rotated' : ''}`} 
+                      size={20}
+                    />
                   </button>
                   
-                  <div className={`transition-all duration-300 overflow-hidden ${item.isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-                    <p className="text-gray-600 leading-relaxed pt-4">{item.content}</p>
+                  <div className={`accordion-content ${item.isOpen ? 'open' : ''}`}>
+                    <p>{item.content}</p>
                   </div>
                 </div>
               ))}
