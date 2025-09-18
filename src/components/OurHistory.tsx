@@ -7,9 +7,9 @@ const OurHistory: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center">
         {/* Copy */}
           <div className="space-y-6 md:space-y-8 pr-0 lg:pr-8 xl:pr-12">
-          <span className="section-subtitle">OUR HISTORY</span>
-          <h2 className="section-title">New York's 21st Winery</h2>
-          <p className="section-description">
+          <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider">OUR HISTORY</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900">New York's 21st Winery</h2>
+          <p className="text-base md:text-lg leading-relaxed text-gray-600">
             In 1974, our founder planted the first vines at Casa Larga, symbolizing his dedication 
             to his Italian Heritage. By 1978, our initial vintages earned rewards and we became 
             New York's 21st licensed winery.

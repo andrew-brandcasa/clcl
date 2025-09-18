@@ -45,9 +45,9 @@ const UpcomingEvents: React.FC = () => {
       {/* content container */}
       <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 relative z-10">
         <div className="section-header">
-          <span className="section-subtitle">JOIN US!</span>
-          <h2 className="section-title">Upcoming Events</h2>
-          <p className="section-description">
+          <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider mb-4 block">JOIN US!</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-6">Upcoming Events</h2>
+          <p className="text-base md:text-lg leading-relaxed text-gray-600 max-w-3xl mx-auto mb-16">
             The fun doesn't stop at the vineyard. From concerts that fill the air with music to 
             patio parties on our grounds, there's always something happening worth toasting to. 
             Take a look at what's coming up and join us for the next celebration.

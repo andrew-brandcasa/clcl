@@ -38,18 +38,72 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 36px;
-  line-height: 1.4em;
+  font-size: 2.25rem; /* 36px */
+  line-height: 1.25;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem; /* 48px */
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3.75rem; /* 60px */
+  }
+}
+
+@media (min-width: 1280px) {
+  h1 {
+    font-size: 4.5rem; /* 72px */
+  }
 }
 
 h2 {
-  font-size: 30px;
-  line-height: 1.3em;
+  font-size: 1.875rem; /* 30px */
+  line-height: 1.25;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 2.25rem; /* 36px */
+  }
+}
+
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 3rem; /* 48px */
+  }
 }
 
 h3 {
-  font-size: 24px;
-  line-height: 1.3em;
+  font-size: 1.5rem; /* 24px */
+  line-height: 1.25;
+}
+
+@media (min-width: 768px) {
+  h3 {
+    font-size: 1.875rem; /* 30px */
+  }
+}
+
+@media (min-width: 1024px) {
+  h3 {
+    font-size: 2.25rem; /* 36px */
+  }
+}
+
+/* Body text */
+body, p {
+  font-size: 1rem; /* 16px */
+  line-height: 1.625;
+}
+
+@media (min-width: 768px) {
+  body, p {
+    font-size: 1.125rem; /* 18px */
+  }
 }
 
 /* Color Variables */

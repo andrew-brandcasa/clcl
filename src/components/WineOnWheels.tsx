@@ -63,8 +63,8 @@ const WineOnWheels: React.FC = () => {
           
           <div className="space-y-6 md:space-y-8">
             <div className="space-y-4">
-              <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider">We COME TO YOU!</span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-amber-900 leading-tight">Wine on Wheels</h2>
+              <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider">WE COME TO YOU!</span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900">Wine on Wheels</h2>
             </div>
             
             <p className="text-base md:text-lg text-gray-600 leading-relaxed">
@@ -82,7 +82,7 @@ const WineOnWheels: React.FC = () => {
                     onClick={() => toggleAccordion(item.id)}
                     aria-expanded={item.isOpen}
                   >
-                    <span className="text-lg font-semibold text-amber-900">{item.title}</span>
+                    <span className="text-lg md:text-xl font-semibold text-amber-900">{item.title}</span>
                     <ChevronDown 
                       className={`text-amber-700 transition-transform duration-300 ${item.isOpen ? 'rotate-180' : ''}`} 
                       size={24}

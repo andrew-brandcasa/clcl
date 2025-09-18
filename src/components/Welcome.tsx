@@ -5,12 +5,12 @@ const Welcome: React.FC = () => {
   return (
     <section id="down" className="py-20 md:py-24 lg:py-32 fade-in-up">
       <div>
-        <div className="container max-w-content mx-auto px-6 md:px-8 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="stamp-icon mb-8 md:mb-12">
             <img src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Stamp.png" alt="Casa Larga Stamp" />
           </div>
           
-          <h2 className="welcome-title">WELCOME TO CASA LARGA</h2>
+          <h2 className="text-lg md:text-xl font-medium text-amber-900 uppercase tracking-widest text-center mb-8 md:mb-12">WELCOME TO CASA LARGA</h2>
           
           <div className="max-w-3xl mx-auto space-y-6 mb-16">
             <p className="text-base md:text-lg leading-relaxed text-gray-600 text-center">
@@ -28,7 +28,7 @@ const Welcome: React.FC = () => {
                   </svg>
                 </div>
                 <div className="nav-content">
-                  <h3>OUR WINES</h3>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl leading-tight font-serif text-amber-900 mb-3">OUR WINES</h3>
                   <p>Old family recipes</p>
                 </div>
               </a>
@@ -42,7 +42,7 @@ const Welcome: React.FC = () => {
                   </svg>
                 </div>
                 <div className="nav-content">
-                  <h3>OUR HISTORY</h3>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl leading-tight font-serif text-amber-900 mb-3">OUR HISTORY</h3>
                   <p>Discover our heritage</p>
                 </div>
               </a>
@@ -56,7 +56,7 @@ const Welcome: React.FC = () => {
                   </svg>
                 </div>
                 <div className="nav-content">
-                  <h3>OUR VENUE</h3>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl leading-tight font-serif text-amber-900 mb-3">OUR VENUE</h3>
                   <p>Meet a tradition that lasts</p>
                 </div>
               </a>
