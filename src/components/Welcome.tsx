@@ -13,7 +13,7 @@ const Welcome: React.FC = () => {
           <h2 className="welcome-title">WELCOME TO CASA LARGA</h2>
           
           <div className="max-w-3xl mx-auto space-y-6 mb-16">
-            <p className="text-base md:text-lg leading-relaxed text-gray-600">
+            <p className="text-base md:text-lg leading-relaxed text-gray-600 text-center">
               Located in Fairport, NY. Celebrating 51 years of winemaking from graft to glass. 
               Click below to explore our wines, uncover our history, and tour our venue.
             </p>
