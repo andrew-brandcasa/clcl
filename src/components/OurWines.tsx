@@ -48,7 +48,7 @@ const wines: Wine[] = [
 
 const OurWines: React.FC = () => {
   return (
-    <section id="wine" className="relative py-16 md:py-24 lg:py-28 fade-in-up">
+    <section id="wine" className="relative py-20 md:py-28 lg:py-36 fade-in-up">
       <div
         className="absolute inset-0 bg-no-repeat bg-center bg-cover"
         style={{
@@ -75,7 +75,7 @@ const OurWines: React.FC = () => {
         }}
       />
       
-      <div className="container max-w-content mx-auto">
+      <div className="container max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
         <div className="section-header mb-24">
         <span className="section-subtitle">OUR WINES</span>
         <h2 className="section-title">SHOP OUR CATALOG</h2>

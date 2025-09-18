@@ -63,9 +63,21 @@
 
 .wine-carousel-track {
   display: flex;
-  gap: 30px;
+  gap: 2rem;
   animation: scroll-infinite 20s linear infinite;
   width: fit-content;
+}
+
+@media (min-width: 768px) {
+  .wine-carousel-track {
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wine-carousel-track {
+    gap: 4rem;
+  }
 }
 
 .wine-carousel-track:hover {
@@ -95,14 +107,26 @@
 .wine-card {
   background-color: rgba(250,248,244,0.9); /* lighter cream */
   border-radius: 20px;
-  padding: 20px;
+  padding: 1.5rem;
   display: flex;
   flex-direction: row;
   width: 443px;
   height: 250px;
   align-items: center;
   overflow: visible;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.05); /* softer */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .wine-card {
+    padding: 2rem;
+  }
+}
+
+.wine-card:hover {
+  box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+  transform: translateY(-2px);
 }
 
 .wine-image {
@@ -134,25 +158,43 @@
 .wine-details {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .wine-details {
+    gap: 1.5rem;
+  }
 }
 
 .wine-name {
   font-family: 'Libre Baskerville', serif;
-  font-size: 24px;
-  font-weight: 400;
+  font-size: 1.125rem;
+  font-weight: 600;
   color: var(--brown-dark);
   margin: 0;
   line-height: 1.2;
 }
 
+@media (min-width: 768px) {
+  .wine-name {
+    font-size: 1.25rem;
+  }
+}
+
 .wine-type {
   font-family: 'Libre Baskerville', serif;
-  font-size: 17px;
+  font-size: 0.875rem;
   font-weight: 400;
   font-style: italic;
-  color: var(--brown-primary);
+  color: #6b7280;
   margin: 0;
+}
+
+@media (min-width: 768px) {
+  .wine-type {
+    font-size: 1rem;
+  }
 }
 
 .wine-purchase {
@@ -178,12 +220,17 @@
 
 .wine-price {
   font-family: 'Libre Baskerville', serif;
-  font-size: 30px;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 700;
   color: var(--brown-dark);
   margin: 0;
 }
 
+@media (min-width: 768px) {
+  .wine-price {
+    font-size: 1.875rem;
+  }
+}
 .wine-actions {
   display: flex;
   align-items: center;
