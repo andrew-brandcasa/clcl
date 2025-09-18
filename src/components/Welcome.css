@@ -1,19 +1,14 @@
-.welcome-section {
-  padding: 96px 0;
-  background-color: var(--ast-global-color-4);
-}
-
 .welcome-content {
-  text-align: center;
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
 }
 
 .stamp-icon {
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -27,7 +22,7 @@
   font-size: 18px;
   color: #000000;
   letter-spacing: 2px;
-  margin-bottom: 40px;
+  margin: 0;
   font-weight: 400;
   text-transform: uppercase;
   opacity: 0.85;
@@ -37,58 +32,43 @@
   font-family: 'Nunito Sans', sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  max-width: 700px;
-  margin: 0 auto 80px;
+  margin: 0;
   color: var(--ast-global-color-3);
 }
 
-.welcome-navigation {
+.numbers-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
-  max-width: 900px;
-  margin: 0 auto;
+  gap: 24px;
+  align-items: start;
+  text-align: center;
+  margin-top: 48px;
 }
 
-.nav-item {
-  text-align: left;
-  padding: 0 10px;
-}
-
-.nav-link {
+.number-item {
   display: flex;
-  align-items: flex-start;
-  text-decoration: none;
-  color: inherit;
-  transition: all 0.3s ease;
-  padding: 20px 0;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.nav-link:hover {
-  transform: translateY(-3px);
+.number {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--brown-primary);
+  margin: 0;
 }
 
-.nav-icon {
-  margin-right: 24px;
-  margin-top: 5px;
-  flex-shrink: 0;
-}
-
-.nav-icon svg {
-  width: 55px;
-  height: auto;
-}
-
-.nav-content h3 {
+.number-title {
   font-family: 'Libre Baskerville', serif;
   font-size: 20px;
   color: var(--brown-dark);
-  margin-bottom: 12px;
+  margin: 0;
   font-weight: 400;
   line-height: 1.2;
 }
 
-.nav-content p {
+.number-description {
   font-family: 'Libre Baskerville', serif;
   font-size: 15px;
   color: var(--brown-primary);
@@ -97,73 +77,18 @@
   line-height: 1.4;
 }
 
-#space-icon-box .nav-icon {
-  margin-top: 3px;
-}
-
 /* Responsive */
-@media (max-width: 1024px) {
-  .welcome-section {
-    padding: 64px 0;
-  }
-  
-  .welcome-navigation {
-    gap: 50px;
-  }
-}
-
 @media (max-width: 768px) {
-  .welcome-section {
-    padding: 48px 0;
-  }
-  
-  .welcome-description {
-    margin-bottom: 60px;
-    font-size: 18px;
-  }
-  
-  .welcome-navigation {
+  .numbers-row {
     grid-template-columns: 1fr;
-    gap: 40px;
-    text-align: center;
-  }
-  
-  .nav-item {
-    text-align: center;
-    padding: 0;
-  }
-  
-  .nav-link {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 30px 20px;
-  }
-  
-  .nav-icon {
-    margin-right: 0;
-    margin-bottom: 20px;
-    margin-top: 0;
-  }
-  
-  #space-icon-box .nav-icon {
-    margin-top: 0;
+    gap: 32px;
+    margin-top: 32px;
   }
 }
 
 @media (max-width: 480px) {
-  .welcome-title {
-    font-size: 13px;
-    margin-bottom: 30px;
-  }
-  
-  .welcome-description {
-    font-size: 16px;
-    margin-bottom: 50px;
-  }
-  
   .stamp-icon {
-    margin-bottom: 30px;
+    margin-bottom: 16px;
   }
   
   .stamp-icon img {
@@ -171,15 +96,19 @@
     height: 80px;
   }
   
-  .nav-icon svg {
-    width: 45px;
+  .welcome-title {
+    font-size: 16px;
   }
   
-  .nav-content h3 {
+  .number {
+    font-size: 36px;
+  }
+  
+  .number-title {
     font-size: 18px;
   }
   
-  .nav-content p {
+  .number-description {
     font-size: 14px;
   }
 }
