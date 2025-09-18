@@ -95,6 +95,7 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  margin-top: 0;
 }
 
 .custom-catalog-button .button-content-wrapper {
