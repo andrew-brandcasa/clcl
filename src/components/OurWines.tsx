@@ -55,7 +55,7 @@ const OurWines: React.FC = () => {
           backgroundImage: "url('/Frame 1618873355.png')",
           backgroundPosition: "bottom center",
           backgroundSize: "1800px auto",
-          opacity: 0.08,
+          opacity: 0.2,
           height: "70%",
           top: "20%",
           pointerEvents: "none"
