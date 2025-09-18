@@ -154,4 +154,3 @@ const OurWines: React.FC = () => {
 };
 
 export default OurWines;
-    </section>
