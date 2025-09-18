@@ -5,17 +5,6 @@ import './Footer.css';
 const Footer: React.FC = () => {
   return (
     <>
-      {/* Brand Section */}
-      <section className="brand-section">
-        <div className="container">
-          <img 
-            src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Group-1597885392.png" 
-            alt="Casa Larga Brand Elements" 
-            className="brand-image"
-          />
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="site-footer">
         <div className="container">

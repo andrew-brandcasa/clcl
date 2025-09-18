@@ -66,6 +66,15 @@ const UpcomingEvents: React.FC = () => {
             VIEW EVENT CALENDAR
           </a>
           </div>
+        
+          {/* Transition Graphic */}
+          <div className="transition-graphic">
+            <img 
+              src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Group-1597885392.png" 
+              alt="Casa Larga Brand Elements" 
+              className="transition-image"
+            />
+          </div>
         </div>
       </div>
     </section>

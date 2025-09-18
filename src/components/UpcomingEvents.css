@@ -145,6 +145,20 @@
   text-align: center;
 }
 
+.transition-graphic {
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.transition-image {
+  width: 100%;
+  height: auto;
+  max-width: 1440px;
+  display: block;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .upcoming-events-section {
