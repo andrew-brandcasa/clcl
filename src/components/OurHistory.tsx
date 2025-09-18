@@ -35,7 +35,6 @@ const OurHistory: React.FC = () => {
         </div>
         </div>
       </div>
-      </div>
     </section>
   );
 };
