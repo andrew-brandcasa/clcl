@@ -1,25 +1,185 @@
-/* Wine on Wheels Section Styles */
-.custom-catalog-button {
-  display: inline-block;
-  background-color: transparent;
-  color: #92400e;
-  border: 2px solid #92400e;
-  padding: 14px 35px;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border-radius: 0;
+.wine-on-wheels-section {
+  padding: 96px 0;
+  background-color: var(--ast-global-color-4);
 }
 
-.custom-catalog-button:hover {
-  background-color: #92400e;
-  color: white;
-  transform: translateY(-2px);
+.wow-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
-.button-content-wrapper {
+.wow-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.wow-image {
+  background-color: var(--cream);
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trailer-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.wow-info {
+  max-width: 100%;
+}
+
+.wow-info .section-subtitle {
   display: block;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 18px;
+  color: var(--brown-primary);
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.wow-info .section-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 36px;
+  color: var(--brown-dark);
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.wow-info .section-description {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: var(--ast-global-color-3);
+}
+
+.wow-process {
+  margin-bottom: 40px;
+}
+
+.accordion-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.accordion-item.active {
+  border-color: var(--brown-primary);
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 20px;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: #f8f9fa;
+}
+
+.accordion-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--brown-dark);
+}
+
+.accordion-icon {
+  color: var(--brown-primary);
+  transition: transform 0.3s ease;
+}
+
+.accordion-icon.rotated {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-content.open {
+  max-height: 200px;
+  padding: 0 20px 20px;
+}
+
+.accordion-content p {
+  margin: 0;
+  color: var(--ast-global-color-3);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .wine-on-wheels-section {
+    padding: 64px 0;
+  }
+  
+  .wow-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .wow-info {
+    max-width: 100%;
+  }
+  
+  .wow-info .section-title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wine-on-wheels-section {
+    padding: 48px 0;
+  }
+  
+  .wow-image {
+    padding: 30px;
+  }
+  
+  .wow-info .section-title {
+    font-size: 28px;
+  }
+  
+  .wow-info .section-subtitle {
+    font-size: 16px;
+  }
+  
+  .accordion-header {
+    padding: 15px;
+  }
+  
+  .accordion-title {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wow-image {
+    padding: 20px;
+  }
+  
+  .accordion-content.open {
+    padding: 0 15px 15px;
+  }
 }

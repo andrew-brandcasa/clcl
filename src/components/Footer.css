@@ -1,59 +1,222 @@
-/* Footer Section Styles */
-.footer-section {
-  background-color: #1f2937;
-  color: white;
-  padding: 64px 0 32px 0;
+.brand-section {
+  background-color: var(--ast-global-color-4);
+  padding: 40px 0;
 }
 
-.footer-logo {
-  height: 60px;
-  width: auto;
-  filter: brightness(0) invert(1);
+.brand-image {
+  width: 100%;
+  height: auto;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: block;
 }
 
-.footer-heading {
-  font-family: 'Libre Baskerville', serif;
+.site-footer {
+  background-color: white;
+  color: var(--ast-global-color-3);
+  padding: 60px 0 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 60px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.footer-logo img {
+  width: 228px;
+  height: auto;
+}
+
+.footer-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+.footer-column h5 {
+  color: var(--brown-primary);
   font-size: 18px;
   font-weight: 600;
-  color: white;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
-.footer-link {
-  color: #d1d5db;
+.links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.link-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link-column ul li {
+  margin-bottom: 8px;
+}
+
+.link-column ul li a {
+  color: var(--ast-global-color-3);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.footer-link:hover {
-  color: #f59e0b;
+.link-column ul li a:hover {
+  color: var(--brown-primary);
 }
 
-.social-link {
+.hours-subtitle {
+  font-size: 14px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.hours-info {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: #374151;
-  color: #d1d5db;
-  border-radius: 50%;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.hours-item h6 {
+  color: var(--brown-primary);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.hours-item p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.contact-item svg {
+  color: var(--brown-primary);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.contact-item a {
+  color: var(--ast-global-color-3);
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: var(--brown-primary);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--ast-global-color-7);
+  padding-top: 30px;
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  color: var(--ast-global-color-3);
+  padding: 8px;
+  border-radius: 50%;
+  background: var(--ast-global-color-5);
   transition: all 0.3s ease;
 }
 
-.social-link:hover {
-  background-color: #f59e0b;
-  color: white;
+.social-links a:hover {
+  background: var(--brown-primary);
   transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
-  .footer-section {
-    padding: 48px 0 24px 0;
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
   }
   
-  .footer-logo {
-    height: 50px;
+  .footer-info {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .footer-logo img {
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 40px 0 20px;
+  }
+  
+  .footer-info {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .links-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .contact-item {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-section {
+    padding: 20px 0;
+  }
+  
+  .footer-logo img {
+    width: 150px;
+  }
+  
+  .footer-column h5 {
+    font-size: 16px;
   }
 }

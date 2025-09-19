@@ -1,41 +1,164 @@
-/* Upcoming Events Section Styles */
-.section-padding-bottom-curve {
-  padding-bottom: 120px;
+/* Section wrapper */
+.upcoming-events-section {
+  padding-bottom: 180px;     /* extra bottom to make room for curve overlap */
+  background-color: #F8F6F6; /* section bg */
+  position: relative;
+  overflow: hidden;          /* hides the top of the illustration if needed */
+}
+
+/* Full-bleed illustration behind content */
+.transition-graphic {
+  position: absolute;
+  left: 50%;
+  bottom: -10px;             /* nudge to taste */
+  transform: translateX(-50%);
+  width: 100vw;              /* BLEED across browser */
+  height: 320px;
+  pointer-events: none;
+  z-index: 0;                /* behind content */
+}
+
+.transition-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  opacity: 0.25;             /* more visible watermark */
+  filter: grayscale(1);
+}
+
+/* Bottom curve */
+.section-curve {
+  position: absolute;
+  left: 50%;
+  bottom: -1px;              /* overlap to avoid hairline seam */
+  transform: translateX(-50%);
+  width: 100vw;              /* full-bleed shape */
+  z-index: 1;                /* above illustration, below next section */
+}
+
+/* Header polish to match your Figma style */
+.section-header { 
+  text-align: center; 
+  margin-bottom: 56px; 
+}
+
+.section-header .section-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 42px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brown-dark);
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.section-header .section-subtitle {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  letter-spacing: .18em;
+  color: var(--brown-primary);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.section-header .section-description {
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: var(--ast-global-color-3);
+}
+
+.event-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.event-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 18px;
+  color: var(--brown-dark);
+  margin-bottom: 10px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.event-date {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 14px;
+  color: var(--brown-primary);
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.event-button {
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  border-left: 4px solid var(--brown-dark);
+  border-radius: 0px;
+  background-color: rgba(158, 132, 92, 0.61);
+  color: black;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.event-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--brown-dark);
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.event-button:hover::before {
+  left: 0;
+}
+
+.event-button:hover {
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .upcoming-events-section { padding-bottom: 120px; }
 }
 
 @media (max-width: 768px) {
-  .section-padding-bottom-curve {
-    padding-bottom: 80px;
+  .upcoming-events-section { padding-bottom: 100px; }
+  
+  .section-header .section-title {
+    font-size: 28px;
+  }
+  
+  .section-header .section-subtitle {
+    font-size: 16px;
+  }
+  
+  .event-image {
+    height: 180px;
   }
 }
 
 @media (max-width: 480px) {
-  .section-padding-bottom-curve {
-    padding-bottom: 64px;
+  .event-image {
+    height: 160px;
   }
-}
-
-.custom-catalog-button {
-  display: inline-block;
-  background-color: transparent;
-  color: #92400e;
-  border: 2px solid #92400e;
-  padding: 14px 35px;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border-radius: 0;
-}
-
-.custom-catalog-button:hover {
-  background-color: #92400e;
-  color: white;
-  transform: translateY(-2px);
-}
-
-.button-content-wrapper {
-  display: block;
+  
+  .event-title {
+    font-size: 16px;
+  }
 }
