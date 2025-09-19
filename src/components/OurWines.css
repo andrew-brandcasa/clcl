@@ -7,8 +7,8 @@
 /* Illustration refinement */
 .illustration-bg {
   background-position: bottom center;
-  background-size: 1800px auto;
-  opacity: 0.08;
+  background-size: 1800px auto;      /* wider so it spans edges like figma */
+  opacity: 0.08;                     /* lighter, watermark feel */
 }
 
 .wines-container {
@@ -105,7 +105,7 @@
 
 /* Card style refinements */
 .wine-card {
-  background-color: rgba(250,248,244,0.9);
+  background-color: rgba(250,248,244,0.9); /* lighter cream */
   border-radius: 20px;
   padding: 1.5rem;
   display: flex;
@@ -231,7 +231,6 @@
     font-size: 1.875rem;
   }
 }
-
 .wine-actions {
   display: flex;
   align-items: center;
