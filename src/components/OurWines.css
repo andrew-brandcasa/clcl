@@ -319,6 +319,7 @@
 @media (max-width: 1024px) {
   .our-wines-section {
     padding: 64px 0;
+    border-bottom: 6px solid #f0f0f0;
     border-bottom: 6px solid #f8f9fa;
   }
   

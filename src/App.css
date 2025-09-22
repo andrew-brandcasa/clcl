@@ -23,12 +23,6 @@ body {
 
 /* Mobile Section Separation */
 @media (max-width: 768px) {
-  .section-separator {
-    height: 24px;
-    background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 50%, #f8f9fa 100%);
-    margin: 0;
-  }
-  
   /* Add breathing room between major sections */
   section + section {
     position: relative;

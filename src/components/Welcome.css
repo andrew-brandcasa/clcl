@@ -93,6 +93,7 @@
 @media (max-width: 1024px) {
   .welcome-section {
     padding: 64px 0;
+    border-bottom: 6px solid #f8f9fa;
   }
   
   .welcome-navigation {
@@ -104,6 +105,7 @@
   .welcome-section {
     padding: 48px 0;
     border-bottom: 6px solid #f8f9fa;
+    margin-bottom: 24px;
   }
   
   .welcome-description {
