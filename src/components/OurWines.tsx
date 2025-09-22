@@ -52,7 +52,7 @@ const OurWines: React.FC = () => {
       <div
         className="absolute inset-0 bg-no-repeat bg-center bg-cover"
         style={{
-          backgroundImage: "url('/Frame 1618873355.png')",
+          backgroundImage: "url('/frame-1618873355.png')",
           backgroundPosition: "bottom center",
           backgroundSize: "1800px auto",
           opacity: 0.3,
@@ -65,7 +65,7 @@ const OurWines: React.FC = () => {
       <div
         className="absolute inset-0 bg-no-repeat bg-center bg-cover"
         style={{
-          backgroundImage: "url('/Frame 1618873355.png')",
+          backgroundImage: "url('/frame-1618873355.png')",
           backgroundPosition: "bottom center",
           backgroundSize: "1800px auto",
           opacity: 0.08,
