@@ -4,7 +4,6 @@
   background-color: #F8F6F6; /* section bg */
   position: relative;
   overflow: hidden;          /* hides the top of the illustration if needed */
-  border-top: 8px solid #ddd;
 }
 
 /* Full-bleed illustration behind content */
@@ -74,15 +73,6 @@
   width: 100%;
   height: 200px;
   overflow: hidden;
-  position: relative;
-  z-index: 1;
-}
-
-.event-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }
 
 .event-title {
@@ -145,9 +135,7 @@
 /* Responsive */
 @media (max-width: 1024px) {
   .upcoming-events-section { padding-bottom: 120px; }
-  .upcoming-events-section { border-top: 6px solid #ddd; }
 }
-    border-top: 6px solid #ddd;
 
 @media (max-width: 768px) {
   .upcoming-events-section { padding-bottom: 100px; }
@@ -161,46 +149,16 @@
   }
   
   .event-image {
-    height: 200px;
-    padding-top: 48px;
-    margin-top: 24px;
-  }
-  
-  .section-header {
-    background: white;
-    padding: 32px 24px;
-    margin: 0 16px 40px;
-    border-radius: 20px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-  }
-  
-  .event-card {
-    margin: 0 16px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    height: 180px;
   }
 }
 
 @media (max-width: 480px) {
   .event-image {
-    height: 180px;
-    padding-top: 48px;
-    margin-top: 24px;
+    height: 160px;
   }
   
   .event-title {
     font-size: 16px;
   }
 }
-  
-  .section-header {
-    background: white;
-    padding: 32px 24px;
-    margin: 0 16px 40px;
-    border-radius: 20px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-  }
-  
-  .event-card {
-    margin: 0 16px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-  }

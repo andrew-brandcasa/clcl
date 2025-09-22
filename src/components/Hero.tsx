@@ -44,7 +44,6 @@ const Hero: React.FC = () => {
               
               <nav className="desktop-navigation-inline">
                 <ul className="nav-menu">
-                  <li><a href="/about">ABOUT</a></li>
                   <li><a href="#visit">VISIT US</a></li>
                   <li><a href="#shop">SHOP WINES</a></li>
                   <li><a href="#events">WINERY EVENTS</a></li>
@@ -93,7 +92,6 @@ const Hero: React.FC = () => {
           {isMobileMenuOpen && (
             <nav className="mobile-navigation">
               <ul className="mobile-nav-menu">
-                <li><a href="/about" onClick={toggleMobileMenu}>ABOUT</a></li>
                 <li><a href="#visit" onClick={toggleMobileMenu}>VISIT US</a></li>
                 <li><a href="#shop" onClick={toggleMobileMenu}>SHOP WINES</a></li>
                 <li><a href="#events" onClick={toggleMobileMenu}>WINERY EVENTS</a></li>
@@ -122,12 +120,7 @@ const Hero: React.FC = () => {
       {/* Scroll Indicator */}
       <div className="scroll-indicator">
         <button onClick={scrollToNext} aria-label="Scroll to next section">
-          <svg width="24" height="84" viewBox="0 0 24 84" fill="none" xmlns="http://www.w3.org/2000/svg">
-            {/* Vertical line */}
-            <line x1="12" y1="0" x2="12" y2="60" stroke="currentColor" strokeWidth="1" opacity="0.6"/>
-            {/* Arrow pointer */}
-            <path d="M12 84L6 72H18L12 84Z" fill="currentColor"/>
-          </svg>
+          <ChevronDown size={24} />
         </button>
       </div>
     </div>

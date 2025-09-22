@@ -1,7 +1,6 @@
 .wine-on-wheels-section {
   padding: 96px 0;
   background-color: var(--ast-global-color-4);
-  border-bottom: 8px solid #e8e8e8;
 }
 
 .wow-container {
@@ -132,8 +131,6 @@
 @media (max-width: 1024px) {
   .wine-on-wheels-section {
     padding: 64px 0;
-    border-bottom: 6px solid #e8e8e8;
-    border-bottom: 6px solid #e8e8e8;
   }
   
   .wow-content {
@@ -144,11 +141,6 @@
   
   .wow-info {
     max-width: 100%;
-    background: white;
-    padding: 32px 24px;
-    border-radius: 20px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    margin: 0 16px;
   }
   
   .wow-info .section-title {
@@ -159,14 +151,10 @@
 @media (max-width: 768px) {
   .wine-on-wheels-section {
     padding: 48px 0;
-    margin-bottom: 24px;
   }
   
   .wow-image {
     padding: 30px;
-    margin: 0 16px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
   }
   
   .wow-info .section-title {
