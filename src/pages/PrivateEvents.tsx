@@ -212,7 +212,7 @@ const PrivateEvents: React.FC = () => {
         <div 
           className="absolute inset-0 bg-no-repeat bg-center bg-cover opacity-8"
           style={{
-            backgroundImage: "url('/frame-1618873355.png')",
+            backgroundImage: "url('/Frame 1618873355.png')",
             backgroundPosition: "bottom center",
             backgroundSize: "100vw auto",
             filter: "grayscale(1)"
