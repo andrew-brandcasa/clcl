@@ -14,7 +14,7 @@ const About: React.FC = () => {
   return (
     <div className="about-page">
       {/* Hero Section */}
-      <section className="about-hero pt-28 pb-20">
+      <section className="about-hero">
         <div className="hero-background">
           <img 
             src="https://casalarga.casasite.com/wp-content/uploads/2025/08/7662debe55392745c26323d52af7183e2300478a.webp" 
@@ -28,19 +28,16 @@ const About: React.FC = () => {
         </div>
         
         <div className="hero-content">
-          <div className="container">
-            <div className="hero-text">
-              <span className="hero-kicker">ITALIAN HERITAGE</span>
-              <h1 className="hero-title">A FAMILY LEGACY OF WINEMAKING EXCELLENCE</h1>
-              <p className="hero-lead">
-                For more than five decades, Casa Larga has tended cool-climate vines on the hills of 
-                Fairport, New York, honoring Italian craft and Finger Lakes character with every vintage.
-              </p>
-            </div>
+          <div className="hero-text">
+            <span className="hero-kicker">ITALIAN HERITAGE</span>
+            <h1 className="hero-title">A FAMILY LEGACY OF WINEMAKING EXCELLENCE</h1>
+            <p className="hero-lead">
+              For more than five decades, Casa Larga has tended cool-climate vines on the hills of 
+              Fairport, New York, honoring Italian craft and Finger Lakes character with every vintage.
+            </p>
           </div>
         </div>
 
-        {/* Scroll Indicator */}
         <div className="scroll-indicator">
           <button onClick={scrollToNext} aria-label="Scroll to next section">
             <ChevronDown size={32} />
@@ -49,26 +46,24 @@ const About: React.FC = () => {
       </section>
 
       {/* Continuing a Legacy */}
-      <section id="continuing-legacy" className="py-20 md:py-20">
-        <div className="container">
+      <section id="continuing-legacy" className="section-wrapper">
+        <div className="content-wrapper">
           <div className="section-header">
             <h2 className="section-title">CONTINUING A LEGACY</h2>
-            <div className="section-content">
-              <p className="section-description">
-                Casa Larga began as a family dream and became a New York wine landmark. What started as a 
-                backyard passion grew into an estate winery known for inviting hospitality, meticulous cellar 
-                work, and wines that reflect place. Today the traditions that shaped our first bottles continue 
-                to guide our vineyards, our tasting room, and the way we welcome guests.
-              </p>
-            </div>
+            <p className="section-description">
+              Casa Larga began as a family dream and became a New York wine landmark. What started as a 
+              backyard passion grew into an estate winery known for inviting hospitality, meticulous cellar 
+              work, and wines that reflect place. Today the traditions that shaped our first bottles continue 
+              to guide our vineyards, our tasting room, and the way we welcome guests.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Italian Beginnings */}
-      <section className="py-20 md:py-20 vineyard-bg">
-        <div className="container">
-          <div className="two-column-section">
+      <section className="section-wrapper vineyard-bg">
+        <div className="content-wrapper">
+          <div className="two-column-layout">
             <div className="text-column">
               <h3 className="section-heading">ITALIAN BEGINNINGS</h3>
               <div className="text-content">
@@ -101,8 +96,8 @@ const About: React.FC = () => {
       </section>
 
       {/* Italian American Roots */}
-      <section className="py-20 md:py-20">
-        <div className="container">
+      <section className="section-wrapper">
+        <div className="content-wrapper">
           <div className="full-width-image-section">
             <div className="image-container">
               <img 
@@ -127,9 +122,9 @@ const About: React.FC = () => {
       </section>
 
       {/* The Winery Begins */}
-      <section className="py-20 md:py-20 vineyard-bg">
-        <div className="container">
-          <div className="two-column-section reverse">
+      <section className="section-wrapper vineyard-bg">
+        <div className="content-wrapper">
+          <div className="two-column-layout reverse">
             <div className="image-column">
               <div className="section-image-container">
                 <img 
@@ -162,13 +157,12 @@ const About: React.FC = () => {
           </div>
         </div>
         
-        {/* Curve divider */}
         <SectionCurve height={120} fill="#FFFFFF" />
       </section>
 
       {/* A New Era */}
-      <section className="py-20 md:py-20">
-        <div className="container">
+      <section className="section-wrapper">
+        <div className="content-wrapper">
           <div className="new-era-section">
             <div className="image-container">
               <img 
@@ -199,8 +193,8 @@ const About: React.FC = () => {
       </section>
 
       {/* Winemaking Philosophy */}
-      <section className="py-20 md:py-20 vineyard-bg">
-        <div className="container">
+      <section className="section-wrapper vineyard-bg">
+        <div className="content-wrapper">
           <div className="philosophy-cards">
             <div className="philosophy-card">
               <h4 className="card-title">WINEMAKING PHILOSOPHY</h4>
@@ -223,8 +217,8 @@ const About: React.FC = () => {
       </section>
 
       {/* Awards & Recognition */}
-      <section className="py-20 md:py-20">
-        <div className="container">
+      <section className="section-wrapper">
+        <div className="content-wrapper">
           <div className="awards-section">
             <h3 className="section-heading centered">AWARDS & RECOGNITION</h3>
             <div className="awards-grid">
@@ -271,8 +265,8 @@ const About: React.FC = () => {
       </section>
 
       {/* Footer CTA */}
-      <section className="py-16 cta-section">
-        <div className="container">
+      <section className="cta-section">
+        <div className="content-wrapper">
           <div className="footer-cta">
             <a href="#visit" className="elementor-button">
               PLAN YOUR VISIT
