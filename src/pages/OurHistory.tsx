@@ -174,7 +174,7 @@ const OurHistory: React.FC = () => {
               THE BEGINNING
             </span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight font-serif mb-8">
-              ITALIAN BEGINNINGS
+              <span className="text-shadow-strong">ITALIAN BEGINNINGS</span>
             </h2>
             <div className="max-w-2xl mx-auto space-y-6">
               <p className="text-xl md:text-2xl leading-relaxed mb-6 font-light">
