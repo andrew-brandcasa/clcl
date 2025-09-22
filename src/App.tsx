@@ -10,6 +10,7 @@ import WineOnWheels from './components/WineOnWheels';
 import UpcomingEvents from './components/UpcomingEvents';
 import Footer from './components/Footer';
 import About from './pages/About';
+import PrivateEvents from './pages/PrivateEvents';
 import './App.css';
 
 const HomePage = () => (
@@ -39,6 +40,14 @@ function App() {
               <Header />
               <main>
                 <About />
+              </main>
+            </>
+          } />
+          <Route path="/private-events" element={
+            <>
+              <Header />
+              <main>
+                <PrivateEvents />
               </main>
             </>
           } />
