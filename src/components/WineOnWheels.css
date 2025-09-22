@@ -1,1 +1,25 @@
 /* Wine on Wheels Section Styles */
+.custom-catalog-button {
+  display: inline-block;
+  background-color: transparent;
+  color: #92400e;
+  border: 2px solid #92400e;
+  padding: 14px 35px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 0;
+}
+
+.custom-catalog-button:hover {
+  background-color: #92400e;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.button-content-wrapper {
+  display: block;
+}
