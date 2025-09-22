@@ -1,42 +1,222 @@
-import React from 'react';
+.brand-section {
+  background-color: var(--ast-global-color-4);
+  padding: 40px 0;
+}
 
-const OurHistory: React.FC = () => {
-  return (
-    <section id="history" className="section relative">
-      <div className="container max-w-content mx-auto px-6 md:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center">
-        {/* Copy */}
-          <div className="space-y-6 md:space-y-8 pr-0 lg:pr-8 xl:pr-12">
-          <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider">OUR HISTORY</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900">New York's 21st Winery</h2>
-          <p className="text-base md:text-lg leading-relaxed text-gray-600">
-            In 1974, our founder planted the first vines at Casa Larga, symbolizing his dedication 
-            to his Italian Heritage. By 1978, our initial vintages earned rewards and we became 
-            New York's 21st licensed winery.
-          </p>
-          <div className="mt-6 flex gap-3">
-            <a href="#" className="custom-catalog-button">
-              <span className="button-content-wrapper">
-              ABOUT CASA LARGA
-              </span>
-            </a>
-          </div>
-        </div>
-        
-        {/* Media */}
-          <div className="pl-0 lg:pl-8 xl:pl-12">
-          <div className="relative rounded-2xl overflow-hidden">
-            <img 
-              src="https://casalarga.casasite.com/wp-content/uploads/2025/08/mr-casa.png" 
-              alt="Casa Larga Founder" 
-              className="aspect-[16/10] w-full object-cover"
-            />
-          </div>
-        </div>
-        </div>
-      </div>
-    </section>
-  );
-};
+.brand-image {
+  width: 100%;
+  height: auto;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: block;
+}
 
-export default OurHistory;
+.site-footer {
+  background-color: white;
+  color: var(--ast-global-color-3);
+  padding: 60px 0 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 60px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.footer-logo img {
+  width: 228px;
+  height: auto;
+}
+
+.footer-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+.footer-column h5 {
+  color: var(--brown-primary);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.link-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link-column ul li {
+  margin-bottom: 8px;
+}
+
+.link-column ul li a {
+  color: var(--ast-global-color-3);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link-column ul li a:hover {
+  color: var(--brown-primary);
+}
+
+.hours-subtitle {
+  font-size: 14px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.hours-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.hours-item h6 {
+  color: var(--brown-primary);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.hours-item p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.contact-item svg {
+  color: var(--brown-primary);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.contact-item a {
+  color: var(--ast-global-color-3);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: var(--brown-primary);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--ast-global-color-7);
+  padding-top: 30px;
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  color: var(--ast-global-color-3);
+  padding: 8px;
+  border-radius: 50%;
+  background: var(--ast-global-color-5);
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: var(--brown-primary);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .footer-info {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .footer-logo img {
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 40px 0 20px;
+  }
+  
+  .footer-info {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .links-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .contact-item {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-section {
+    padding: 20px 0;
+  }
+  
+  .footer-logo img {
+    width: 150px;
+  }
+  
+  .footer-column h5 {
+    font-size: 16px;
+  }
+}

@@ -1,42 +1,173 @@
-import React from 'react';
+/* Section wrapper */
+.upcoming-events-section {
+  padding-bottom: 180px;     /* extra bottom to make room for curve overlap */
+  background-color: #F8F6F6; /* section bg */
+  position: relative;
+  overflow: hidden;          /* hides the top of the illustration if needed */
+}
 
-const OurHistory: React.FC = () => {
-  return (
-    <section id="history" className="section relative">
-      <div className="container max-w-content mx-auto px-6 md:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center">
-        {/* Copy */}
-          <div className="space-y-6 md:space-y-8 pr-0 lg:pr-8 xl:pr-12">
-          <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider">OUR HISTORY</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900">New York's 21st Winery</h2>
-          <p className="text-base md:text-lg leading-relaxed text-gray-600">
-            In 1974, our founder planted the first vines at Casa Larga, symbolizing his dedication 
-            to his Italian Heritage. By 1978, our initial vintages earned rewards and we became 
-            New York's 21st licensed winery.
-          </p>
-          <div className="mt-6 flex gap-3">
-            <a href="#" className="custom-catalog-button">
-              <span className="button-content-wrapper">
-              ABOUT CASA LARGA
-              </span>
-            </a>
-          </div>
-        </div>
-        
-        {/* Media */}
-          <div className="pl-0 lg:pl-8 xl:pl-12">
-          <div className="relative rounded-2xl overflow-hidden">
-            <img 
-              src="https://casalarga.casasite.com/wp-content/uploads/2025/08/mr-casa.png" 
-              alt="Casa Larga Founder" 
-              className="aspect-[16/10] w-full object-cover"
-            />
-          </div>
-        </div>
-        </div>
-      </div>
-    </section>
-  );
-};
+/* Full-bleed illustration behind content */
+.transition-graphic {
+  position: absolute;
+  left: 50%;
+  bottom: -10px;             /* nudge to taste */
+  transform: translateX(-50%);
+  width: 100vw;              /* BLEED across browser */
+  height: 320px;
+  pointer-events: none;
+  z-index: 0;                /* behind content */
+}
 
-export default OurHistory;
+.transition-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  opacity: 0.25;             /* more visible watermark */
+  filter: grayscale(1);
+}
+
+/* Bottom curve */
+.section-curve {
+  position: absolute;
+  left: 50%;
+  bottom: -1px;              /* overlap to avoid hairline seam */
+  transform: translateX(-50%);
+  width: 100vw;              /* full-bleed shape */
+  z-index: 1;                /* above illustration, below next section */
+}
+
+/* Header polish to match your Figma style */
+.section-header { 
+  text-align: center; 
+  margin-bottom: 56px; 
+}
+
+.section-header .section-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 42px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brown-dark);
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.section-header .section-subtitle {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  letter-spacing: .18em;
+  color: var(--brown-primary);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.section-header .section-description {
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: var(--ast-global-color-3);
+}
+
+.event-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.event-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 18px;
+  color: var(--brown-dark);
+  margin-bottom: 10px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.event-date {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 14px;
+  color: var(--brown-primary);
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.event-button {
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  border-left: 4px solid var(--brown-dark);
+  border-radius: 0px;
+  background-color: rgba(158, 132, 92, 0.61);
+  color: black;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.event-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--brown-dark);
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.event-button:hover::before {
+  left: 0;
+}
+
+.event-button:hover {
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .upcoming-events-section { padding-bottom: 120px; }
+}
+
+@media (max-width: 768px) {
+  .upcoming-events-section { padding-bottom: 100px; }
+  
+  .section-header .section-title {
+    font-size: 28px;
+  }
+  
+  .section-header .section-subtitle {
+    font-size: 16px;
+  }
+  
+  .event-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-image {
+    height: 180px;
+  }
+  
+  .event-title {
+    font-size: 16px;
+  }
+}
