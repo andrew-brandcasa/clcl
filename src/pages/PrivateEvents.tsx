@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, MapPin, Users, Wine } from 'lucide-react';
+import { ChevronDown, MapPin, Users, Wine, Mail } from 'lucide-react';
 import PrivateEventsHero from '../components/PrivateEventsHero';
 
 const PrivateEvents: React.FC = () => {
@@ -37,6 +37,59 @@ const PrivateEvents: React.FC = () => {
   return (
     <div className="private-events-page">
       <PrivateEventsHero />
+
+      {/* Let Us Host You - Welcome section style */}
+      <section id="private-events-content" className="py-20 md:py-24 lg:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+          <div className="flex justify-center items-center mb-8 md:mb-12">
+            <img src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Stamp.png" alt="Casa Larga Stamp" className="w-[100px] h-[100px]" />
+          </div>
+          
+          <h2 className="text-lg md:text-xl font-medium text-amber-900 uppercase tracking-widest text-center mb-8 md:mb-12">
+            LET US HOST YOU
+          </h2>
+          
+          <div className="max-w-3xl mx-auto mb-16">
+            <p className="text-base md:text-lg leading-relaxed text-gray-600 text-center">
+              Casa Larga provides the perfect backdrop for your most important celebrations. With our stunning 
+              vineyard views, elegant facilities, and award-winning wines, we create unforgettable experiences 
+              for weddings, corporate events, and special occasions.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            <div className="text-center space-y-4">
+              <div className="flex justify-center">
+                <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center">
+                  <Mail className="w-8 h-8 text-amber-700" />
+                </div>
+              </div>
+              <h3 className="text-xl md:text-2xl font-serif text-amber-900 uppercase tracking-wide">BREATHTAKING SETTING</h3>
+              <p className="text-gray-600">Panoramic vineyard views and beautifully landscaped grounds</p>
+            </div>
+            
+            <div className="text-center space-y-4">
+              <div className="flex justify-center">
+                <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center">
+                  <Users className="w-8 h-8 text-amber-700" />
+                </div>
+              </div>
+              <h3 className="text-xl md:text-2xl font-serif text-amber-900 uppercase tracking-wide">FLEXIBLE SPACES</h3>
+              <p className="text-gray-600">Indoor and outdoor venues to accommodate 50-300 guests</p>
+            </div>
+            
+            <div className="text-center space-y-4">
+              <div className="flex justify-center">
+                <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center">
+                  <Wine className="w-8 h-8 text-amber-700" />
+                </div>
+              </div>
+              <h3 className="text-xl md:text-2xl font-serif text-amber-900 uppercase tracking-wide">AWARD-WINNING WINES</h3>
+              <p className="text-gray-600">Exclusive access to our complete wine collection</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Let Us Host You - Welcome section style */}
       <section id="private-events-content" className="py-20 md:py-24 lg:py-32 bg-white">
