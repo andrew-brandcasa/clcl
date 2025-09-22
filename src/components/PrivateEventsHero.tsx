@@ -1,61 +1,58 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ShoppingCart, Menu, X, ChevronDown } from 'lucide-react';
-import './Hero.css';
+import './PrivateEventsHero.css';
 
-const Hero: React.FC = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+const PrivateEventsHero: React.FC = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   const scrollToNext = () => {
-    const nextSection = document.getElementById('down');
+    const nextSection = document.getElementById('private-events-content');
     if (nextSection) {
       nextSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
-    <div className="hero-section">
-      {/* Video Background */}
-      <video
-        className="hero-video"
-        autoPlay
-        muted
-        playsInline
-        loop
-        src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Casa-Larga-Video-1.mp4"
+    <section className="private-events-hero">
+      {/* Background Image */}
+      <img
+        className="private-events-hero-bg"
+        src="https://images.pexels.com/photos/1407846/pexels-photo-1407846.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+        alt="Private events at Casa Larga"
       />
 
       {/* Desktop Header */}
-      <header className="desktop-header">
+      <header className="private-events-header">
         <div className="container">
-          <div className="header-content">
-            <div className="header-left" />
-            <div className="header-center">
+          <div className="private-events-header-content">
+            <div className="private-events-header-left" />
+            <div className="private-events-header-center">
               <a href="/">
                 <img
                   src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Logo.svg"
                   alt="Casa Larga Logo"
-                  className="logo"
+                  className="private-events-logo"
                 />
               </a>
               
-              <nav className="desktop-navigation-inline">
-                <ul className="nav-menu">
+              <nav className="private-events-navigation">
+                <ul className="private-events-nav-menu">
                   <li><a href="/about">ABOUT</a></li>
                   <li><a href="#visit">VISIT US</a></li>
                   <li><a href="#shop">SHOP WINES</a></li>
                   <li><a href="#events">WINERY EVENTS</a></li>
-                  <li><a href="/private-events">PRIVATE EVENTS</a></li>
+                  <li><a href="/private-events" className="active">PRIVATE EVENTS</a></li>
                 </ul>
               </nav>
             </div>
-            <div className="header-right">
-              <a href="/cart" className="cart-link">
+            <div className="private-events-header-right">
+              <a href="/cart" className="private-events-cart-link">
                 <ShoppingCart size={24} />
-                <span className="cart-count">0</span>
+                <span className="private-events-cart-count">0</span>
               </a>
             </div>
           </div>
@@ -63,25 +60,25 @@ const Hero: React.FC = () => {
       </header>
 
       {/* Mobile Header */}
-      <header className="mobile-header">
+      <header className="private-events-mobile-header">
         <div className="container">
-          <div className="mobile-header-content">
-            <div className="mobile-logo">
+          <div className="private-events-mobile-header-content">
+            <div className="private-events-mobile-logo">
               <a href="/">
                 <img
                   src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Logo.svg"
                   alt="Casa Larga Logo"
-                  className="logo"
+                  className="private-events-logo"
                 />
               </a>
             </div>
-            <div className="mobile-controls">
-              <a href="/cart" className="cart-link">
+            <div className="private-events-mobile-controls">
+              <a href="/cart" className="private-events-cart-link">
                 <ShoppingCart size={24} />
-                <span className="cart-count">0</span>
+                <span className="private-events-cart-count">0</span>
               </a>
               <button
-                className="mobile-menu-toggle"
+                className="private-events-mobile-menu-toggle"
                 onClick={toggleMobileMenu}
                 aria-label="Toggle menu"
               >
@@ -91,13 +88,13 @@ const Hero: React.FC = () => {
           </div>
 
           {isMobileMenuOpen && (
-            <nav className="mobile-navigation">
-              <ul className="mobile-nav-menu">
+            <nav className="private-events-mobile-navigation">
+              <ul className="private-events-mobile-nav-menu">
                 <li><a href="/about" onClick={toggleMobileMenu}>ABOUT</a></li>
                 <li><a href="#visit" onClick={toggleMobileMenu}>VISIT US</a></li>
                 <li><a href="#shop" onClick={toggleMobileMenu}>SHOP WINES</a></li>
                 <li><a href="#events" onClick={toggleMobileMenu}>WINERY EVENTS</a></li>
-                <li><a href="/private-events" onClick={toggleMobileMenu}>PRIVATE EVENTS</a></li>
+                <li><a href="/private-events" className="active" onClick={toggleMobileMenu}>PRIVATE EVENTS</a></li>
               </ul>
             </nav>
           )}
@@ -105,22 +102,20 @@ const Hero: React.FC = () => {
       </header>
 
       {/* Hero Content */}
-      <div className="hero-content">
+      <div className="private-events-hero-content">
         <div className="container">
-          <div className="hero-text">
-            <span className="hero-eyebrow">ITALIAN HERITAGE</span>
-            <h1 className="hero-title">
-              A LEGACY OF ITALIAN WINEMAKING IN NEW YORK
+          <div className="private-events-hero-text">
+            <span className="private-events-hero-eyebrow">WHERE MEMORIES ARE MADE</span>
+            <h1 className="private-events-hero-title">
+              HOST YOUR PRIVATE<br />
+              EVENT AT CASA LARGA
             </h1>
-            <p className="hero-subtitle">
-              Celebrating 51 years from graft to glass.
-            </p>
           </div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="scroll-indicator">
+      <div className="private-events-scroll-indicator">
         <button onClick={scrollToNext} aria-label="Scroll to next section">
           <svg width="24" height="84" viewBox="0 0 24 84" fill="none" xmlns="http://www.w3.org/2000/svg">
             {/* Vertical line */}
@@ -130,8 +125,8 @@ const Hero: React.FC = () => {
           </svg>
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Hero;
+export default PrivateEventsHero;

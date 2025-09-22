@@ -1,42 +1,29 @@
 import React from 'react';
+import './OurVenue.css';
 
-const OurHistory: React.FC = () => {
+const OurVenue: React.FC = () => {
   return (
-    <section id="history" className="section relative">
-      <div className="container max-w-content mx-auto px-6 md:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center">
-        {/* Copy */}
-          <div className="space-y-6 md:space-y-8 pr-0 lg:pr-8 xl:pr-12">
-          <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider">OUR HISTORY</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900">New York's 21st Winery</h2>
-          <p className="text-base md:text-lg leading-relaxed text-gray-600">
-            In 1974, our founder planted the first vines at Casa Larga, symbolizing his dedication 
-            to his Italian Heritage. By 1978, our initial vintages earned rewards and we became 
-            New York's 21st licensed winery.
+    <section id="venu" className="py-16 md:py-24 lg:py-28">
+      <div className="venue-content">
+        <div className="venue-text">
+          <span className="text-sm md:text-base font-medium text-white uppercase tracking-wider mb-4 block">OUR VENUE</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight font-serif text-white mb-6">
+            BELLA VISTA AT<br />
+            CASA LARGA
+          </h1>
+          <p className="text-base md:text-lg leading-relaxed text-white mb-8">
+            With breathtaking views (Bella Vista means "Beautiful View" in Italian), our venue hosts up to 
+            300 guests for weddings, corporate gatherings, and social events. The winery's timeless elegance 
+            features dramatic floor-to-ceiling windows, vaulted ceilings, and a wraparound deck. Our open, 
+            pillar-free floor plan offers complete flexibility to bring your vision to life.
           </p>
-          <div className="mt-6 flex gap-3">
-            <a href="#" className="custom-catalog-button">
-              <span className="button-content-wrapper">
-              ABOUT CASA LARGA
-              </span>
-            </a>
-          </div>
-        </div>
-        
-        {/* Media */}
-          <div className="pl-0 lg:pl-8 xl:pl-12">
-          <div className="relative rounded-2xl overflow-hidden">
-            <img 
-              src="https://casalarga.casasite.com/wp-content/uploads/2025/08/mr-casa.png" 
-              alt="Casa Larga Founder" 
-              className="aspect-[16/10] w-full object-cover"
-            />
-          </div>
-        </div>
+          <a href="#" className="venue-button">
+            BOOK A PRIVATE EVENT
+          </a>
         </div>
       </div>
     </section>
   );
 };
 
-export default OurHistory;
+export default OurVenue;
