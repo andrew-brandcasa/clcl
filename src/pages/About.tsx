@@ -1,8 +1,14 @@
 import React from 'react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, ShoppingCart, Menu, X } from 'lucide-react';
 import './About.css';
 
 const About: React.FC = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   const scrollToNext = () => {
     const nextSection = document.getElementById('continuing-legacy');
     if (nextSection) {
@@ -14,6 +20,99 @@ const About: React.FC = () => {
     <div className="about-page">
       {/* Hero Section - Same as homepage */}
       <section className="relative h-screen overflow-hidden flex flex-col">
+        {/* Desktop Header */}
+        <header className="absolute top-0 left-0 w-full z-10 bg-transparent pt-8">
+          <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+            <div className="flex items-center justify-center relative pb-6 mb-6">
+              {/* Decorative lines */}
+              <div className="absolute left-0 right-0 top-1/2 h-px bg-white/30"></div>
+              
+              <div className="absolute left-0 top-1/2 transform -translate-y-1/2">
+                {/* Left side content if needed */}
+              </div>
+              
+              <div className="bg-transparent px-4 z-10 flex flex-col items-center gap-3">
+                <a href="/">
+                  <img
+                    src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Logo.svg"
+                    alt="Casa Larga Logo"
+                    className="h-20 w-auto filter brightness-0 invert"
+                  />
+                </a>
+                
+                <nav className="hidden lg:block">
+                  <ul className="flex items-center justify-center gap-20">
+                    <li><a href="/about" className="text-white font-sans font-normal text-xs uppercase tracking-[2px] transition-opacity hover:opacity-70">ABOUT</a></li>
+                    <li><a href="#visit" className="text-white font-sans font-normal text-xs uppercase tracking-[2px] transition-opacity hover:opacity-70">VISIT US</a></li>
+                    <li><a href="#shop" className="text-white font-sans font-normal text-xs uppercase tracking-[2px] transition-opacity hover:opacity-70">SHOP WINES</a></li>
+                    <li><a href="#events" className="text-white font-sans font-normal text-xs uppercase tracking-[2px] transition-opacity hover:opacity-70">WINERY EVENTS</a></li>
+                    <li><a href="/private-events" className="text-white font-sans font-normal text-xs uppercase tracking-[2px] transition-opacity hover:opacity-70">PRIVATE EVENTS</a></li>
+                  </ul>
+                </nav>
+              </div>
+              
+              <div className="absolute right-0 top-1/2 transform -translate-y-1/2 z-30">
+                <a href="/cart" className="relative flex items-center text-white p-2">
+                  <ShoppingCart size={24} />
+                  <span className="absolute -top-1 -right-1 bg-amber-700 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold">0</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        {/* Mobile Header */}
+        <header className="lg:hidden absolute top-0 left-0 w-full z-10 bg-transparent p-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex items-center justify-between">
+              <div>
+                <a href="/">
+                  <img
+                    src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Logo.svg"
+                    alt="Casa Larga Logo"
+                    className="h-15 w-auto filter brightness-0 invert"
+                  />
+                </a>
+              </div>
+              <div className="flex items-center gap-4">
+                <a href="/cart" className="relative flex items-center text-white p-2">
+                  <ShoppingCart size={24} />
+                  <span className="absolute -top-1 -right-1 bg-amber-700 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold">0</span>
+                </a>
+                <button
+                  className="text-white p-1"
+                  onClick={toggleMobileMenu}
+                  aria-label="Toggle menu"
+                >
+                  {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                </button>
+              </div>
+            </div>
+
+            {isMobileMenuOpen && (
+              <nav className="mt-4 bg-black/90 rounded-lg border-t border-white/20">
+                <ul className="py-2">
+                  <li className="border-b border-white/10 last:border-b-0">
+                    <a href="/about" onClick={toggleMobileMenu} className="block px-5 py-4 text-white font-sans font-medium text-sm uppercase tracking-wider transition-colors hover:bg-white/10">ABOUT</a>
+                  </li>
+                  <li className="border-b border-white/10 last:border-b-0">
+                    <a href="#visit" onClick={toggleMobileMenu} className="block px-5 py-4 text-white font-sans font-medium text-sm uppercase tracking-wider transition-colors hover:bg-white/10">VISIT US</a>
+                  </li>
+                  <li className="border-b border-white/10 last:border-b-0">
+                    <a href="#shop" onClick={toggleMobileMenu} className="block px-5 py-4 text-white font-sans font-medium text-sm uppercase tracking-wider transition-colors hover:bg-white/10">SHOP WINES</a>
+                  </li>
+                  <li className="border-b border-white/10 last:border-b-0">
+                    <a href="#events" onClick={toggleMobileMenu} className="block px-5 py-4 text-white font-sans font-medium text-sm uppercase tracking-wider transition-colors hover:bg-white/10">WINERY EVENTS</a>
+                  </li>
+                  <li className="border-b border-white/10 last:border-b-0">
+                    <a href="/private-events" onClick={toggleMobileMenu} className="block px-5 py-4 text-white font-sans font-medium text-sm uppercase tracking-wider transition-colors hover:bg-white/10">PRIVATE EVENTS</a>
+                  </li>
+                </ul>
+              </nav>
+            )}
+          </div>
+        </header>
+
         <div
           className="absolute inset-0 w-full h-full bg-cover bg-center z-[-2]"
           style={{
