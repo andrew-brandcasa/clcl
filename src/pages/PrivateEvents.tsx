@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, MapPin, Users, Wine } from 'lucide-react';
+import PrivateEventsHero from '../components/PrivateEventsHero';
 
 const PrivateEvents: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -35,43 +36,10 @@ const PrivateEvents: React.FC = () => {
 
   return (
     <div className="private-events-page">
-      {/* Hero Section - Same as homepage */}
-      <section className="relative h-screen overflow-hidden flex flex-col">
-        <video
-          className="absolute inset-0 w-full h-full object-cover z-[-2]"
-          autoPlay
-          muted
-          playsInline
-          loop
-          poster="https://casalarga.casasite.com/wp-content/uploads/2025/08/7662debe55392745c26323d52af7183e2300478a.webp"
-        >
-          <source src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Casa-Larga-Video-1.mp4" type="video/mp4" />
-        </video>
-
-        <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent z-[-1]"></div>
-
-        <div className="absolute inset-0 grid place-items-center z-[5] text-center px-8 md:px-12 lg:px-16">
-          <div className="max-w-4xl w-full mx-auto">
-            <div className="flex flex-col gap-6 md:gap-8">
-              <span className="font-serif font-normal text-[15px] tracking-[0.3em] uppercase opacity-85 text-white">
-                WHERE MEMORIES ARE MADE
-              </span>
-              <h1 className="font-serif font-normal text-[clamp(28px,5.2vw,56px)] leading-[1.15] uppercase text-shadow-sm text-white max-w-[25ch] mx-auto tracking-[0.12em]">
-                HOST YOUR PRIVATE EVENT AT CASA LARGA
-              </h1>
-            </div>
-          </div>
-        </div>
-
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10">
-          <button onClick={scrollToNext} aria-label="Scroll to next section" className="text-white opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300 animate-bounce">
-            <ChevronDown size={24} />
-          </button>
-        </div>
-      </section>
+      <PrivateEventsHero />
 
       {/* Let Us Host You - Welcome section style */}
-      <section id="let-us-host-you" className="py-20 md:py-24 lg:py-32 bg-white">
+      <section id="private-events-content" className="py-20 md:py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="flex justify-center items-center mb-8 md:mb-12">
             <img src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Stamp.png" alt="Casa Larga Stamp" className="w-[100px] h-[100px]" />
