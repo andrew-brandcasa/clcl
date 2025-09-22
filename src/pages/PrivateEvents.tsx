@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ChevronDown, MapPin, Users, Wine } from 'lucide-react';
-import './PrivateEvents.css';
 
 const PrivateEvents: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -31,16 +30,15 @@ const PrivateEvents: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
     console.log('Form submitted:', formData);
   };
 
   return (
     <div className="private-events-page">
-      {/* Hero Section */}
-      <section className="private-events-hero">
+      {/* Hero Section - Same as homepage */}
+      <section className="relative h-screen overflow-hidden flex flex-col">
         <video
-          className="hero-video"
+          className="absolute inset-0 w-full h-full object-cover z-[-2]"
           autoPlay
           muted
           playsInline
@@ -50,34 +48,40 @@ const PrivateEvents: React.FC = () => {
           <source src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Casa-Larga-Video-1.mp4" type="video/mp4" />
         </video>
 
-        <div className="hero-content">
-          <div className="container">
-            <div className="hero-text">
-              <span className="hero-eyebrow">WHERE MEMORIES ARE MADE</span>
-              <h1 className="hero-title">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent z-[-1]"></div>
+
+        <div className="absolute inset-0 grid place-items-center z-[5] text-center px-8 md:px-12 lg:px-16">
+          <div className="max-w-4xl w-full mx-auto">
+            <div className="flex flex-col gap-6 md:gap-8">
+              <span className="font-serif font-normal text-[15px] tracking-[0.3em] uppercase opacity-85 text-white">
+                WHERE MEMORIES ARE MADE
+              </span>
+              <h1 className="font-serif font-normal text-[clamp(28px,5.2vw,56px)] leading-[1.15] uppercase text-shadow-sm text-white max-w-[25ch] mx-auto tracking-[0.12em]">
                 HOST YOUR PRIVATE EVENT AT CASA LARGA
               </h1>
             </div>
           </div>
         </div>
 
-        <div className="scroll-indicator">
-          <button onClick={scrollToNext} aria-label="Scroll to next section">
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10">
+          <button onClick={scrollToNext} aria-label="Scroll to next section" className="text-white opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300 animate-bounce">
             <ChevronDown size={24} />
           </button>
         </div>
       </section>
 
-      {/* Let Us Host You - Welcome style */}
-      <section id="let-us-host-you" className="py-20 md:py-24 lg:py-32 fade-in-up">
+      {/* Let Us Host You - Welcome section style */}
+      <section id="let-us-host-you" className="py-20 md:py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
-          <div className="stamp-icon mb-8 md:mb-12">
-            <img src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Stamp.png" alt="Casa Larga Stamp" />
+          <div className="flex justify-center items-center mb-8 md:mb-12">
+            <img src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Stamp.png" alt="Casa Larga Stamp" className="w-[100px] h-[100px]" />
           </div>
           
-          <h2 className="text-lg md:text-xl font-medium text-amber-900 uppercase tracking-widest text-center mb-8 md:mb-12">LET US HOST YOU</h2>
+          <h2 className="text-lg md:text-xl font-medium text-amber-900 uppercase tracking-widest text-center mb-8 md:mb-12">
+            LET US HOST YOU
+          </h2>
           
-          <div className="max-w-3xl mx-auto space-y-6 mb-16">
+          <div className="max-w-3xl mx-auto mb-16">
             <p className="text-base md:text-lg leading-relaxed text-gray-600 text-center">
               Casa Larga provides the perfect backdrop for your most important celebrations. With our stunning 
               vineyard views, elegant facilities, and award-winning wines, we create unforgettable experiences 
@@ -114,7 +118,7 @@ const PrivateEvents: React.FC = () => {
       </section>
 
       {/* Our Venue - OurVenue style */}
-      <section className="py-20 md:py-28 lg:py-36 relative">
+      <section className="relative py-20 md:py-28 lg:py-36">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://casalarga.casasite.com/wp-content/uploads/2025/08/7662debe55392745c26323d52af7183e2300478a.webp" 
@@ -128,7 +132,9 @@ const PrivateEvents: React.FC = () => {
         
         <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="max-w-2xl">
-            <span className="text-sm md:text-base font-medium text-white uppercase tracking-wider mb-4 block">OUR VENUE</span>
+            <span className="text-sm md:text-base font-medium text-white uppercase tracking-wider mb-4 block">
+              OUR VENUE
+            </span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight font-serif text-white mb-6">
               BELLA VISTA AT<br />
               CASA LARGA
@@ -146,12 +152,16 @@ const PrivateEvents: React.FC = () => {
         </div>
       </section>
 
-      {/* Event Types - OurHistory style */}
-      <section className="py-20 md:py-28 lg:py-36">
-        <div className="container max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+      {/* Event Types - Card grid style */}
+      <section className="py-20 md:py-28 lg:py-36 bg-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
-            <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider mb-4 block">EVENT TYPES</span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-6">Our Services</h2>
+            <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider mb-4 block">
+              EVENT TYPES
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-6">
+              Our Services
+            </h2>
             <p className="text-base md:text-lg leading-relaxed text-gray-600 max-w-3xl mx-auto">
               Our pricing is designed to make mobile bar service simple and transparent. Every package includes 
               3 hours of bar service, setup and breakdown, professional staff, and all the essentials — with 
@@ -160,7 +170,7 @@ const PrivateEvents: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-            <div className="bg-white rounded-2xl p-8 md:p-10 shadow-sm hover:shadow-lg transition-shadow duration-300">
+            <div className="bg-white rounded-2xl p-8 md:p-10 shadow-sm hover:shadow-lg transition-shadow duration-300 border border-gray-100">
               <div className="mb-6">
                 <img 
                   src="https://casalarga.casasite.com/wp-content/uploads/2025/08/4baba914a1de8731acdbc0ad8c1d02c8f54037ec.webp" 
@@ -180,7 +190,7 @@ const PrivateEvents: React.FC = () => {
               </a>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 md:p-10 shadow-sm hover:shadow-lg transition-shadow duration-300">
+            <div className="bg-white rounded-2xl p-8 md:p-10 shadow-sm hover:shadow-lg transition-shadow duration-300 border border-gray-100">
               <div className="mb-6">
                 <img 
                   src="https://casalarga.casasite.com/wp-content/uploads/2025/08/a3a395d6313a0da9beca8495e462c809a30e81cd.webp" 
@@ -200,7 +210,7 @@ const PrivateEvents: React.FC = () => {
               </a>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 md:p-10 shadow-sm hover:shadow-lg transition-shadow duration-300">
+            <div className="bg-white rounded-2xl p-8 md:p-10 shadow-sm hover:shadow-lg transition-shadow duration-300 border border-gray-100">
               <div className="mb-6">
                 <img 
                   src="https://casalarga.casasite.com/wp-content/uploads/2025/08/64f3e826d389d57eb75ad44a2114ff3c24d99e3b.webp" 
@@ -223,7 +233,7 @@ const PrivateEvents: React.FC = () => {
         </div>
       </section>
 
-      {/* Contact Form - Similar to UpcomingEvents with form */}
+      {/* Contact Form - UpcomingEvents style with form */}
       <section id="inquire" className="py-20 md:py-28 lg:py-36 bg-gray-50 relative">
         <div 
           className="absolute inset-0 bg-no-repeat bg-center bg-cover opacity-8"
@@ -237,8 +247,12 @@ const PrivateEvents: React.FC = () => {
         
         <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
-            <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider mb-4 block">INQUIRE NOW</span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-6">Start Planning Your Event</h2>
+            <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider mb-4 block">
+              INQUIRE NOW
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-6">
+              Start Planning Your Event
+            </h2>
             <p className="text-base md:text-lg leading-relaxed text-gray-600 max-w-2xl mx-auto">
               Ready to create an unforgettable celebration? Contact our events team to begin planning your perfect day at Casa Larga.
             </p>
@@ -257,7 +271,7 @@ const PrivateEvents: React.FC = () => {
                     name="firstName"
                     value={formData.firstName}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-200"
                     placeholder="First name"
                     required
                   />
@@ -272,7 +286,7 @@ const PrivateEvents: React.FC = () => {
                     name="lastName"
                     value={formData.lastName}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-200"
                     placeholder="Last name"
                     required
                   />
@@ -290,7 +304,7 @@ const PrivateEvents: React.FC = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-200"
                     placeholder="Email Address"
                     required
                   />
@@ -305,7 +319,7 @@ const PrivateEvents: React.FC = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-200"
                     placeholder="Phone Number"
                     required
                   />
@@ -322,10 +336,10 @@ const PrivateEvents: React.FC = () => {
                     name="eventType"
                     value={formData.eventType}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-200"
                     required
                   >
-                    <option value="">Event Type</option>
+                    <option value="">Select Event Type</option>
                     <option value="wedding">Wedding</option>
                     <option value="corporate">Corporate Event</option>
                     <option value="prom">Prom</option>
@@ -343,7 +357,7 @@ const PrivateEvents: React.FC = () => {
                     name="eventDate"
                     value={formData.eventDate}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-200"
                     required
                   />
                 </div>
@@ -359,7 +373,7 @@ const PrivateEvents: React.FC = () => {
                   name="numberOfGuests"
                   value={formData.numberOfGuests}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-200"
                   placeholder="Number of Guests"
                   min="1"
                   max="300"
@@ -377,7 +391,7 @@ const PrivateEvents: React.FC = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-200 resize-vertical"
                   placeholder="Tell us about your event..."
                 ></textarea>
               </div>

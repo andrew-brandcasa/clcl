@@ -1,6 +1,5 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
-import './About.css';
 
 const About: React.FC = () => {
   const scrollToNext = () => {
@@ -12,10 +11,10 @@ const About: React.FC = () => {
 
   return (
     <div className="about-page">
-      {/* Hero Section - Similar to homepage hero */}
-      <section className="about-hero">
+      {/* Hero Section - Same as homepage */}
+      <section className="relative h-screen overflow-hidden flex flex-col">
         <video
-          className="hero-video"
+          className="absolute inset-0 w-full h-full object-cover z-[-2]"
           autoPlay
           muted
           playsInline
@@ -25,14 +24,18 @@ const About: React.FC = () => {
           <source src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Casa-Larga-Video-1.mp4" type="video/mp4" />
         </video>
 
-        <div className="hero-content">
-          <div className="container">
-            <div className="hero-text">
-              <span className="hero-eyebrow">ITALIAN HERITAGE</span>
-              <h1 className="hero-title">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent z-[-1]"></div>
+
+        <div className="absolute inset-0 grid place-items-center z-[5] text-center px-8 md:px-12 lg:px-16">
+          <div className="max-w-4xl w-full mx-auto">
+            <div className="flex flex-col gap-6 md:gap-8">
+              <span className="font-serif font-normal text-[15px] tracking-[0.3em] uppercase opacity-85 text-white">
+                ITALIAN HERITAGE
+              </span>
+              <h1 className="font-serif font-normal text-[clamp(28px,5.2vw,56px)] leading-[1.15] uppercase text-shadow-sm text-white max-w-[25ch] mx-auto tracking-[0.12em]">
                 A FAMILY LEGACY OF WINEMAKING EXCELLENCE
               </h1>
-              <p className="hero-subtitle">
+              <p className="font-sans font-normal text-lg leading-[1.4] text-white opacity-85 italic max-w-[760px] mx-auto">
                 For more than five decades, Casa Larga has tended cool-climate vines on the hills of 
                 Fairport, New York, honoring Italian craft and Finger Lakes character with every vintage.
               </p>
@@ -40,23 +43,25 @@ const About: React.FC = () => {
           </div>
         </div>
 
-        <div className="scroll-indicator">
-          <button onClick={scrollToNext} aria-label="Scroll to next section">
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10">
+          <button onClick={scrollToNext} aria-label="Scroll to next section" className="text-white opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300 animate-bounce">
             <ChevronDown size={24} />
           </button>
         </div>
       </section>
 
-      {/* Continuing Legacy - Similar to Welcome section */}
-      <section id="continuing-legacy" className="py-20 md:py-24 lg:py-32 fade-in-up">
+      {/* Continuing Legacy - Welcome section style */}
+      <section id="continuing-legacy" className="py-20 md:py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
-          <div className="stamp-icon mb-8 md:mb-12">
-            <img src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Stamp.png" alt="Casa Larga Stamp" />
+          <div className="flex justify-center items-center mb-8 md:mb-12">
+            <img src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Stamp.png" alt="Casa Larga Stamp" className="w-[100px] h-[100px]" />
           </div>
           
-          <h2 className="text-lg md:text-xl font-medium text-amber-900 uppercase tracking-widest text-center mb-8 md:mb-12">CONTINUING A LEGACY</h2>
+          <h2 className="text-lg md:text-xl font-medium text-amber-900 uppercase tracking-widest text-center mb-8 md:mb-12">
+            CONTINUING A LEGACY
+          </h2>
           
-          <div className="max-w-3xl mx-auto space-y-6 mb-16">
+          <div className="max-w-3xl mx-auto mb-16">
             <p className="text-base md:text-lg leading-relaxed text-gray-600 text-center">
               Casa Larga began as a family dream and became a New York wine landmark. What started as a 
               backyard passion grew into an estate winery known for inviting hospitality, meticulous cellar 
@@ -67,13 +72,17 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Italian Beginnings - Similar to OurHistory section */}
-      <section className="py-20 md:py-28 lg:py-36">
-        <div className="container max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+      {/* Italian Beginnings - OurHistory section style */}
+      <section className="py-20 md:py-28 lg:py-36 bg-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center">
             <div className="space-y-6 md:space-y-8 pr-0 lg:pr-8 xl:pr-12">
-              <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider">ITALIAN BEGINNINGS</span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900">Our Story Begins</h2>
+              <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider">
+                ITALIAN BEGINNINGS
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900">
+                Our Story Begins
+              </h2>
               <div className="space-y-6">
                 <p className="text-base md:text-lg leading-relaxed text-gray-600">
                   Our story traces back to the Colaruotolo family, where wine was part of daily life—set on 
@@ -104,7 +113,7 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Italian American Roots - Full width image like OurVenue */}
+      {/* Italian American Roots - OurVenue style full width */}
       <section className="relative py-20 md:py-28 lg:py-36">
         <div className="absolute inset-0 z-0">
           <img 
@@ -130,7 +139,7 @@ const About: React.FC = () => {
 
       {/* The Winery Begins - Mirror of Italian Beginnings */}
       <section className="py-20 md:py-28 lg:py-36 bg-gray-50">
-        <div className="container max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center">
             <div className="pl-0 lg:pl-8 xl:pl-12 order-2 lg:order-1">
               <div className="relative rounded-2xl overflow-hidden">
@@ -150,8 +159,12 @@ const About: React.FC = () => {
             </div>
             
             <div className="space-y-6 md:space-y-8 pr-0 lg:pr-8 xl:pr-12 order-1 lg:order-2">
-              <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider">THE WINERY BEGINS</span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900">From Dream to Reality</h2>
+              <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider">
+                THE WINERY BEGINS
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900">
+                From Dream to Reality
+              </h2>
               <div className="space-y-6">
                 <p className="text-base md:text-lg leading-relaxed text-gray-600">
                   What started as a personal cellar soon outgrew the basement. Encouraged by family and friends, 
@@ -170,8 +183,8 @@ const About: React.FC = () => {
       </section>
 
       {/* A New Era - Similar to OurHistory layout */}
-      <section className="py-20 md:py-28 lg:py-36">
-        <div className="container max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+      <section className="py-20 md:py-28 lg:py-36 bg-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="space-y-16">
             <div className="relative rounded-2xl overflow-hidden">
               <img 
@@ -184,8 +197,12 @@ const About: React.FC = () => {
             </div>
             
             <div className="text-center max-w-4xl mx-auto space-y-6">
-              <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider">A NEW ERA</span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900">Modern Excellence</h2>
+              <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider">
+                A NEW ERA
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900">
+                Modern Excellence
+              </h2>
               <div className="space-y-6">
                 <p className="text-base md:text-lg leading-relaxed text-gray-600">
                   As the estate grew, the next generation stepped in—modernizing the cellar, refining vineyard 
@@ -201,9 +218,9 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Philosophy Cards - Similar to WineOnWheels accordion style */}
+      {/* Philosophy Cards - WineOnWheels card style */}
       <section className="py-20 md:py-28 lg:py-36 bg-gray-50">
-        <div className="container max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
             <div className="bg-white rounded-2xl p-8 md:p-10 lg:p-12 shadow-sm hover:shadow-lg transition-shadow duration-300">
               <h3 className="text-xl md:text-2xl font-serif text-amber-900 mb-6 uppercase tracking-wide">
@@ -230,12 +247,16 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Awards - Similar to Welcome navigation grid */}
-      <section className="py-20 md:py-28 lg:py-36">
-        <div className="container max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+      {/* Awards - Welcome navigation grid style */}
+      <section className="py-20 md:py-28 lg:py-36 bg-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
-            <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider mb-4 block">RECOGNITION</span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900">Awards & Recognition</h2>
+            <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider mb-4 block">
+              RECOGNITION
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900">
+              Awards & Recognition
+            </h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
@@ -283,7 +304,7 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section - Similar to UpcomingEvents footer */}
+      {/* CTA Section - UpcomingEvents footer style */}
       <section className="py-16 md:py-20 bg-white relative">
         <div 
           className="absolute inset-0 bg-no-repeat bg-center bg-cover opacity-8"

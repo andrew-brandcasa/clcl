@@ -1,210 +1,33 @@
-/* Private Events Page Styles - Following Homepage Patterns */
+/* Private Events Page Styles - Clean and minimal, relying on Tailwind */
 
-/* Hero Section - Same as homepage hero */
-.private-events-hero {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.hero-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -2;
-}
-
-.private-events-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0));
-  z-index: -1;
-}
-
-.hero-content {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  z-index: 5;
-  text-align: center;
-  padding: 8rem 2rem;
-}
-
-@media (min-width: 768px) {
-  .hero-content {
-    padding: 10rem 3rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero-content {
-    padding: 12rem 4rem;
-  }
-}
-
-.hero-content .container {
-  max-width: 56rem;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
-  display: block;
-}
-
-.hero-text {
-  width: 100%;
-  margin-inline: auto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-@media (min-width: 768px) {
-  .hero-text {
-    gap: 2rem;
-  }
-}
-
-.hero-eyebrow {
-  font-family: 'Libre Baskerville', serif;
-  font-weight: 400;
-  font-size: 15px;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  opacity: 0.85;
-  margin: 0;
-  color: white;
-}
-
-.hero-title {
-  font-family: 'Libre Baskerville', serif;
-  font-weight: 400;
-  font-size: clamp(28px, 5.2vw, 56px);
-  line-height: 1.15;
-  margin: 0;
-  text-transform: uppercase;
+/* Text shadow utility for hero title */
+.text-shadow-sm {
   text-shadow: 0 1px 2px rgba(0,0,0,.35);
-  color: white;
-  max-width: 25ch;
-  margin-left: auto;
-  margin-right: auto;
-  letter-spacing: 0.12em;
 }
 
-/* Scroll Indicator - Same as homepage */
-.scroll-indicator {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-}
-
-.scroll-indicator button {
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  opacity: 0.8;
-  transition: all 0.3s ease;
-  animation: bounce 2s infinite;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.scroll-indicator button:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
+/* Bounce animation for scroll indicator */
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-  40% { transform: translateY(-10px); }
-  60% { transform: translateY(-5px); }
-}
-
-/* Stamp Icon - Same as Welcome section */
-.stamp-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.stamp-icon img {
-  width: 100px;
-  height: 100px;
-}
-
-/* Form Styles */
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-label {
-  display: block;
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--brown-dark);
-  margin-bottom: 8px;
-}
-
-.form-input,
-.form-select,
-.form-textarea {
-  width: 100%;
-  padding: 12px 16px;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 16px;
-  transition: all 0.3s ease;
-  background-color: white;
-}
-
-.form-input:focus,
-.form-select:focus,
-.form-textarea:focus {
-  outline: none;
-  border-color: var(--brown-primary);
-  box-shadow: 0 0 0 3px rgba(175, 105, 0, 0.1);
-}
-
-.form-textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
-
-@media (min-width: 768px) {
-  .form-grid {
-    grid-template-columns: 1fr 1fr;
+  0%, 20%, 50%, 80%, 100% { 
+    transform: translateY(0); 
+  }
+  40% { 
+    transform: translateY(-10px); 
+  }
+  60% { 
+    transform: translateY(-5px); 
   }
 }
 
-.form-grid-full {
-  grid-column: 1 / -1;
+.animate-bounce {
+  animation: bounce 2s infinite;
 }
 
-/* Button Styles - Same as homepage */
+/* Button styles matching homepage */
 .elementor-button {
   display: inline-block;
   padding: 18px 45px;
   border: none;
-  border-left: 4px solid var(--brown-dark);
+  border-left: 4px solid var(--brown-dark, #482817);
   border-radius: 0px;
   background-color: rgba(158, 132, 92, 0.61);
   color: white;
@@ -227,7 +50,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background-color: var(--brown-dark);
+  background-color: var(--brown-dark, #482817);
   transition: all 0.3s ease-in-out;
   z-index: -1;
 }
@@ -242,44 +65,21 @@
 
 .elementor-button.white {
   background-color: white;
-  color: var(--brown-primary);
+  color: var(--brown-primary, #AF6900);
 }
 
 .elementor-button.white::before {
-  background-color: var(--brown-primary);
+  background-color: var(--brown-primary, #AF6900);
 }
 
 .elementor-button.white:hover {
   color: white;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hero-eyebrow { 
-    font-size: 12px; 
-    letter-spacing: 2.5px; 
-  }
-  
-  .stamp-icon img {
-    width: 80px;
-    height: 80px;
-  }
-  
-  .form-input,
-  .form-select,
-  .form-textarea {
-    font-size: 16px; /* Prevent zoom on iOS */
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-eyebrow { 
-    font-size: 11px; 
-    letter-spacing: 2px; 
-  }
-  
-  .elementor-button {
-    padding: 14px 28px;
-    font-size: 14px;
-  }
+/* CSS Variables for consistency */
+:root {
+  --brown-primary: #AF6900;
+  --brown-dark: #482817;
+  --brown-light: #9E845C;
+  --cream: #F5EBDA;
 }
