@@ -1,5 +1,6 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
+import './About.css';
 
 const About: React.FC = () => {
   const scrollToNext = () => {
@@ -13,16 +14,12 @@ const About: React.FC = () => {
     <div className="about-page">
       {/* Hero Section - Same as homepage */}
       <section className="relative h-screen overflow-hidden flex flex-col">
-        <video
-          className="absolute inset-0 w-full h-full object-cover z-[-2]"
-          autoPlay
-          muted
-          playsInline
-          loop
-          poster="https://casalarga.casasite.com/wp-content/uploads/2025/08/7662debe55392745c26323d52af7183e2300478a.webp"
-        >
-          <source src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Casa-Larga-Video-1.mp4" type="video/mp4" />
-        </video>
+        <div
+          className="absolute inset-0 w-full h-full bg-cover bg-center z-[-2]"
+          style={{
+            backgroundImage: "url('https://images.pexels.com/photos/1407846/pexels-photo-1407846.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')"
+          }}
+        />
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent z-[-1]"></div>
 
@@ -30,15 +27,11 @@ const About: React.FC = () => {
           <div className="max-w-4xl w-full mx-auto">
             <div className="flex flex-col gap-6 md:gap-8">
               <span className="font-serif font-normal text-[15px] tracking-[0.3em] uppercase opacity-85 text-white">
-                ITALIAN HERITAGE
+                OUR STORY
               </span>
-              <h1 className="font-serif font-normal text-[clamp(28px,5.2vw,56px)] leading-[1.15] uppercase text-shadow-sm text-white max-w-[25ch] mx-auto tracking-[0.12em]">
+              <h1 className="font-serif font-normal text-[clamp(28px,5.2vw,64px)] leading-[1.15] uppercase text-shadow-sm text-white max-w-[25ch] mx-auto tracking-[0.12em]">
                 A FAMILY LEGACY OF WINEMAKING EXCELLENCE
               </h1>
-              <p className="font-sans font-normal text-lg leading-[1.4] text-white opacity-85 italic max-w-[760px] mx-auto">
-                For more than five decades, Casa Larga has tended cool-climate vines on the hills of 
-                Fairport, New York, honoring Italian craft and Finger Lakes character with every vintage.
-              </p>
             </div>
           </div>
         </div>
@@ -50,60 +43,60 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Continuing Legacy - Welcome section style */}
-      <section id="continuing-legacy" className="py-20 md:py-24 lg:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
-          <div className="flex justify-center items-center mb-8 md:mb-12">
-            <img src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Stamp.png" alt="Casa Larga Stamp" className="w-[100px] h-[100px]" />
-          </div>
-          
-          <h2 className="text-lg md:text-xl font-medium text-amber-900 uppercase tracking-widest text-center mb-8 md:mb-12">
+      {/* Introduction Section */}
+      <section id="continuing-legacy" className="py-20 md:py-28 lg:py-36 bg-white">
+        <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12 text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-8 md:mb-12 uppercase tracking-wide">
             CONTINUING A LEGACY
           </h2>
-          
-          <div className="max-w-3xl mx-auto mb-16">
-            <p className="text-base md:text-lg leading-relaxed text-gray-600 text-center">
-              Casa Larga began as a family dream and became a New York wine landmark. What started as a 
-              backyard passion grew into an estate winery known for inviting hospitality, meticulous cellar 
-              work, and wines that reflect place. Today the traditions that shaped our first bottles continue 
-              to guide our vineyards, our tasting room, and the way we welcome guests.
-            </p>
-          </div>
+          <p className="text-base md:text-lg leading-relaxed text-gray-600">
+            Casa Larga is dedicated to preserving our Italian heritage. The legacies of our founders, Andrew and Ann Colaruotolo, is a key part of our continued success. Fondly, we call them Mr. C and Mrs. C.
+          </p>
         </div>
       </section>
 
-      {/* Italian Beginnings - OurHistory section style */}
-      <section className="py-20 md:py-28 lg:py-36 bg-white">
+      {/* Italian Beginnings Section */}
+      <section className="py-20 md:py-28 lg:py-36 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center">
-            <div className="space-y-6 md:space-y-8 pr-0 lg:pr-8 xl:pr-12">
-              <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider">
+            <div className="space-y-6 md:space-y-8">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 uppercase tracking-wide">
                 ITALIAN BEGINNINGS
-              </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900">
-                Our Story Begins
               </h2>
               <div className="space-y-6">
                 <p className="text-base md:text-lg leading-relaxed text-gray-600">
-                  Our story traces back to the Colaruotolo family, where wine was part of daily life—set on 
-                  the table, shared with neighbors, and made with care. Recipes and techniques traveled from 
-                  Italy to upstate New York, along with a belief that great wine starts with patience and 
-                  respect for the land.
+                  Andrew Colaruotolo was born in July of 1931 to Antonio and Josephine Colaruotolo in Gaeta, Italy, a small Mediterranean fishing village located between Rome and Naples. He was the third of four children.
                 </p>
                 <p className="text-base md:text-lg leading-relaxed text-gray-600">
-                  Those early years were hands-on and humble: tending vines after work, repairing trellises 
-                  by hand, and celebrating the first successful fermentations with family. The lessons were 
-                  simple—work honestly, harvest only when the fruit is ready, and never stop learning.
+                  His father, Antonio, was a merchant marine as well as a fisherman and farmer. Antonio spent many months abroad in the newfound land of America, working as a laborer to send home money to his wife and four children.
+                </p>
+                <p className="text-base md:text-lg leading-relaxed text-gray-600">
+                  In his youth, Andrew spent much of his time working alongside his grandparents in the fields and in their small, family-owned grocery store. In Italy, it was customary for a family to have several very small farms that were in different climatic regions perfectly suited for growing different types of fruits and vegetables. It was here in the fields of Italy where Andrew fostered a stewardship for the land.
+                </p>
+                <p className="text-base md:text-lg leading-relaxed text-gray-600">
+                  Each of the Colaruotolo family's farms had a different name and specialized in a different product, such as olives, cheese and citrus fruit. "Casa Larga" was the farm where Andrew's family grew grapes and made wine. Of all the vineyards in the Gaeta area, "Casa Larga" was known as the one where the highest quality grapes were grown. Here, Andrew was taught by his grandmother that only a meticulously tended vineyard will yield the fruit required to produce high quality wine.
+                </p>
+                <p className="text-base md:text-lg leading-relaxed text-gray-600">
+                  After World War II, at the age of 17, Andrew immigrated to Rochester along with his sister, Eliza. Leaving behind their mother, father, sister and war-torn country, the siblings joined their brother, Frank, who had already come to Rochester in search of a better life. Andrew began his career as a mason, studying architecture at RIT and learning English at night.
                 </p>
               </div>
             </div>
             
-            <div className="pl-0 lg:pl-8 xl:pl-12">
-              <div className="relative rounded-2xl overflow-hidden">
+            <div className="space-y-12">
+              <div className="relative rounded-2xl overflow-hidden shadow-lg">
                 <img 
-                  src="https://casalarga.casasite.com/wp-content/uploads/2025/08/mr-casa.png" 
-                  alt="Historic photo of the Colaruotolo family in their early winemaking days" 
-                  className="aspect-[4/3] w-full object-cover"
+                  src="https://casalarga.casasite.com/wp-content/uploads/2025/09/4c037f636c3c55436ad9ca4091784592e1762573.webp" 
+                  alt="Historic photo of Andrew Colaruotolo in Italy" 
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div className="relative rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src="https://casalarga.casasite.com/wp-content/uploads/2025/09/d12a69a37997b0407ca91563052dbddd2647c3c5.webp" 
+                  alt="Early Casa Larga vineyard in Italy" 
+                  className="w-full h-auto object-cover"
                   loading="lazy"
                   decoding="async"
                 />
@@ -113,213 +106,140 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Italian American Roots - OurVenue style full width */}
-      <section className="relative py-20 md:py-28 lg:py-36">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="https://casalarga.casasite.com/wp-content/uploads/2025/08/4baba914a1de8731acdbc0ad8c1d02c8f54037ec.webp" 
-            alt="" 
-            className="w-full h-full object-cover"
-            loading="lazy"
-            decoding="async"
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      {/* Italian American Roots Section */}
+      <section className="py-20 md:py-28 lg:py-36 bg-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center">
+            <div className="order-2 lg:order-1">
+              <div className="relative rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src="https://casalarga.casasite.com/wp-content/uploads/2025/09/224ad2d758ea70c1cb6d2ff3fd6b348777d41770.webp" 
+                  alt="Andrew and Ann Colaruotolo in their early years" 
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+            
+            <div className="space-y-6 md:space-y-8 order-1 lg:order-2">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 uppercase tracking-wide">
+                ITALIAN AMERICAN ROOTS
+              </h2>
+              <div className="space-y-6">
+                <p className="text-base md:text-lg leading-relaxed text-gray-600">
+                  Antionette Campbell was born in 1934 in Rochester to immigrant parents. She grew up speaking Italian at home and taught herself to speak English at the age of 5 when she began kindergarten. She graduated from Jefferson High School in 1952 and later attended the Rochester Business Institute.
+                </p>
+                <p className="text-base md:text-lg leading-relaxed text-gray-600">
+                  Andy and Ann met at a dance in 1956 and married in April of 1957. Shortly after they wed, they started a home building company, Anco Builders. After mastering the art of stone masonry and becoming a successful home builder, Mr. C set out to reconnect with his passion for the land. In 1974, he started planting a vineyard in Fairport as a hobby. That vineyard soon became another business venture – Casa Larga Vineyards.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-8 lg:px-12 text-center">
-          <div className="bg-white bg-opacity-95 rounded-2xl p-8 md:p-12 lg:p-16">
-            <p className="text-base md:text-lg leading-relaxed text-gray-700 italic">
-              The cellar became a gathering place. Sunday dinners stretched long, friends arrived with 
-              stories, and the house filled with the aromas of simmering sauce and fresh bread. Wine 
-              connected generations—linking a new life in New York to memories of sun-baked hillsides in Italy.
+      </section>
+
+      {/* The Winery Begins Section */}
+      <section className="py-20 md:py-28 lg:py-36 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center">
+            <div className="space-y-6 md:space-y-8">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 uppercase tracking-wide">
+                THE WINERY BEGINS
+              </h2>
+              <div className="space-y-6">
+                <p className="text-base md:text-lg leading-relaxed text-gray-600">
+                  In 1974, Andrew began planting his first vineyard in Fairport, New York, as a hobby. What started as a passion project quickly grew into something much larger. By 1978, Casa Larga had produced its first commercial vintage and became New York's 21st licensed winery.
+                </p>
+                <p className="text-base md:text-lg leading-relaxed text-gray-600">
+                  The early years were challenging but rewarding. Andrew applied the same meticulous attention to detail he had learned from his grandmother in Italy, ensuring that every vine was carefully tended and every grape met the highest standards. This dedication to quality would become the foundation of Casa Larga's reputation for excellence.
+                </p>
+              </div>
+            </div>
+            
+            <div>
+              <div className="relative rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src="https://casalarga.casasite.com/wp-content/uploads/2025/09/2191daffdc0354ac2d35d9aa3868861c0a16ca84.webp" 
+                  alt="Early Casa Larga vineyard in Fairport, New York" 
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* A New Era Section */}
+      <section className="py-20 md:py-28 lg:py-36 bg-white">
+        <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12 text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-8 md:mb-12 uppercase tracking-wide">
+            A NEW ERA
+          </h2>
+          <div className="space-y-6">
+            <p className="text-base md:text-lg leading-relaxed text-gray-600">
+              Andrew and Ann had three children: John (Marie), Mary Jo and Andrea (Dennis). Andrew and Ann were also blessed with a healthy harvest of grandchildren (Nina Marie, Andrew John, Alana, Andrea, Maria, Lucy, Andrew, Thomas and Elizabeth).
+            </p>
+            <p className="text-base md:text-lg leading-relaxed text-gray-600">
+              In 2004, Casa Larga's founder Mr. C passed away. Anyone who knew him was immediately captivated by his striking build and charismatic personality. Mr. C was succeeded by wife, Ann (Mrs. C), who left us in September of 2015. She gave us a legacy of family, charity and tradition. Mrs. C was a uniquely great lady and her many passions made Casa Larga what it is today. Her love of our family was matched in her generosity to others and her deep faith. She and Mr. C gave us our old-world approach to making wine and doing business.
+            </p>
+            <p className="text-base md:text-lg leading-relaxed text-gray-600">
+              Their three children are continuing their legacies – each has an active role at Casa Larga Vineyards. Andrea is Director of Marketing, Mary Jo is Director of Accounting and IT, and John is Director of Winemaking. As the vineyard and winery continue to operate under the watchful eye of Mr. C's children, a variety of other family and non-family employees at various positions are also continuing the legacy. Several grandchildren can be seen on occasion at the winery, doing their parts to continue the family tradition.
             </p>
           </div>
         </div>
       </section>
 
-      {/* The Winery Begins - Mirror of Italian Beginnings */}
+      {/* Today and Tomorrow Section */}
       <section className="py-20 md:py-28 lg:py-36 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center">
-            <div className="pl-0 lg:pl-8 xl:pl-12 order-2 lg:order-1">
-              <div className="relative rounded-2xl overflow-hidden">
-                <img 
-                  src="https://casalarga.casasite.com/wp-content/uploads/2025/08/mr-casa.png" 
-                  alt="Mr. Colaruotolo working in the vineyard among the original vine rows" 
-                  className="aspect-[4/3] w-full object-cover"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div className="mt-4 text-center">
-                  <p className="text-sm text-gray-500 italic">
-                    Mr. C. in the vineyard, tending the rows that started it all.
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="space-y-6 md:space-y-8 pr-0 lg:pr-8 xl:pr-12 order-1 lg:order-2">
-              <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider">
-                THE WINERY BEGINS
-              </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900">
-                From Dream to Reality
-              </h2>
-              <div className="space-y-6">
-                <p className="text-base md:text-lg leading-relaxed text-gray-600">
-                  What started as a personal cellar soon outgrew the basement. Encouraged by family and friends, 
-                  vines were planted on the Fairport hills and a bonded winery was born. The goal was 
-                  straightforward: make honest, expressive wines and invite people to experience where they come from.
-                </p>
-                <p className="text-base md:text-lg leading-relaxed text-gray-600">
-                  From the earliest tastings to our first public events, the response was immediate. Visitors 
-                  came for the wines and stayed for the view, the warmth, and the feeling that they were part 
-                  of something built with heart.
-                </p>
-              </div>
-            </div>
+        <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12 text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-8 md:mb-12 uppercase tracking-wide">
+            TODAY AND TOMORROW
+          </h2>
+          <div className="space-y-6">
+            <p className="text-base md:text-lg leading-relaxed text-gray-600">
+              Now in its second generation of family ownership, Casa Larga continues to innovate while honoring our traditions. We remain committed to producing award-winning wines and creating memorable experiences for every guest who visits our "large house."
+            </p>
+            <p className="text-base md:text-lg leading-relaxed text-gray-600">
+              Over the years, our wines have earned numerous awards and accolades, cementing our reputation as one of New York's premier wineries. We continue to expand our offerings while maintaining the quality and craftsmanship that Mr. C and Mrs. C instilled in every bottle.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* A New Era - Similar to OurHistory layout */}
+      {/* Statistics Section */}
       <section className="py-20 md:py-28 lg:py-36 bg-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
-          <div className="space-y-16">
-            <div className="relative rounded-2xl overflow-hidden">
-              <img 
-                src="https://casalarga.casasite.com/wp-content/uploads/2025/08/a3a395d6313a0da9beca8495e462c809a30e81cd.webp" 
-                alt="Modern Casa Larga winery with guests enjoying wine tasting" 
-                className="aspect-[16/10] w-full object-cover"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            
-            <div className="text-center max-w-4xl mx-auto space-y-6">
-              <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider">
-                A NEW ERA
-              </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900">
-                Modern Excellence
-              </h2>
-              <div className="space-y-6">
-                <p className="text-base md:text-lg leading-relaxed text-gray-600">
-                  As the estate grew, the next generation stepped in—modernizing the cellar, refining vineyard 
-                  practices, and expanding guest experiences while preserving the soul of the place.
-                </p>
-                <p className="text-base md:text-lg leading-relaxed text-gray-600">
-                  Today Casa Larga hosts tastings, tours, classes, and celebrations overlooking the vines. 
-                  Each season brings new visitors, new releases, and familiar faces returning to raise a glass.
-                </p>
+        <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 text-center">
+            <div className="space-y-4">
+              <div className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-amber-900">
+                50+
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Philosophy Cards - WineOnWheels card style */}
-      <section className="py-20 md:py-28 lg:py-36 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-            <div className="bg-white rounded-2xl p-8 md:p-10 lg:p-12 shadow-sm hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl md:text-2xl font-serif text-amber-900 mb-6 uppercase tracking-wide">
-                Winemaking Philosophy
-              </h3>
-              <p className="text-base md:text-lg leading-relaxed text-gray-600">
-                We believe in gentle handling, clarity of fruit, and balance. Fermentations are kept cool 
-                for freshness; oak is used thoughtfully for texture, not domination. Every lot is tasted 
-                repeatedly—patience and precision from crush to bottle.
+              <p className="text-base md:text-lg text-gray-600 font-medium">
+                Years of winemaking excellence
               </p>
             </div>
             
-            <div className="bg-white rounded-2xl p-8 md:p-10 lg:p-12 shadow-sm hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl md:text-2xl font-serif text-amber-900 mb-6 uppercase tracking-wide">
-                Today and Tomorrow
-              </h3>
-              <p className="text-base md:text-lg leading-relaxed text-gray-600">
-                We continue to invest in sustainable practices, thoughtful canopy management, and careful 
-                harvesting. Sparkling projects, small-lot selections, and cellar experiments keep us curious. 
-                What never changes is our commitment to hospitality and wines that speak of this ridge.
+            <div className="space-y-4">
+              <div className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-amber-900">
+                35
+              </div>
+              <p className="text-base md:text-lg text-gray-600 font-medium">
+                Acres of premium vineyard land
+              </p>
+            </div>
+            
+            <div className="space-y-4">
+              <div className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-amber-900">
+                15+
+              </div>
+              <p className="text-base md:text-lg text-gray-600 font-medium">
+                Wine varieties in production
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Awards - Welcome navigation grid style */}
-      <section className="py-20 md:py-28 lg:py-36 bg-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
-          <div className="text-center mb-16">
-            <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider mb-4 block">
-              RECOGNITION
-            </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900">
-              Awards & Recognition
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
-            <div className="text-center space-y-4">
-              <div className="w-16 h-16 mx-auto bg-amber-100 rounded-full flex items-center justify-center">
-                <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M24 4L29.09 14.26L40 16L32 23.74L34.18 34.65L24 29.27L13.82 34.65L16 23.74L8 16L18.91 14.26L24 4Z" fill="#AF6900"/>
-                </svg>
-              </div>
-              <h4 className="text-sm font-semibold text-amber-900 uppercase tracking-wider">Decades of Craft</h4>
-              <p className="text-xs text-gray-600">Family-run since the first estate vines took root.</p>
-            </div>
-            
-            <div className="text-center space-y-4">
-              <div className="w-16 h-16 mx-auto bg-amber-100 rounded-full flex items-center justify-center">
-                <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2L22 8L32 2L36 12L46 16L40 26L46 36L36 40L32 50L22 44L12 50L8 40L2 36L8 26L2 16L8 12L12 2Z" fill="#AF6900"/>
-                </svg>
-              </div>
-              <h4 className="text-sm font-semibold text-amber-900 uppercase tracking-wider">Estate Vineyards</h4>
-              <p className="text-xs text-gray-600">Cool-climate fruit from our hillside rows in Fairport.</p>
-            </div>
-            
-            <div className="text-center space-y-4">
-              <div className="w-16 h-16 mx-auto bg-amber-100 rounded-full flex items-center justify-center">
-                <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="24" cy="24" r="20" fill="#AF6900"/>
-                  <path d="M16 24L20 28L32 16" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </div>
-              <h4 className="text-sm font-semibold text-amber-900 uppercase tracking-wider">Cellar Discipline</h4>
-              <p className="text-xs text-gray-600">Clean ferments, careful blending, bottled at peak expression.</p>
-            </div>
-            
-            <div className="text-center space-y-4">
-              <div className="w-16 h-16 mx-auto bg-amber-100 rounded-full flex items-center justify-center">
-                <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M24 4C35.05 4 44 12.95 44 24C44 35.05 35.05 44 24 44C12.95 44 4 35.05 4 24C4 12.95 12.95 4 24 4ZM24 12C19.58 12 16 15.58 16 20V28C16 32.42 19.58 36 24 36C28.42 36 32 32.42 32 28V20C32 15.58 28.42 12 24 12Z" fill="#AF6900"/>
-                </svg>
-              </div>
-              <h4 className="text-sm font-semibold text-amber-900 uppercase tracking-wider">Welcoming Hospitality</h4>
-              <p className="text-xs text-gray-600">Tastings, tours, and celebrations overlooking the vines.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section - UpcomingEvents footer style */}
-      <section className="py-16 md:py-20 bg-white relative">
-        <div 
-          className="absolute inset-0 bg-no-repeat bg-center bg-cover opacity-8"
-          style={{
-            backgroundImage: "url('/Frame 1618873355.png')",
-            backgroundPosition: "bottom center",
-            backgroundSize: "100vw auto",
-            filter: "grayscale(1)"
-          }}
-        />
-        
-        <div className="relative z-10 text-center">
-          <a href="#visit" className="elementor-button">
-            PLAN YOUR VISIT
-          </a>
         </div>
       </section>
     </div>

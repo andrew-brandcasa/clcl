@@ -63,6 +63,19 @@
   color: white;
 }
 
+.elementor-button.white {
+  background-color: white;
+  color: var(--brown-primary, #AF6900);
+}
+
+.elementor-button.white::before {
+  background-color: var(--brown-primary, #AF6900);
+}
+
+.elementor-button.white:hover {
+  color: white;
+}
+
 /* CSS Variables for consistency */
 :root {
   --brown-primary: #AF6900;
