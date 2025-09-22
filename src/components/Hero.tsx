@@ -44,6 +44,7 @@ const Hero: React.FC = () => {
               
               <nav className="desktop-navigation-inline">
                 <ul className="nav-menu">
+                  <li><a href="/about">ABOUT</a></li>
                   <li><a href="#visit">VISIT US</a></li>
                   <li><a href="#shop">SHOP WINES</a></li>
                   <li><a href="#events">WINERY EVENTS</a></li>
@@ -92,6 +93,7 @@ const Hero: React.FC = () => {
           {isMobileMenuOpen && (
             <nav className="mobile-navigation">
               <ul className="mobile-nav-menu">
+                <li><a href="/about" onClick={toggleMobileMenu}>ABOUT</a></li>
                 <li><a href="#visit" onClick={toggleMobileMenu}>VISIT US</a></li>
                 <li><a href="#shop" onClick={toggleMobileMenu}>SHOP WINES</a></li>
                 <li><a href="#events" onClick={toggleMobileMenu}>WINERY EVENTS</a></li>
