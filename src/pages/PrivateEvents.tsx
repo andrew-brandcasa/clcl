@@ -91,53 +91,6 @@ const PrivateEvents: React.FC = () => {
         </div>
       </section>
 
-      {/* Let Us Host You - Welcome section style */}
-      <section id="private-events-content" className="py-20 md:py-24 lg:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
-          <div className="flex justify-center items-center mb-8 md:mb-12">
-            <img src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Stamp.png" alt="Casa Larga Stamp" className="w-[100px] h-[100px]" />
-          </div>
-          
-          <h2 className="text-lg md:text-xl font-medium text-amber-900 uppercase tracking-widest text-center mb-8 md:mb-12">
-            LET US HOST YOU
-          </h2>
-          
-          <div className="max-w-3xl mx-auto mb-16">
-            <p className="text-base md:text-lg leading-relaxed text-gray-600 text-center">
-              Casa Larga provides the perfect backdrop for your most important celebrations. With our stunning 
-              vineyard views, elegant facilities, and award-winning wines, we create unforgettable experiences 
-              for weddings, corporate events, and special occasions.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-            <div className="text-center space-y-4">
-              <div className="flex justify-center">
-                <MapPin className="w-12 h-12 text-amber-700" />
-              </div>
-              <h3 className="text-xl md:text-2xl font-serif text-amber-900">Breathtaking Setting</h3>
-              <p className="text-gray-600">Panoramic vineyard views and beautifully landscaped grounds</p>
-            </div>
-            
-            <div className="text-center space-y-4">
-              <div className="flex justify-center">
-                <Users className="w-12 h-12 text-amber-700" />
-              </div>
-              <h3 className="text-xl md:text-2xl font-serif text-amber-900">Flexible Spaces</h3>
-              <p className="text-gray-600">Indoor and outdoor venues to accommodate 50-300 guests</p>
-            </div>
-            
-            <div className="text-center space-y-4">
-              <div className="flex justify-center">
-                <Wine className="w-12 h-12 text-amber-700" />
-              </div>
-              <h3 className="text-xl md:text-2xl font-serif text-amber-900">Award-Winning Wines</h3>
-              <p className="text-gray-600">Exclusive access to our complete wine collection</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Our Venue - OurVenue style */}
       <section className="relative py-20 md:py-28 lg:py-36">
         <div className="absolute inset-0 z-0">
