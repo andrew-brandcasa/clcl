@@ -43,15 +43,22 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Introduction Section */}
-      <section id="continuing-legacy" className="py-20 md:py-28 lg:py-36 bg-white">
-        <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12 text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-8 md:mb-12 uppercase tracking-wide">
+      {/* Introduction Section - Welcome style */}
+      <section id="continuing-legacy" className="py-20 md:py-24 lg:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+          <div className="flex justify-center items-center mb-8 md:mb-12">
+            <img src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Stamp.png" alt="Casa Larga Stamp" className="w-[100px] h-[100px]" />
+          </div>
+          
+          <h2 className="text-lg md:text-xl font-medium text-amber-900 uppercase tracking-widest text-center mb-8 md:mb-12">
             CONTINUING A LEGACY
           </h2>
-          <p className="text-base md:text-lg leading-relaxed text-gray-600">
-            Casa Larga is dedicated to preserving our Italian heritage. The legacies of our founders, Andrew and Ann Colaruotolo, is a key part of our continued success. Fondly, we call them Mr. C and Mrs. C.
-          </p>
+          
+          <div className="max-w-3xl mx-auto">
+            <p className="text-base md:text-lg leading-relaxed text-gray-600 text-center">
+              Casa Larga is dedicated to preserving our Italian heritage. The legacies of our founders, Andrew and Ann Colaruotolo, is a key part of our continued success. Fondly, we call them Mr. C and Mrs. C.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -60,9 +67,12 @@ const About: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center">
             <div className="space-y-6 md:space-y-8">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 uppercase tracking-wide">
-                ITALIAN BEGINNINGS
-              </h2>
+              <div className="space-y-4">
+                <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider">OUR ORIGINS</span>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900">
+                  ITALIAN BEGINNINGS
+                </h2>
+              </div>
               <div className="space-y-6">
                 <p className="text-base md:text-lg leading-relaxed text-gray-600">
                   Andrew Colaruotolo was born in July of 1931 to Antonio and Josephine Colaruotolo in Gaeta, Italy, a small Mediterranean fishing village located between Rome and Naples. He was the third of four children.
@@ -123,9 +133,12 @@ const About: React.FC = () => {
             </div>
             
             <div className="space-y-6 md:space-y-8 order-1 lg:order-2">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 uppercase tracking-wide">
-                ITALIAN AMERICAN ROOTS
-              </h2>
+              <div className="space-y-4">
+                <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider">THE JOURNEY</span>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900">
+                  ITALIAN AMERICAN ROOTS
+                </h2>
+              </div>
               <div className="space-y-6">
                 <p className="text-base md:text-lg leading-relaxed text-gray-600">
                   Antionette Campbell was born in 1934 in Rochester to immigrant parents. She grew up speaking Italian at home and taught herself to speak English at the age of 5 when she began kindergarten. She graduated from Jefferson High School in 1952 and later attended the Rochester Business Institute.
@@ -144,9 +157,12 @@ const About: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center">
             <div className="space-y-6 md:space-y-8">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 uppercase tracking-wide">
-                THE WINERY BEGINS
-              </h2>
+              <div className="space-y-4">
+                <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider">THE BEGINNING</span>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900">
+                  THE WINERY BEGINS
+                </h2>
+              </div>
               <div className="space-y-6">
                 <p className="text-base md:text-lg leading-relaxed text-gray-600">
                   In 1974, Andrew began planting his first vineyard in Fairport, New York, as a hobby. What started as a passion project quickly grew into something much larger. By 1978, Casa Larga had produced its first commercial vintage and became New York's 21st licensed winery.
@@ -174,11 +190,14 @@ const About: React.FC = () => {
 
       {/* A New Era Section */}
       <section className="py-20 md:py-28 lg:py-36 bg-white">
-        <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12 text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-8 md:mb-12 uppercase tracking-wide">
-            A NEW ERA
-          </h2>
-          <div className="space-y-6">
+        <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12">
+          <div className="text-center mb-12">
+            <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider mb-4 block">THE LEGACY</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-8">
+              A NEW ERA
+            </h2>
+          </div>
+          <div className="space-y-6 text-center">
             <p className="text-base md:text-lg leading-relaxed text-gray-600">
               Andrew and Ann had three children: John (Marie), Mary Jo and Andrea (Dennis). Andrew and Ann were also blessed with a healthy harvest of grandchildren (Nina Marie, Andrew John, Alana, Andrea, Maria, Lucy, Andrew, Thomas and Elizabeth).
             </p>
@@ -194,11 +213,14 @@ const About: React.FC = () => {
 
       {/* Today and Tomorrow Section */}
       <section className="py-20 md:py-28 lg:py-36 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12 text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-8 md:mb-12 uppercase tracking-wide">
-            TODAY AND TOMORROW
-          </h2>
-          <div className="space-y-6">
+        <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12">
+          <div className="text-center mb-12">
+            <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider mb-4 block">OUR FUTURE</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-8">
+              TODAY AND TOMORROW
+            </h2>
+          </div>
+          <div className="space-y-6 text-center">
             <p className="text-base md:text-lg leading-relaxed text-gray-600">
               Now in its second generation of family ownership, Casa Larga continues to innovate while honoring our traditions. We remain committed to producing award-winning wines and creating memorable experiences for every guest who visits our "large house."
             </p>
@@ -211,7 +233,14 @@ const About: React.FC = () => {
 
       {/* Statistics Section */}
       <section className="py-20 md:py-28 lg:py-36 bg-white">
-        <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+          <div className="text-center mb-16">
+            <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider mb-4 block">BY THE NUMBERS</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-6">
+              Our Legacy in Numbers
+            </h2>
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 text-center">
             <div className="space-y-4">
               <div className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-amber-900">
