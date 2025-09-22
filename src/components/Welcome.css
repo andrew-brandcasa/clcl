@@ -1,25 +1,172 @@
-/* Welcome Section Styles */
-.custom-catalog-button {
-  display: inline-block;
-  background-color: transparent;
-  color: #92400e;
-  border: 2px solid #92400e;
-  padding: 14px 35px;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
+.welcome-section {
+  background-color: var(--ast-global-color-4);
+}
+
+.stamp-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stamp-icon img {
+  width: 100px;
+  height: 100px;
+}
+
+.welcome-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 18px;
+  color: #000000;
+  letter-spacing: 2px;
+  font-weight: 400;
   text-transform: uppercase;
+  opacity: 0.85;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+
+
+
+
+.welcome-navigation {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.nav-item {
+  text-align: left;
+  padding: 0 10px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: flex-start;
   text-decoration: none;
+  color: inherit;
   transition: all 0.3s ease;
-  border-radius: 0;
+  padding: 20px 0;
 }
 
-.custom-catalog-button:hover {
-  background-color: #92400e;
-  color: white;
-  transform: translateY(-2px);
+.nav-link:hover {
+  transform: translateY(-3px);
 }
 
-.button-content-wrapper {
-  display: block;
+.nav-icon {
+  margin-right: 24px;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.nav-icon svg {
+  width: 55px;
+  height: auto;
+}
+
+.nav-content h3 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 20px;
+  color: var(--brown-dark);
+  margin-bottom: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.nav-content p {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 15px;
+  color: var(--brown-primary);
+  font-style: italic;
+  margin: 0;
+  line-height: 1.4;
+}
+
+#space-icon-box .nav-icon {
+  margin-top: 3px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .welcome-section {
+    padding: 64px 0;
+  }
+  
+  .welcome-navigation {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome-section {
+    padding: 48px 0;
+  }
+  
+  .welcome-description {
+    margin-bottom: 60px;
+    font-size: 18px;
+  }
+  
+  .welcome-navigation {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .nav-item {
+    text-align: center;
+    padding: 0;
+  }
+  
+  .nav-link {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  
+  .nav-icon {
+    margin-right: 0;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+  
+  #space-icon-box .nav-icon {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-title {
+    font-size: 13px;
+    margin-bottom: 30px;
+  }
+  
+  .welcome-description {
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+  
+  .stamp-icon {
+    margin-bottom: 30px;
+  }
+  
+  .stamp-icon img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .nav-icon svg {
+    width: 45px;
+  }
+  
+  .nav-content h3 {
+    font-size: 18px;
+  }
+  
+  .nav-content p {
+    font-size: 14px;
+  }
 }
