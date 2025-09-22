@@ -1,57 +1,412 @@
-/* Our History Page Styles - Matching homepage visual hierarchy */
+/* Modern Our History Page - Interactive Storytelling */
 
 /* Text shadow utility for hero title */
 .text-shadow-sm {
   text-shadow: 0 1px 2px rgba(0,0,0,.35);
 }
 
-/* Bounce animation for scroll indicator */
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% { 
-    transform: translateY(0); 
-  }
-  40% { 
-    transform: translateY(-10px); 
-  }
-  60% { 
-    transform: translateY(-5px); 
-  }
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
 }
 
-.animate-bounce {
-  animation: bounce 2s infinite;
+/* Progress indicator */
+.story-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(175, 105, 0, 0.2);
+  z-index: 1000;
 }
 
-/* Fade in animations matching homepage */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 40px, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
+.story-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #AF6900, #482817);
+  width: 0%;
+  transition: width 0.3s ease;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+/* Interactive Timeline */
+.timeline-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.fade-in-up {
-  animation: fadeInUp 0.8s ease-out;
+.timeline-track {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 60px 0;
+  padding: 40px 0;
 }
 
-.fade-in {
-  animation: fadeIn 0.8s ease-out;
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #AF6900, #482817);
+  transform: translateY(-50%);
 }
 
-/* Button styles matching homepage */
+.timeline-point {
+  position: relative;
+  background: white;
+  border: 4px solid #AF6900;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.timeline-point:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(175, 105, 0, 0.3);
+}
+
+.timeline-point.active {
+  background: #AF6900;
+  color: white;
+  transform: scale(1.2);
+  box-shadow: 0 12px 30px rgba(175, 105, 0, 0.4);
+}
+
+.timeline-year {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.timeline-label {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  font-weight: 600;
+  color: #AF6900;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.timeline-description {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  color: #666;
+  white-space: nowrap;
+  text-align: center;
+  max-width: 80px;
+  line-height: 1.3;
+}
+
+/* Story Cards */
+.story-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin: 60px 0;
+}
+
+.story-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.story-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.story-card-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.story-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.story-card:hover .story-card-image img {
+  transform: scale(1.05);
+}
+
+.story-card-content {
+  padding: 30px;
+}
+
+.story-card-chapter {
+  font-size: 12px;
+  color: #AF6900;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.story-card-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 24px;
+  color: #482817;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.story-card-summary {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.story-card-cta {
+  color: #AF6900;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap 0.3s ease;
+}
+
+.story-card-cta:hover {
+  gap: 12px;
+}
+
+/* Quote Callouts */
+.quote-section {
+  background: linear-gradient(135deg, #F5EBDA, #F0E6D6);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-section::before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 200px;
+  color: rgba(175, 105, 0, 0.1);
+  font-family: 'Libre Baskerville', serif;
+  line-height: 1;
+}
+
+.quote-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.quote-text {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 28px;
+  font-style: italic;
+  color: #482817;
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+
+.quote-attribution {
+  font-size: 16px;
+  color: #AF6900;
+  font-weight: 600;
+}
+
+/* Family Tree Section */
+.family-tree-section {
+  background: white;
+  padding: 100px 0;
+}
+
+.family-tree {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.founders-row {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.family-member {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.family-member:hover {
+  transform: translateY(-5px);
+}
+
+.family-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #AF6900;
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.family-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.family-name {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 18px;
+  color: #482817;
+  margin-bottom: 5px;
+}
+
+.family-role {
+  font-size: 14px;
+  color: #AF6900;
+  font-weight: 600;
+}
+
+.children-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.children-row .family-photo {
+  width: 100px;
+  height: 100px;
+}
+
+.children-row .family-name {
+  font-size: 16px;
+}
+
+.children-row .family-role {
+  font-size: 12px;
+}
+
+/* Stats Section */
+.stats-showcase {
+  background: linear-gradient(135deg, #482817, #AF6900);
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 60px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background: linear-gradient(45deg, #F5EBDA, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-label {
+  font-size: 16px;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+/* Immersive Story Sections */
+.immersive-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.immersive-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0,0,0,0.7) 0%,
+    rgba(72,40,23,0.6) 50%,
+    rgba(0,0,0,0.8) 100%
+  );
+}
+
+.immersive-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 40px;
+  color: white;
+  text-align: center;
+}
+
+.immersive-eyebrow {
+  font-size: 14px;
+  color: #F5EBDA;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.immersive-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 48px;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.immersive-text {
+  font-size: 20px;
+  line-height: 1.6;
+  opacity: 0.95;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Button styles */
 .elementor-button {
   display: inline-block;
   padding: 18px 45px;
@@ -92,17 +447,87 @@
   color: white;
 }
 
-.elementor-button.white {
-  background-color: white;
-  color: var(--brown-primary, #AF6900);
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .timeline-track {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .timeline-line {
+    width: 2px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-label {
+    left: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .timeline-description {
+    left: 80px;
+    bottom: auto;
+    top: 50%;
+    transform: translateY(20px);
+  }
+  
+  .founders-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .children-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
 }
 
-.elementor-button.white::before {
-  background-color: var(--brown-primary, #AF6900);
+@media (max-width: 768px) {
+  .story-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .immersive-title {
+    font-size: 36px;
+  }
+  
+  .immersive-text {
+    font-size: 18px;
+  }
+  
+  .quote-text {
+    font-size: 22px;
+  }
+  
+  .stat-number {
+    font-size: 48px;
+  }
+  
+  .timeline-point {
+    width: 50px;
+    height: 50px;
+  }
 }
 
-.elementor-button.white:hover {
-  color: white;
+@media (max-width: 480px) {
+  .immersive-content {
+    padding: 0 20px;
+  }
+  
+  .story-card-content {
+    padding: 20px;
+  }
+  
+  .stats-grid {
+    gap: 40px;
+  }
 }
 
 /* CSS Variables for consistency */
@@ -111,4 +536,32 @@
   --brown-dark: #482817;
   --brown-light: #9E845C;
   --cream: #F5EBDA;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Scroll animations */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
 }
