@@ -1,11 +1,11 @@
 .site-header {
   position: relative;
   z-index: 1000;
-  background: transparent;
+  background: white;
 }
 
 .desktop-header {
-  background-color: transparent;
+  background-color: white;
   border-bottom: 1px solid var(--ast-global-color-7);
   padding: 10px 0;
 }
@@ -36,6 +36,7 @@
 .logo {
   height: 80px;
   width: auto;
+  filter: none;
 }
 
 .cart-section {
@@ -50,6 +51,7 @@
   align-items: center;
   color: var(--brown-primary);
   padding: 10px;
+  text-decoration: none;
 }
 
 .cart-count {
@@ -70,7 +72,7 @@
 
 /* Navigation Styles */
 .main-navigation {
-  background-color: transparent;
+  background-color: white;
   border-bottom: 1px solid var(--ast-global-color-7);
 }
 
@@ -95,10 +97,14 @@
   font-weight: 500;
   text-decoration: none;
   transition: color 0.3s ease;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .nav-menu li a:hover {
-  color: var(--ast-global-color-1);
+  color: var(--brown-primary);
 }
 
 .has-dropdown .dropdown-menu {
@@ -106,7 +112,7 @@
   top: 100%;
   left: 0;
   background: white;
-  border: 2px solid var(--ast-global-color-0);
+  border: 1px solid var(--ast-global-color-7);
   border-top: none;
   list-style: none;
   padding: 0;
@@ -117,6 +123,7 @@
   transform: translateY(-10px);
   transition: all 0.3s ease;
   z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .has-dropdown:hover .dropdown-menu {
@@ -127,7 +134,7 @@
 
 .dropdown-menu li {
   margin: 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--ast-global-color-7);
 }
 
 .dropdown-menu li:last-child {
@@ -138,17 +145,20 @@
   padding: 15px 20px;
   color: var(--ast-global-color-3);
   border: none;
+  font-size: 13px;
+  text-transform: none;
+  letter-spacing: 0.5px;
 }
 
 .dropdown-menu li a:hover {
-  background: var(--ast-global-color-5);
-  color: var(--ast-global-color-1);
+  background: #f8f9fa;
+  color: var(--brown-primary);
 }
 
 /* Mobile Header */
 .mobile-header {
   display: none;
-  background-color: var(--ast-global-color-4);
+  background-color: white;
   border-bottom: 1px solid var(--ast-global-color-7);
   padding: 15px 0;
 }
@@ -162,6 +172,7 @@
 .mobile-logo .logo {
   height: 60px;
   width: auto;
+  filter: none;
 }
 
 .mobile-controls {
@@ -190,7 +201,7 @@
 }
 
 .mobile-nav-menu li {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--ast-global-color-7);
 }
 
 .mobile-nav-menu li:last-child {
@@ -203,17 +214,22 @@
   color: var(--ast-global-color-3);
   text-decoration: none;
   transition: background-color 0.3s ease;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .mobile-nav-menu li a:hover {
-  background-color: var(--ast-global-color-5);
-  color: var(--ast-global-color-1);
+  background-color: #f8f9fa;
+  color: var(--brown-primary);
 }
 
 /* Responsive */
 @media (max-width: 1024px) {
   .desktop-header,
-  .desktop-nav {
+  .main-navigation {
     display: none;
   }
   
