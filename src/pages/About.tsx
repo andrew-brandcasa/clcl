@@ -164,51 +164,81 @@ const About: React.FC = () => {
       {/* Italian Beginnings Section */}
       <section className="py-20 md:py-28 lg:py-36 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center">
-            <div className="space-y-6 md:space-y-8">
-              <div className="space-y-4">
-                <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider">OUR ORIGINS</span>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900">
-                  ITALIAN BEGINNINGS
-                </h2>
-              </div>
-              <div className="space-y-6">
-                <p className="text-base md:text-lg leading-relaxed text-gray-600">
-                  Andrew Colaruotolo was born in July of 1931 to Antonio and Josephine Colaruotolo in Gaeta, Italy, a small Mediterranean fishing village located between Rome and Naples. He was the third of four children.
-                </p>
-                <p className="text-base md:text-lg leading-relaxed text-gray-600">
-                  His father, Antonio, was a merchant marine as well as a fisherman and farmer. Antonio spent many months abroad in the newfound land of America, working as a laborer to send home money to his wife and four children.
-                </p>
-                <p className="text-base md:text-lg leading-relaxed text-gray-600">
-                  In his youth, Andrew spent much of his time working alongside his grandparents in the fields and in their small, family-owned grocery store. In Italy, it was customary for a family to have several very small farms that were in different climatic regions perfectly suited for growing different types of fruits and vegetables. It was here in the fields of Italy where Andrew fostered a stewardship for the land.
-                </p>
-                <p className="text-base md:text-lg leading-relaxed text-gray-600">
-                  Each of the Colaruotolo family's farms had a different name and specialized in a different product, such as olives, cheese and citrus fruit. "Casa Larga" was the farm where Andrew's family grew grapes and made wine. Of all the vineyards in the Gaeta area, "Casa Larga" was known as the one where the highest quality grapes were grown. Here, Andrew was taught by his grandmother that only a meticulously tended vineyard will yield the fruit required to produce high quality wine.
-                </p>
-                <p className="text-base md:text-lg leading-relaxed text-gray-600">
-                  After World War II, at the age of 17, Andrew immigrated to Rochester along with his sister, Eliza. Leaving behind their mother, father, sister and war-torn country, the siblings joined their brother, Frank, who had already come to Rochester in search of a better life. Andrew began his career as a mason, studying architecture at RIT and learning English at night.
-                </p>
-              </div>
+          <div className="space-y-16">
+            {/* Section Header */}
+            <div className="text-center">
+              <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider mb-4 block">OUR ORIGINS</span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-8">
+                ITALIAN BEGINNINGS
+              </h2>
             </div>
             
-            <div className="space-y-12">
-              <div className="relative rounded-2xl overflow-hidden shadow-lg">
-                <img 
-                  src="https://casalarga.casasite.com/wp-content/uploads/2025/09/4c037f636c3c55436ad9ca4091784592e1762573.webp" 
-                  alt="Historic photo of Andrew Colaruotolo in Italy" 
-                  className="w-full h-auto object-cover"
-                  loading="lazy"
-                  decoding="async"
-                />
+            {/* Content Layout */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 md:gap-16">
+              {/* Left Column - Images */}
+              <div className="lg:col-span-1 space-y-8">
+                <div className="relative rounded-2xl overflow-hidden shadow-lg">
+                  <img 
+                    src="https://casalarga.casasite.com/wp-content/uploads/2025/09/4c037f636c3c55436ad9ca4091784592e1762573.webp" 
+                    alt="Historic photo of Andrew Colaruotolo in Italy" 
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div className="relative rounded-2xl overflow-hidden shadow-lg">
+                  <img 
+                    src="https://casalarga.casasite.com/wp-content/uploads/2025/09/d12a69a37997b0407ca91563052dbddd2647c3c5.webp" 
+                    alt="Early Casa Larga vineyard in Italy" 
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
               </div>
-              <div className="relative rounded-2xl overflow-hidden shadow-lg">
-                <img 
-                  src="https://casalarga.casasite.com/wp-content/uploads/2025/09/d12a69a37997b0407ca91563052dbddd2647c3c5.webp" 
-                  alt="Early Casa Larga vineyard in Italy" 
-                  className="w-full h-auto object-cover"
-                  loading="lazy"
-                  decoding="async"
-                />
+              
+              {/* Right Column - Text in digestible chunks */}
+              <div className="lg:col-span-2 space-y-8">
+                {/* Chunk 1: Early Life */}
+                <div className="bg-white p-8 rounded-2xl shadow-sm">
+                  <h3 className="text-xl font-serif text-amber-900 mb-4">Early Life in Gaeta</h3>
+                  <p className="text-base md:text-lg leading-relaxed text-gray-600 mb-4">
+                    Andrew Colaruotolo was born in July of 1931 to Antonio and Josephine Colaruotolo in Gaeta, Italy, a small Mediterranean fishing village located between Rome and Naples. He was the third of four children.
+                  </p>
+                  <p className="text-base md:text-lg leading-relaxed text-gray-600">
+                    His father, Antonio, was a merchant marine as well as a fisherman and farmer. Antonio spent many months abroad in the newfound land of America, working as a laborer to send home money to his wife and four children.
+                  </p>
+                </div>
+                
+                {/* Chunk 2: Learning the Trade */}
+                <div className="bg-white p-8 rounded-2xl shadow-sm">
+                  <h3 className="text-xl font-serif text-amber-900 mb-4">Learning from the Land</h3>
+                  <p className="text-base md:text-lg leading-relaxed text-gray-600 mb-4">
+                    In his youth, Andrew spent much of his time working alongside his grandparents in the fields and in their small, family-owned grocery store. In Italy, it was customary for a family to have several very small farms that were in different climatic regions perfectly suited for growing different types of fruits and vegetables.
+                  </p>
+                  <p className="text-base md:text-lg leading-relaxed text-gray-600">
+                    It was here in the fields of Italy where Andrew fostered a stewardship for the land.
+                  </p>
+                </div>
+                
+                {/* Chunk 3: Casa Larga Origins */}
+                <div className="bg-amber-50 p-8 rounded-2xl border border-amber-100">
+                  <h3 className="text-xl font-serif text-amber-900 mb-4">The Original Casa Larga</h3>
+                  <p className="text-base md:text-lg leading-relaxed text-gray-600 mb-4">
+                    Each of the Colaruotolo family's farms had a different name and specialized in a different product, such as olives, cheese and citrus fruit. <strong className="text-amber-900">"Casa Larga"</strong> was the farm where Andrew's family grew grapes and made wine.
+                  </p>
+                  <p className="text-base md:text-lg leading-relaxed text-gray-600">
+                    Of all the vineyards in the Gaeta area, "Casa Larga" was known as the one where the highest quality grapes were grown. Here, Andrew was taught by his grandmother that only a meticulously tended vineyard will yield the fruit required to produce high quality wine.
+                  </p>
+                </div>
+                
+                {/* Chunk 4: Immigration */}
+                <div className="bg-white p-8 rounded-2xl shadow-sm">
+                  <h3 className="text-xl font-serif text-amber-900 mb-4">Journey to America</h3>
+                  <p className="text-base md:text-lg leading-relaxed text-gray-600">
+                    After World War II, at the age of 17, Andrew immigrated to Rochester along with his sister, Eliza. Leaving behind their mother, father, sister and war-torn country, the siblings joined their brother, Frank, who had already come to Rochester in search of a better life. Andrew began his career as a mason, studying architecture at RIT and learning English at night.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -238,13 +268,20 @@ const About: React.FC = () => {
                   ITALIAN AMERICAN ROOTS
                 </h2>
               </div>
-              <div className="space-y-6">
-                <p className="text-base md:text-lg leading-relaxed text-gray-600">
-                  Antionette Campbell was born in 1934 in Rochester to immigrant parents. She grew up speaking Italian at home and taught herself to speak English at the age of 5 when she began kindergarten. She graduated from Jefferson High School in 1952 and later attended the Rochester Business Institute.
-                </p>
-                <p className="text-base md:text-lg leading-relaxed text-gray-600">
-                  Andy and Ann met at a dance in 1956 and married in April of 1957. Shortly after they wed, they started a home building company, Anco Builders. After mastering the art of stone masonry and becoming a successful home builder, Mr. C set out to reconnect with his passion for the land. In 1974, he started planting a vineyard in Fairport as a hobby. That vineyard soon became another business venture – Casa Larga Vineyards.
-                </p>
+              <div className="space-y-8">
+                <div className="bg-gray-50 p-6 rounded-xl">
+                  <h4 className="text-lg font-serif text-amber-900 mb-3">Ann's Story</h4>
+                  <p className="text-base md:text-lg leading-relaxed text-gray-600">
+                    Antionette Campbell was born in 1934 in Rochester to immigrant parents. She grew up speaking Italian at home and taught herself to speak English at the age of 5 when she began kindergarten. She graduated from Jefferson High School in 1952 and later attended the Rochester Business Institute.
+                  </p>
+                </div>
+                
+                <div className="bg-gray-50 p-6 rounded-xl">
+                  <h4 className="text-lg font-serif text-amber-900 mb-3">A New Beginning</h4>
+                  <p className="text-base md:text-lg leading-relaxed text-gray-600">
+                    Andy and Ann met at a dance in 1956 and married in April of 1957. Shortly after they wed, they started a home building company, Anco Builders. After mastering the art of stone masonry and becoming a successful home builder, Mr. C set out to reconnect with his passion for the land. In 1974, he started planting a vineyard in Fairport as a hobby. That vineyard soon became another business venture – Casa Larga Vineyards.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -296,16 +333,32 @@ const About: React.FC = () => {
               A NEW ERA
             </h2>
           </div>
-          <div className="space-y-6 text-center">
-            <p className="text-base md:text-lg leading-relaxed text-gray-600">
-              Andrew and Ann had three children: John (Marie), Mary Jo and Andrea (Dennis). Andrew and Ann were also blessed with a healthy harvest of grandchildren (Nina Marie, Andrew John, Alana, Andrea, Maria, Lucy, Andrew, Thomas and Elizabeth).
-            </p>
-            <p className="text-base md:text-lg leading-relaxed text-gray-600">
-              In 2004, Casa Larga's founder Mr. C passed away. Anyone who knew him was immediately captivated by his striking build and charismatic personality. Mr. C was succeeded by wife, Ann (Mrs. C), who left us in September of 2015. She gave us a legacy of family, charity and tradition. Mrs. C was a uniquely great lady and her many passions made Casa Larga what it is today. Her love of our family was matched in her generosity to others and her deep faith. She and Mr. C gave us our old-world approach to making wine and doing business.
-            </p>
-            <p className="text-base md:text-lg leading-relaxed text-gray-600">
-              Their three children are continuing their legacies – each has an active role at Casa Larga Vineyards. Andrea is Director of Marketing, Mary Jo is Director of Accounting and IT, and John is Director of Winemaking. As the vineyard and winery continue to operate under the watchful eye of Mr. C's children, a variety of other family and non-family employees at various positions are also continuing the legacy. Several grandchildren can be seen on occasion at the winery, doing their parts to continue the family tradition.
-            </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            {/* Family Card */}
+            <div className="bg-amber-50 p-8 rounded-2xl border border-amber-100">
+              <h4 className="text-xl font-serif text-amber-900 mb-4">The Family</h4>
+              <p className="text-base md:text-lg leading-relaxed text-gray-600">
+                Andrew and Ann had three children: John (Marie), Mary Jo and Andrea (Dennis). They were also blessed with a healthy harvest of grandchildren (Nina Marie, Andrew John, Alana, Andrea, Maria, Lucy, Andrew, Thomas and Elizabeth).
+              </p>
+            </div>
+            
+            {/* Legacy Card */}
+            <div className="bg-gray-50 p-8 rounded-2xl">
+              <h4 className="text-xl font-serif text-amber-900 mb-4">Passing the Torch</h4>
+              <p className="text-base md:text-lg leading-relaxed text-gray-600">
+                In 2004, Casa Larga's founder Mr. C passed away. He was succeeded by wife, Ann (Mrs. C), who left us in September of 2015. She gave us a legacy of family, charity and tradition.
+              </p>
+            </div>
+          </div>
+          
+          <div className="mt-12 text-center">
+            <div className="bg-white p-8 rounded-2xl shadow-sm max-w-4xl mx-auto">
+              <h4 className="text-xl font-serif text-amber-900 mb-4">Continuing the Legacy</h4>
+              <p className="text-base md:text-lg leading-relaxed text-gray-600">
+                Their three children are continuing their legacies – each has an active role at Casa Larga Vineyards. Andrea is Director of Marketing, Mary Jo is Director of Accounting and IT, and John is Director of Winemaking. As the vineyard and winery continue to operate under the watchful eye of Mr. C's children, a variety of other family and non-family employees at various positions are also continuing the legacy.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -319,13 +372,21 @@ const About: React.FC = () => {
               TODAY AND TOMORROW
             </h2>
           </div>
-          <div className="space-y-6 text-center">
-            <p className="text-base md:text-lg leading-relaxed text-gray-600">
-              Now in its second generation of family ownership, Casa Larga continues to innovate while honoring our traditions. We remain committed to producing award-winning wines and creating memorable experiences for every guest who visits our "large house."
-            </p>
-            <p className="text-base md:text-lg leading-relaxed text-gray-600">
-              Over the years, our wines have earned numerous awards and accolades, cementing our reputation as one of New York's premier wineries. We continue to expand our offerings while maintaining the quality and craftsmanship that Mr. C and Mrs. C instilled in every bottle.
-            </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            <div className="bg-white p-8 rounded-2xl shadow-sm">
+              <h4 className="text-xl font-serif text-amber-900 mb-4">Innovation & Tradition</h4>
+              <p className="text-base md:text-lg leading-relaxed text-gray-600">
+                Now in its second generation of family ownership, Casa Larga continues to innovate while honoring our traditions. We remain committed to producing award-winning wines and creating memorable experiences for every guest who visits our "large house."
+              </p>
+            </div>
+            
+            <div className="bg-white p-8 rounded-2xl shadow-sm">
+              <h4 className="text-xl font-serif text-amber-900 mb-4">Award-Winning Excellence</h4>
+              <p className="text-base md:text-lg leading-relaxed text-gray-600">
+                Over the years, our wines have earned numerous awards and accolades, cementing our reputation as one of New York's premier wineries. We continue to expand our offerings while maintaining the quality and craftsmanship that Mr. C and Mrs. C instilled in every bottle.
+              </p>
+            </div>
           </div>
         </div>
       </section>
