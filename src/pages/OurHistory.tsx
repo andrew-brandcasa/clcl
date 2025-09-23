@@ -229,19 +229,17 @@ const OurHistory: React.FC = () => {
       {/* Introduction - The Heart of Our Heritage */}
       <section id="heritage-intro" className="py-20 md:py-28 lg:py-36 bg-white">
         <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
+          <div className="flex justify-center items-center mb-8 md:mb-12">
+            <img src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Stamp.png" alt="Casa Larga Stamp" className="w-[100px] h-[100px]" />
+          </div>
+          
+          <span className="section-subtitle">THE HEART OF OUR HERITAGE</span>
+          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center">
             <div className="space-y-6 md:space-y-8">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900">
-                The Heart of Our Heritage
-              </h2>
-              <div className="space-y-6">
-                <p className="text-lg md:text-xl leading-relaxed text-gray-700">
-                  Casa Larga is more than a winery; it is a living tribute to our Italian heritage and the enduring legacy of our founders, Andrew and Ann Colaruotolo.
-                </p>
-                <p className="text-base md:text-lg leading-relaxed text-gray-600">
-                  Known affectionately as Mr. and Mrs. C, their passion, dedication, and love for family are the cornerstones of our continued success. This is their story, and ours.
-                </p>
-              </div>
+              <p className="section-description text-center lg:text-left">
+                Casa Larga is more than a winery; it is a living tribute to our Italian heritage and the enduring legacy of our founders, Andrew and Ann Colaruotolo. Known affectionately as Mr. and Mrs. C, their passion, dedication, and love for family are the cornerstones of our continued success. This is their story, and ours.
+              </p>
             </div>
             
             <div className="flex justify-center">
@@ -260,11 +258,10 @@ const OurHistory: React.FC = () => {
       {/* Interactive Timeline - The Journey of Casa Larga */}
       <section className="timeline-container">
         <div className="timeline-wrapper">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-6">
-              The Journey of Casa Larga
-            </h2>
-            <p className="text-base md:text-lg leading-relaxed text-gray-600 max-w-3xl mx-auto">
+          <div className="text-center mb-24">
+            <span className="section-subtitle">THE JOURNEY</span>
+            <h2 className="mb-6">The Journey of Casa Larga</h2>
+            <p className="section-description">
               Follow the remarkable story of Casa Larga through the decades, from a small vineyard in Italy to New York's celebrated winery.
             </p>
           </div>
@@ -299,6 +296,7 @@ const OurHistory: React.FC = () => {
           backgroundImage: "url('https://casalarga.casasite.com/wp-content/uploads/2025/09/2191daffdc0354ac2d35d9aa3868861c0a16ca84.webp')"
         }}
       >
+        <span className="section-subtitle">THE PHILOSOPHY</span>
         <div className="quote-content">
           <div className="quote-text">
             "Only a meticulously tended vineyard will yield the fruit required to produce high quality wine."
@@ -312,11 +310,10 @@ const OurHistory: React.FC = () => {
       {/* The Family Today - Continuing the Legacy */}
       <section className="family-gallery">
         <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-6">
-              The Family Today
-            </h2>
-            <p className="text-base md:text-lg leading-relaxed text-gray-600 max-w-3xl mx-auto">
+          <div className="text-center mb-24">
+            <span className="section-subtitle">THE LEGACY</span>
+            <h2 className="mb-6">The Family Today</h2>
+            <p className="section-description">
               Today, the legacy of Mr. and Mrs. C is carried on by their children and grandchildren. John, our Director of Winemaking, inherited his father's passion for the craft. Mary Jo, our Director of Accounting and IT, ensures the smooth operation of the business. And Andrea, our Director of Marketing, shares the Casa Larga story with the world.
             </p>
           </div>
@@ -363,11 +360,11 @@ const OurHistory: React.FC = () => {
       {/* Call to Action - Experience the Legacy */}
       <section className="cta-section">
         <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="cta-title">Experience the Casa Larga legacy for yourself.</h2>
+          <h2 className="cta-title">Experience the Casa Larga Legacy</h2>
           <div className="cta-buttons">
-            <a href="#visit" className="cta-button">Visit Our Winery</a>
-            <a href="#shop" className="cta-button">Shop Our Wines</a>
-            <a href="#club" className="cta-button">Join Our Wine Club</a>
+            <a href="#visit" className="elementor-button white">Visit Our Winery</a>
+            <a href="#shop" className="elementor-button white">Shop Our Wines</a>
+            <a href="#club" className="elementor-button white">Join Our Wine Club</a>
           </div>
         </div>
       </section>
