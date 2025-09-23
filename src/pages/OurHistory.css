@@ -119,89 +119,111 @@
   padding: 0 20px;
 }
 
-.timeline-line {
+/* Vertical Timeline */
+.vertical-timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Timeline line running down the center */
+.vertical-timeline::before {
+  content: '';
   position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #AF6900 0%, #9E845C 50%, #AF6900 100%);
-  transform: translateY(-50%);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #AF6900, #9E845C, #AF6900);
   z-index: 1;
 }
 
-.timeline-points {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.timeline-item {
   position: relative;
-  z-index: 2;
-  margin: 40px 0;
+  margin-bottom: 80px;
+  width: 100%;
 }
 
-.timeline-point {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 10px;
+/* Alternating left and right layout */
+.timeline-item:nth-child(odd) {
+  padding-left: 0;
+  padding-right: calc(50% + 40px);
 }
 
-.timeline-point:hover {
-  transform: translateY(-5px);
-}
-
-.timeline-dot {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: white;
-  border: 4px solid #AF6900;
-  transition: all 0.3s ease;
-  margin-bottom: 10px;
-}
-
-.timeline-point.active .timeline-dot {
-  background: #AF6900;
-  transform: scale(1.3);
-  box-shadow: 0 0 20px rgba(175, 105, 0, 0.4);
-}
-
-.timeline-year {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: #482817;
-  margin-bottom: 5px;
-}
-
-.timeline-label {
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 12px;
-  color: #666;
-  text-align: center;
-  max-width: 80px;
-  line-height: 1.2;
+.timeline-item:nth-child(even) {
+  padding-left: calc(50% + 40px);
+  padding-right: 0;
 }
 
 .timeline-content {
-  margin-top: 40px;
   background: white;
   border-radius: 15px;
   padding: 40px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  min-height: 300px;
-  display: flex;
-  align-items: center;
-  gap: 40px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.timeline-text {
-  flex: 1;
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
-.timeline-content h3 {
+/* Timeline dot */
+.timeline-dot {
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background: #AF6900;
+  border: 4px solid white;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  box-shadow: 0 0 0 4px #AF6900;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+  right: -50px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+  left: -50px;
+}
+
+/* Arrow pointing to timeline */
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+  right: -30px;
+  border-left-color: white;
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+  left: -30px;
+  border-right-color: white;
+}
+
+.timeline-year {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #AF6900;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.timeline-title {
   font-family: 'Libre Baskerville', serif;
   font-size: 28px;
   color: #482817;
@@ -209,25 +231,31 @@
   line-height: 1.3;
 }
 
-.timeline-content p {
+.timeline-description {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 16px;
   line-height: 1.7;
   color: #666;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .timeline-image {
-  flex: 0 0 300px;
-  height: 200px;
+  width: 100%;
+  height: 250px;
   border-radius: 10px;
   overflow: hidden;
+  margin-top: 20px;
 }
 
 .timeline-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.timeline-image:hover img {
+  transform: scale(1.05);
 }
 
 /* Parallax Quote Section */
@@ -370,30 +398,32 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .timeline-points {
-    flex-direction: column;
-    gap: 30px;
+  .vertical-timeline::before {
+    left: 30px;
   }
   
-  .timeline-line {
-    top: 0;
-    bottom: 0;
-    left: 50%;
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    padding-left: 80px;
+    padding-right: 0;
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-dot,
+  .timeline-item:nth-child(even) .timeline-dot {
+    left: 20px;
     right: auto;
-    width: 3px;
-    height: auto;
-    transform: translateX(-50%);
   }
   
-  .timeline-content {
-    flex-direction: column;
-    text-align: center;
+  .timeline-item:nth-child(odd) .timeline-content::before,
+  .timeline-item:nth-child(even) .timeline-content::before {
+    left: -30px;
+    right: auto;
+    border-right-color: white;
+    border-left-color: transparent;
   }
   
-  .timeline-image {
-    flex: none;
-    width: 100%;
-    max-width: 300px;
+  .timeline-year {
+    font-size: 36px;
   }
   
   .parallax-quote {

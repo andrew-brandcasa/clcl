@@ -92,7 +92,6 @@ const timelineEvents: TimelineEvent[] = [
 
 const OurHistory: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeTimelineIndex, setActiveTimelineIndex] = useState(0);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -270,35 +269,25 @@ const OurHistory: React.FC = () => {
             </p>
           </div>
 
-          <div className="timeline-line"></div>
-          
-          <div className="timeline-points">
+          <div className="vertical-timeline">
             {timelineEvents.map((event, index) => (
-              <div
-                key={event.year}
-                className={`timeline-point ${index === activeTimelineIndex ? 'active' : ''}`}
-                onClick={() => setActiveTimelineIndex(index)}
-              >
+              <div key={event.year} className="timeline-item">
                 <div className="timeline-dot"></div>
-                <div className="timeline-year">{event.year}</div>
-                <div className="timeline-label">{event.label}</div>
+                <div className="timeline-content">
+                  <div className="timeline-year">{event.year}</div>
+                  <h3 className="timeline-title">{event.title}</h3>
+                  {event.content.map((paragraph, pIndex) => (
+                    <p key={pIndex} className="timeline-description">{paragraph}</p>
+                  ))}
+                  <div className="timeline-image">
+                    <img 
+                      src={event.image} 
+                      alt={event.title}
+                    />
+                  </div>
+                </div>
               </div>
             ))}
-          </div>
-
-          <div className="timeline-content">
-            <div className="timeline-text">
-              <h3>{timelineEvents[activeTimelineIndex].title}</h3>
-              {timelineEvents[activeTimelineIndex].content.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
-            </div>
-            <div className="timeline-image">
-              <img 
-                src={timelineEvents[activeTimelineIndex].image} 
-                alt={timelineEvents[activeTimelineIndex].title}
-              />
-            </div>
           </div>
         </div>
       </section>
