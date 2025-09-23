@@ -310,7 +310,7 @@ const OurHistory: React.FC = () => {
           <div className="mb-16">
             <div className="max-w-4xl mx-auto">
               <img 
-                src="/api/placeholder/800/600" 
+                src="https://www.mpnnow.com/gcdn/authoring/2011/08/14/NMP2/ghows-NU-15234b0c-2a07-4f6b-b99e-097298cc8940-02cb14b6.jpeg?width=1320&height=872&fit=crop&format=pjpg&auto=webp" 
                 alt="The Colaruotolo family in the vineyard" 
                 className="w-full rounded-2xl shadow-2xl"
               />
