@@ -306,39 +306,45 @@ const OurHistory: React.FC = () => {
             </p>
           </div>
 
+          {/* Featured Family Photo */}
+          <div className="mb-16">
+            <div className="max-w-4xl mx-auto">
+              <img 
+                src="/api/placeholder/800/600" 
+                alt="The Colaruotolo family in the vineyard" 
+                className="w-full rounded-2xl shadow-2xl"
+              />
+              <p className="text-center text-gray-600 italic mt-6 text-lg">
+                The Colaruotolo family sharing a moment in the vineyard that started it all
+              </p>
+            </div>
+          </div>
+
+          {/* Family Roles */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-16">
-            <div className="text-center bg-gray-50 p-8 rounded-2xl">
-              <div className="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-serif font-bold text-amber-900">J</span>
-              </div>
-              <h3 className="text-xl font-serif text-amber-900 mb-2">John Colaruotolo</h3>
-              <p className="text-amber-700 font-medium mb-4">Director of Winemaking</p>
-              <p className="text-gray-600 text-sm">Continuing the winemaking tradition with modern techniques and old-world craftsmanship.</p>
+            <div className="text-center">
+              <h3 className="text-2xl font-serif text-amber-900 mb-3">John Colaruotolo</h3>
+              <p className="text-amber-700 font-medium text-lg mb-4">Director of Winemaking</p>
+              <p className="text-gray-600 leading-relaxed">Continuing the winemaking tradition with modern techniques and old-world craftsmanship, ensuring every bottle reflects the family's commitment to excellence.</p>
             </div>
             
-            <div className="text-center bg-gray-50 p-8 rounded-2xl">
-              <div className="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-serif font-bold text-amber-900">M</span>
-              </div>
-              <h3 className="text-xl font-serif text-amber-900 mb-2">Mary Jo Colaruotolo</h3>
-              <p className="text-amber-700 font-medium mb-4">Director of Accounting & IT</p>
-              <p className="text-gray-600 text-sm">Managing the business operations with the same attention to detail as the vineyard.</p>
+            <div className="text-center">
+              <h3 className="text-2xl font-serif text-amber-900 mb-3">Mary Jo Colaruotolo</h3>
+              <p className="text-amber-700 font-medium text-lg mb-4">Director of Accounting & IT</p>
+              <p className="text-gray-600 leading-relaxed">Managing the business operations with the same attention to detail as the vineyard, ensuring Casa Larga runs smoothly behind the scenes.</p>
             </div>
             
-            <div className="text-center bg-gray-50 p-8 rounded-2xl">
-              <div className="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-serif font-bold text-amber-900">A</span>
-              </div>
-              <h3 className="text-xl font-serif text-amber-900 mb-2">Andrea Colaruotolo</h3>
-              <p className="text-amber-700 font-medium mb-4">Director of Marketing</p>
-              <p className="text-gray-600 text-sm">Sharing the Casa Larga story and connecting with wine lovers everywhere.</p>
+            <div className="text-center">
+              <h3 className="text-2xl font-serif text-amber-900 mb-3">Andrea Colaruotolo</h3>
+              <p className="text-amber-700 font-medium text-lg mb-4">Director of Marketing</p>
+              <p className="text-gray-600 leading-relaxed">Sharing the Casa Larga story and connecting with wine lovers everywhere, bringing the family's passion to new generations.</p>
             </div>
           </div>
 
           <div className="text-center">
             <div className="bg-amber-50 p-8 md:p-12 rounded-2xl border border-amber-100 max-w-4xl mx-auto">
               <p className="text-lg md:text-xl leading-relaxed text-gray-700">
-                Together, they are committed to upholding the family's tradition of excellence, ensuring that the Casa Larga legacy continues for generations to come.
+                <strong className="text-amber-900">Together, they are committed to upholding the family's tradition of excellence,</strong> ensuring that the Casa Larga legacy continues for generations to come. The third generation is now beginning to contribute, carrying forward the values of quality, heritage, and family that have defined Casa Larga for over 50 years.
               </p>
             </div>
           </div>
