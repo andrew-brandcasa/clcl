@@ -1,4 +1,4 @@
-/* Our History Page - Single Flow Design */
+/* Our History Page - Neoclassical Elegance Design */
 
 /* Text shadow utility for hero title */
 .text-shadow-sm {
@@ -105,10 +105,322 @@
   color: white;
 }
 
+/* Interactive Timeline Styles */
+.timeline-container {
+  position: relative;
+  padding: 60px 0;
+  background: linear-gradient(135deg, #f8f6f3 0%, #f0ede8 100%);
+}
+
+.timeline-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #AF6900 0%, #9E845C 50%, #AF6900 100%);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.timeline-points {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  margin: 40px 0;
+}
+
+.timeline-point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 10px;
+}
+
+.timeline-point:hover {
+  transform: translateY(-5px);
+}
+
+.timeline-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  border: 4px solid #AF6900;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.timeline-point.active .timeline-dot {
+  background: #AF6900;
+  transform: scale(1.3);
+  box-shadow: 0 0 20px rgba(175, 105, 0, 0.4);
+}
+
+.timeline-year {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #482817;
+  margin-bottom: 5px;
+}
+
+.timeline-label {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  max-width: 80px;
+  line-height: 1.2;
+}
+
+.timeline-content {
+  margin-top: 40px;
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.timeline-text {
+  flex: 1;
+}
+
+.timeline-content h3 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 28px;
+  color: #482817;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.timeline-content p {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.timeline-image {
+  flex: 0 0 300px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.timeline-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Parallax Quote Section */
+.parallax-quote {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.parallax-quote::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.quote-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.quote-text {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(24px, 4vw, 48px);
+  color: white;
+  font-style: italic;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.quote-author {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 18px;
+  color: rgba(255,255,255,0.9);
+  font-weight: 300;
+}
+
+/* Family Gallery */
+.family-gallery {
+  padding: 80px 0;
+  background: white;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  color: white;
+  padding: 30px 20px 20px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Call to Action Section */
+.cta-section {
+  background: linear-gradient(135deg, #482817 0%, #AF6900 100%);
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+}
+
+.cta-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  background: rgba(255,255,255,0.1);
+  border: 2px solid white;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: white;
+  color: #482817;
+}
+
 /* CSS Variables for consistency */
 :root {
   --brown-primary: #AF6900;
   --brown-dark: #482817;
   --brown-light: #9E845C;
   --cream: #F5EBDA;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline-points {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .timeline-line {
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: auto;
+    width: 3px;
+    height: auto;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .timeline-image {
+    flex: none;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .parallax-quote {
+    background-attachment: scroll;
+    height: 50vh;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-content {
+    padding: 20px;
+  }
+  
+  .timeline-content h3 {
+    font-size: 22px;
+  }
+  
+  .quote-text {
+    font-size: 20px;
+  }
 }
