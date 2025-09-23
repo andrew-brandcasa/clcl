@@ -233,7 +233,7 @@ const OurHistory: React.FC = () => {
             <img src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Stamp.png" alt="Casa Larga Stamp" className="w-[100px] h-[100px]" />
           </div>
           
-          <span className="section-subtitle">THE HEART OF OUR HERITAGE</span>
+          <span className="section-subtitle text-center block">THE HEART OF OUR HERITAGE</span>
           
           <div className="text-center">
             <p className="section-description">
