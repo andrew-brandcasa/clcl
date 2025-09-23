@@ -235,22 +235,10 @@ const OurHistory: React.FC = () => {
           
           <span className="section-subtitle">THE HEART OF OUR HERITAGE</span>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center">
-            <div className="space-y-6 md:space-y-8">
-              <p className="section-description text-center lg:text-left">
-                Casa Larga is more than a winery; it is a living tribute to our Italian heritage and the enduring legacy of our founders, Andrew and Ann Colaruotolo. Known affectionately as Mr. and Mrs. C, their passion, dedication, and love for family are the cornerstones of our continued success. This is their story, and ours.
-              </p>
-            </div>
-            
-            <div className="flex justify-center">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl max-w-md">
-                <img 
-                  src="https://casalarga.casasite.com/wp-content/uploads/2025/08/mr-casa.png" 
-                  alt="Andrew and Ann Colaruotolo - Mr. and Mrs. C" 
-                  className="w-full h-auto"
-                />
-              </div>
-            </div>
+          <div className="text-center">
+            <p className="section-description">
+              Casa Larga is more than a winery; it is a living tribute to our Italian heritage and the enduring legacy of our founders, Andrew and Ann Colaruotolo. Known affectionately as Mr. and Mrs. C, their passion, dedication, and love for family are the cornerstones of our continued success. This is their story, and ours.
+            </p>
           </div>
         </div>
       </section>
