@@ -136,12 +136,15 @@ const PetiteNoir: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent z-[-1]"></div>
         
         <div className="text-center text-white z-10 px-6">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif mb-6 text-shadow-sm">
-            Casa Larga Petite Noir
+          <span className="font-serif font-normal text-[15px] tracking-[0.3em] uppercase opacity-85 text-white mb-6 block">
+            FINGER LAKES ELEGANCE
+          </span>
+          <h1 className="font-serif font-normal text-[clamp(32px,6vw,72px)] leading-[1.1] text-shadow-sm text-white max-w-[20ch] mx-auto tracking-[0.02em] mb-6">
+            CASA LARGA PETITE NOIR
           </h1>
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-light opacity-90">
-            A Taste of Finger Lakes Elegance
-          </h2>
+          <p className="font-sans font-normal text-[18px] leading-[1.4] text-white opacity-85 font-style-italic">
+            A taste of tradition in every bottle.
+          </p>
         </div>
       </section>
 
@@ -176,7 +179,7 @@ const PetiteNoir: React.FC = () => {
             {/* Product Info */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl md:text-4xl font-serif text-amber-900 mb-4">Casa Larga Petite Noir</h2>
+                <h2 className="text-3xl md:text-4xl font-serif text-amber-900 mb-4 uppercase tracking-wide">CASA LARGA PETITE NOIR</h2>
                 <div className="flex items-center gap-4 mb-6">
                   <span className="text-3xl font-bold text-amber-900">$14.41</span>
                   <div className="flex items-center gap-2">
@@ -266,7 +269,7 @@ const PetiteNoir: React.FC = () => {
             <div className="p-8">
               {activeTab === 'tasting' && (
                 <div>
-                  <h3 className="text-2xl font-serif text-amber-900 mb-4">Tasting Notes</h3>
+                  <h3 className="text-2xl font-serif text-amber-900 mb-4 uppercase tracking-wide">TASTING NOTES</h3>
                   <p className="text-gray-700 leading-relaxed">
                     Our Petite Noir delights the senses with aromas of ripe cherry, raspberry, and a hint of spice. On the palate, you'll discover a burst of red fruit flavors, balanced by soft tannins and a smooth, lingering finish. This is a light-bodied red wine with a refreshing acidity that makes it incredibly food-friendly.
                   </p>
@@ -275,7 +278,7 @@ const PetiteNoir: React.FC = () => {
 
               {activeTab === 'pairing' && (
                 <div>
-                  <h3 className="text-2xl font-serif text-amber-900 mb-4">Food Pairings</h3>
+                  <h3 className="text-2xl font-serif text-amber-900 mb-4 uppercase tracking-wide">FOOD PAIRINGS</h3>
                   <p className="text-gray-700 leading-relaxed">
                     The versatility of our Petite Noir makes it an excellent companion for a wide range of dishes. Pair it with roasted chicken, grilled salmon, or a mushroom risotto. It's also a wonderful match for a cheese board featuring creamy, soft cheeses.
                   </p>
@@ -284,7 +287,7 @@ const PetiteNoir: React.FC = () => {
 
               {activeTab === 'specs' && (
                 <div>
-                  <h3 className="text-2xl font-serif text-amber-900 mb-6">Technical Specifications</h3>
+                  <h3 className="text-2xl font-serif text-amber-900 mb-6 uppercase tracking-wide">TECHNICAL SPECIFICATIONS</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-4">
                       <div className="flex justify-between py-2 border-b border-gray-200">
@@ -332,8 +335,8 @@ const PetiteNoir: React.FC = () => {
           <span className="text-sm md:text-base font-medium text-white uppercase tracking-wider mb-4 block opacity-90">
             OUR STORY
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight font-serif text-white mb-8">
-            A Legacy in Every Bottle
+          <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight font-serif text-white mb-8 uppercase tracking-wide">
+            A LEGACY IN EVERY BOTTLE
           </h2>
           <p className="text-xl md:text-2xl leading-relaxed text-white mb-8 font-light">
             The Petite Noir holds a special place in our family's story. It represents our commitment to innovation while honoring the traditions passed down from our founder, Andrew Colaruotolo. Every bottle is a celebration of our heritage and our passion for creating wines that bring people together.
@@ -348,8 +351,11 @@ const PetiteNoir: React.FC = () => {
       <section className="py-20 md:py-28 lg:py-36 bg-white">
         <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-6">
-              What Our Customers Are Saying
+            <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider mb-4 block">
+              CUSTOMER REVIEWS
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-6 uppercase tracking-wide">
+              WHAT OUR CUSTOMERS ARE SAYING
             </h2>
           </div>
 
@@ -379,8 +385,11 @@ const PetiteNoir: React.FC = () => {
       <section className="py-20 md:py-28 lg:py-36 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-6">
-              You Might Also Like
+            <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider mb-4 block">
+              RELATED WINES
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-6 uppercase tracking-wide">
+              YOU MIGHT ALSO LIKE
             </h2>
           </div>
 
