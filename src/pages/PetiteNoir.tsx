@@ -38,7 +38,7 @@ const PetiteNoir: React.FC = () => {
   return (
     <div className="petite-noir-page">
       {/* Header */}
-      <header className="hidden lg:block absolute top-0 left-0 w-full z-10 bg-transparent pt-8">
+      <header className="hidden lg:block absolute top-0 left-0 w-full z-10 bg-transparent pt-4">
         <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="flex items-center justify-center relative pb-6 mb-6">
             <div className="absolute left-0 right-0 top-1/2 h-px bg-gray-300"></div>
