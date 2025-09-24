@@ -197,7 +197,7 @@ const TastingRoomCafe: React.FC = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="hero-section relative h-screen overflow-hidden flex flex-col">
+      <section className="relative h-screen overflow-hidden flex flex-col">
         <div
           className="absolute inset-0 w-full h-full bg-cover bg-center z-[-2]"
           style={{
@@ -218,7 +218,7 @@ const TastingRoomCafe: React.FC = () => {
                 Where Italian Heritage Meets Finger Lakes Charm
               </h2>
               <div className="mt-8">
-                <a href="#reservations" className="cafe-cta-button">
+                <a href="#reservations" className="elementor-button white">
                   MAKE A RESERVATION
                 </a>
               </div>
@@ -264,7 +264,7 @@ const TastingRoomCafe: React.FC = () => {
       </section>
 
       {/* Interactive Menu Section */}
-      <section className="py-20 md:py-28 lg:py-36 bg-cream">
+      <section className="py-20 md:py-28 lg:py-36 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
             <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider mb-4 block">
@@ -301,7 +301,7 @@ const TastingRoomCafe: React.FC = () => {
               <div
                 key={item.id}
                 onClick={() => openMenuModal(item)}
-                className="menu-item-card bg-white rounded-2xl overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-amber-100"
+                className="bg-white rounded-2xl overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-amber-100"
               >
                 <div className="aspect-video overflow-hidden">
                   <img 
@@ -375,7 +375,7 @@ const TastingRoomCafe: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-            <div className="bg-cream rounded-2xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300 border border-amber-100">
+            <div className="bg-gray-50 rounded-2xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300 border border-amber-100">
               <div className="w-16 h-16 bg-amber-700 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Wine className="w-8 h-8 text-white" />
               </div>
@@ -388,7 +388,7 @@ const TastingRoomCafe: React.FC = () => {
               </a>
             </div>
 
-            <div className="bg-cream rounded-2xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300 border border-amber-100">
+            <div className="bg-gray-50 rounded-2xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300 border border-amber-100">
               <div className="w-16 h-16 bg-amber-700 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="w-8 h-8 text-white" />
               </div>
@@ -401,7 +401,7 @@ const TastingRoomCafe: React.FC = () => {
               </a>
             </div>
 
-            <div className="bg-cream rounded-2xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300 border border-amber-100">
+            <div className="bg-gray-50 rounded-2xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300 border border-amber-100">
               <div className="w-16 h-16 bg-amber-700 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Star className="w-8 h-8 text-white" />
               </div>
@@ -418,7 +418,7 @@ const TastingRoomCafe: React.FC = () => {
       </section>
 
       {/* Photo Gallery Section */}
-      <section className="py-20 md:py-28 lg:py-36 bg-cream">
+      <section className="py-20 md:py-28 lg:py-36 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
             <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider mb-4 block">

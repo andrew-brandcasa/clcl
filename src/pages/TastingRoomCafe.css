@@ -86,21 +86,6 @@
   justify-content: center;
 }
 
-/* Menu Item Cards */
-.menu-item-card {
-  background: white;
-  border-radius: 16px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(175, 105, 0, 0.1);
-}
-
-.menu-item-card:hover {
-  border-color: rgba(175, 105, 0, 0.3);
-  box-shadow: 0 10px 30px rgba(175, 105, 0, 0.2);
-}
-
 /* Gallery Items */
 .gallery-item {
   position: relative;
