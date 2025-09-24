@@ -144,7 +144,7 @@ const PetiteNoir: React.FC = () => {
             <div className="space-y-6">
               <div className="aspect-square bg-gray-50 rounded-2xl overflow-hidden">
                 <img 
-                  src={productImages[selectedImage]} 
+                  src="https://media.liquormax.com/dtakhbk0dduu5inarcubm/casa-larga-petite-noir-1.png" 
                   alt="Casa Larga Petite Noir" 
                   className="w-full h-full object-contain"
                 />
