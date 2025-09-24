@@ -317,7 +317,6 @@ const PetiteNoir: React.FC = () => {
             backgroundImage: "url('https://casalarga.casasite.com/wp-content/uploads/2025/09/2191daffdc0354ac2d35d9aa3868861c0a16ca84.webp')"
           }}
         />
-        <div className="absolute inset-0 bg-black/60"></div>
         
         <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-8 lg:px-12 text-center">
           <span className="text-sm md:text-base font-medium text-white uppercase tracking-wider mb-4 block opacity-90">
