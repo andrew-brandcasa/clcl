@@ -41,30 +41,30 @@ const PetiteNoir: React.FC = () => {
       <header className="hidden lg:block absolute top-0 left-0 w-full z-10 bg-transparent pt-8">
         <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="flex items-center justify-center relative pb-6 mb-6">
-            <div className="absolute left-0 right-0 top-1/2 h-px bg-white/30"></div>
+            <div className="absolute left-0 right-0 top-1/2 h-px bg-gray-300"></div>
             
             <div className="bg-transparent px-4 z-10 flex flex-col items-center gap-3">
               <a href="/">
                 <img
                   src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Logo.svg"
                   alt="Casa Larga Logo"
-                  className="h-20 w-auto filter brightness-0 invert"
+                  className="h-20 w-auto"
                 />
               </a>
               
               <nav>
                 <ul className="flex items-center justify-center gap-20">
-                  <li><a href="/about" className="text-white font-sans font-normal text-xs uppercase tracking-[2px] transition-opacity hover:opacity-70">ABOUT</a></li>
-                  <li><a href="#visit" className="text-white font-sans font-normal text-xs uppercase tracking-[2px] transition-opacity hover:opacity-70">VISIT US</a></li>
-                  <li><a href="#shop" className="text-white font-sans font-normal text-xs uppercase tracking-[2px] transition-opacity hover:opacity-70">SHOP WINES</a></li>
-                  <li><a href="#events" className="text-white font-sans font-normal text-xs uppercase tracking-[2px] transition-opacity hover:opacity-70">WINERY EVENTS</a></li>
-                  <li><a href="/private-events" className="text-white font-sans font-normal text-xs uppercase tracking-[2px] transition-opacity hover:opacity-70">PRIVATE EVENTS</a></li>
+                  <li><a href="/about" className="text-amber-900 font-sans font-normal text-xs uppercase tracking-[2px] transition-colors hover:text-amber-700">ABOUT</a></li>
+                  <li><a href="#visit" className="text-amber-900 font-sans font-normal text-xs uppercase tracking-[2px] transition-colors hover:text-amber-700">VISIT US</a></li>
+                  <li><a href="#shop" className="text-amber-900 font-sans font-normal text-xs uppercase tracking-[2px] transition-colors hover:text-amber-700">SHOP WINES</a></li>
+                  <li><a href="#events" className="text-amber-900 font-sans font-normal text-xs uppercase tracking-[2px] transition-colors hover:text-amber-700">WINERY EVENTS</a></li>
+                  <li><a href="/private-events" className="text-amber-900 font-sans font-normal text-xs uppercase tracking-[2px] transition-colors hover:text-amber-700">PRIVATE EVENTS</a></li>
                 </ul>
               </nav>
             </div>
             
             <div className="absolute right-0 top-1/2 transform -translate-y-1/2 z-30">
-              <a href="/cart" className="relative flex items-center text-white p-2">
+              <a href="/cart" className="relative flex items-center text-amber-900 p-2">
                 <ShoppingCart size={24} />
                 <span className="absolute -top-1 -right-1 bg-amber-700 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold">0</span>
               </a>
@@ -82,17 +82,17 @@ const PetiteNoir: React.FC = () => {
                 <img
                   src="https://casalarga.casasite.com/wp-content/uploads/2025/08/Logo.svg"
                   alt="Casa Larga Logo"
-                  className="h-15 w-auto filter brightness-0 invert"
+                  className="h-15 w-auto"
                 />
               </a>
             </div>
             <div className="flex items-center gap-4">
-              <a href="/cart" className="relative flex items-center text-white p-2">
+              <a href="/cart" className="relative flex items-center text-amber-900 p-2">
                 <ShoppingCart size={24} />
                 <span className="absolute -top-1 -right-1 bg-amber-700 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold">0</span>
               </a>
               <button
-                className="text-white p-1"
+                className="text-amber-900 p-1"
                 onClick={toggleMobileMenu}
                 aria-label="Toggle menu"
               >
@@ -102,22 +102,22 @@ const PetiteNoir: React.FC = () => {
           </div>
 
           {isMobileMenuOpen && (
-            <nav className="mt-4 bg-black/90 rounded-lg border-t border-white/20">
+            <nav className="mt-4 bg-white rounded-lg border border-gray-200 shadow-lg">
               <ul className="py-2">
                 <li className="border-b border-white/10 last:border-b-0">
-                  <a href="/about" onClick={toggleMobileMenu} className="block px-5 py-4 text-white font-sans font-medium text-sm uppercase tracking-wider transition-colors hover:bg-white/10">ABOUT</a>
+                  <a href="/about" onClick={toggleMobileMenu} className="block px-5 py-4 text-amber-900 font-sans font-medium text-sm uppercase tracking-wider transition-colors hover:bg-amber-50">ABOUT</a>
                 </li>
                 <li className="border-b border-white/10 last:border-b-0">
-                  <a href="#visit" onClick={toggleMobileMenu} className="block px-5 py-4 text-white font-sans font-medium text-sm uppercase tracking-wider transition-colors hover:bg-white/10">VISIT US</a>
+                  <a href="#visit" onClick={toggleMobileMenu} className="block px-5 py-4 text-amber-900 font-sans font-medium text-sm uppercase tracking-wider transition-colors hover:bg-amber-50">VISIT US</a>
                 </li>
                 <li className="border-b border-white/10 last:border-b-0">
-                  <a href="#shop" onClick={toggleMobileMenu} className="block px-5 py-4 text-white font-sans font-medium text-sm uppercase tracking-wider transition-colors hover:bg-white/10">SHOP WINES</a>
+                  <a href="#shop" onClick={toggleMobileMenu} className="block px-5 py-4 text-amber-900 font-sans font-medium text-sm uppercase tracking-wider transition-colors hover:bg-amber-50">SHOP WINES</a>
                 </li>
                 <li className="border-b border-white/10 last:border-b-0">
-                  <a href="#events" onClick={toggleMobileMenu} className="block px-5 py-4 text-white font-sans font-medium text-sm uppercase tracking-wider transition-colors hover:bg-white/10">WINERY EVENTS</a>
+                  <a href="#events" onClick={toggleMobileMenu} className="block px-5 py-4 text-amber-900 font-sans font-medium text-sm uppercase tracking-wider transition-colors hover:bg-amber-50">WINERY EVENTS</a>
                 </li>
                 <li className="border-b border-white/10 last:border-b-0">
-                  <a href="/private-events" onClick={toggleMobileMenu} className="block px-5 py-4 text-white font-sans font-medium text-sm uppercase tracking-wider transition-colors hover:bg-white/10">PRIVATE EVENTS</a>
+                  <a href="/private-events" onClick={toggleMobileMenu} className="block px-5 py-4 text-amber-900 font-sans font-medium text-sm uppercase tracking-wider transition-colors hover:bg-amber-50">PRIVATE EVENTS</a>
                 </li>
               </ul>
             </nav>
