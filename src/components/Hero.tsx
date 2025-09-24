@@ -49,6 +49,7 @@ const Hero: React.FC = () => {
                   <li><a href="#shop">SHOP WINES</a></li>
                   <li><a href="#events">WINERY EVENTS</a></li>
                   <li><a href="/private-events">PRIVATE EVENTS</a></li>
+                  <li><a href="/store-finder">STORE FINDER</a></li>
                 </ul>
               </nav>
             </div>
@@ -98,6 +99,7 @@ const Hero: React.FC = () => {
                 <li><a href="#shop" onClick={toggleMobileMenu}>SHOP WINES</a></li>
                 <li><a href="#events" onClick={toggleMobileMenu}>WINERY EVENTS</a></li>
                 <li><a href="/private-events" onClick={toggleMobileMenu}>PRIVATE EVENTS</a></li>
+                <li><a href="/store-finder" onClick={toggleMobileMenu}>STORE FINDER</a></li>
               </ul>
             </nav>
           )}

@@ -12,6 +12,7 @@ import OurHistory from './pages/OurHistory';
 import About from './pages/About';
 import PrivateEvents from './pages/PrivateEvents';
 import PetiteNoir from './pages/PetiteNoir';
+import StoreFinder from './pages/StoreFinder';
 import './App.css';
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/private-events" element={<PrivateEvents />} />
         <Route path="/petite-noir" element={<PetiteNoir />} />
+        <Route path="/store-finder" element={<StoreFinder />} />
       </Routes>
     </div>
   );
