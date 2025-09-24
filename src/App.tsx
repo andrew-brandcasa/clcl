@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import OurHistory from './pages/OurHistory';
 import About from './pages/About';
 import PrivateEvents from './pages/PrivateEvents';
+import PetiteNoir from './pages/PetiteNoir';
 import './App.css';
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <Route path="/our-history" element={<OurHistory />} />
         <Route path="/about" element={<About />} />
         <Route path="/private-events" element={<PrivateEvents />} />
+        <Route path="/petite-noir" element={<PetiteNoir />} />
       </Routes>
     </div>
   );
