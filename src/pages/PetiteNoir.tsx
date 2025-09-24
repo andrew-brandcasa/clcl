@@ -309,30 +309,6 @@ const PetiteNoir: React.FC = () => {
         </div>
       </section>
 
-      {/* Our Story Section */}
-      <section className="relative py-20 md:py-28 lg:py-36">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('https://casalarga.casasite.com/wp-content/uploads/2025/09/2191daffdc0354ac2d35d9aa3868861c0a16ca84.webp')"
-          }}
-        />
-        
-        <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-8 lg:px-12 text-center">
-          <span className="text-sm md:text-base font-medium text-white uppercase tracking-wider mb-4 block opacity-90">
-            OUR STORY
-          </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight font-serif text-white mb-8 uppercase tracking-wide">
-            A LEGACY IN EVERY BOTTLE
-          </h2>
-          <p className="text-xl md:text-2xl leading-relaxed text-white mb-8 font-light">
-            The Petite Noir holds a special place in our family's story. It represents our commitment to innovation while honoring the traditions passed down from our founder, Andrew Colaruotolo. Every bottle is a celebration of our heritage and our passion for creating wines that bring people together.
-          </p>
-          <a href="/our-history" className="elementor-button white">
-            LEARN OUR STORY
-          </a>
-        </div>
-      </section>
 
       {/* Customer Reviews */}
       <section className="py-20 md:py-28 lg:py-36 bg-white">
