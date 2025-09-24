@@ -13,7 +13,7 @@ const PetiteNoir: React.FC = () => {
   };
 
   const productImages = [
-    "https://casalarga.casasite.com/wp-content/uploads/2025/08/pallido-bottle.png",
+    "https://media.liquormax.com/dtakhbk0dduu5inarcubm/casa-larga-petite-noir-1.png",
     "https://images.pexels.com/photos/1407846/pexels-photo-1407846.jpeg?auto=compress&cs=tinysrgb&w=800",
     "https://images.pexels.com/photos/434311/pexels-photo-434311.jpeg?auto=compress&cs=tinysrgb&w=800",
     "https://images.pexels.com/photos/39351/grapes-purple-fruit-vineyard-39351.jpeg?auto=compress&cs=tinysrgb&w=800"
@@ -317,6 +317,7 @@ const PetiteNoir: React.FC = () => {
             backgroundImage: "url('https://casalarga.casasite.com/wp-content/uploads/2025/09/2191daffdc0354ac2d35d9aa3868861c0a16ca84.webp')"
           }}
         />
+        <div className="absolute inset-0 bg-black/60"></div>
         
         <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-8 lg:px-12 text-center">
           <span className="text-sm md:text-base font-medium text-white uppercase tracking-wider mb-4 block opacity-90">
