@@ -234,17 +234,20 @@ const TastingRoomCafe: React.FC = () => {
       </section>
 
       {/* Introduction Section */}
-      <section id="introduction" className="py-20 md:py-28 lg:py-36 bg-gray-900">
+      <section id="introduction" className="py-20 md:py-28 lg:py-36 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="space-y-6 md:space-y-8">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-white mb-6">
+              <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider mb-4 block">
+                WELCOME TO THE CAFÉ
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-6">
                 A Culinary Journey Through Italy
               </h2>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-300">
+              <p className="text-lg md:text-xl leading-relaxed text-gray-700">
                 Welcome to The Tasting Room Café, the heart of the Casa Larga experience. Inspired by our family's Italian roots and the bounty of the Finger Lakes, our café offers a warm and inviting atmosphere where you can relax, savor, and celebrate.
               </p>
-              <p className="text-base md:text-lg leading-relaxed text-gray-400">
+              <p className="text-base md:text-lg leading-relaxed text-gray-600">
                 From wood-fired pizzas to artisanal charcuterie, every dish is crafted to complement our award-winning wines. Our menu celebrates the authentic flavors of Italy while showcasing the finest local ingredients from the Finger Lakes region.
               </p>
             </div>
@@ -253,22 +256,24 @@ const TastingRoomCafe: React.FC = () => {
               <img 
                 src="https://images.pexels.com/photos/1407846/pexels-photo-1407846.jpeg?auto=compress&cs=tinysrgb&w=800" 
                 alt="Casa Larga Tasting Room Café exterior" 
-                className="w-full rounded-2xl shadow-2xl"
+                className="w-full rounded-2xl shadow-lg"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Interactive Menu Section */}
-      <section className="py-20 md:py-28 lg:py-36 bg-black">
+      <section className="py-20 md:py-28 lg:py-36 bg-cream">
         <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-white mb-6">
+            <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider mb-4 block">
+              DISCOVER OUR MENU
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-6">
               Our Menu
             </h2>
-            <p className="text-lg md:text-xl leading-relaxed text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl leading-relaxed text-gray-700 max-w-3xl mx-auto">
               Discover our carefully crafted selection of Italian-inspired dishes, wood-fired pizzas, and perfectly paired wines.
             </p>
           </div>
@@ -281,8 +286,8 @@ const TastingRoomCafe: React.FC = () => {
                 onClick={() => setActiveMenuTab(tab.id)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                   activeMenuTab === tab.id
-                    ? 'bg-amber-500 text-black'
-                    : 'bg-gray-800 text-white hover:bg-gray-700'
+                    ? 'bg-amber-700 text-white'
+                    : 'bg-white text-amber-900 border border-amber-200 hover:bg-amber-50'
                 }`}
               >
                 {tab.label}
@@ -296,7 +301,7 @@ const TastingRoomCafe: React.FC = () => {
               <div
                 key={item.id}
                 onClick={() => openMenuModal(item)}
-                className="menu-item-card bg-gray-900 rounded-2xl overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                className="menu-item-card bg-white rounded-2xl overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-amber-100"
               >
                 <div className="aspect-video overflow-hidden">
                   <img 
@@ -307,10 +312,10 @@ const TastingRoomCafe: React.FC = () => {
                 </div>
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-3">
-                    <h3 className="text-xl font-serif text-white">{item.name}</h3>
-                    <span className="text-amber-400 font-bold text-lg">{item.price}</span>
+                    <h3 className="text-xl font-serif text-amber-900">{item.name}</h3>
+                    <span className="text-amber-700 font-bold text-lg">{item.price}</span>
                   </div>
-                  <p className="text-gray-400 text-sm leading-relaxed">{item.shortDescription}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{item.shortDescription}</p>
                 </div>
               </div>
             ))}
@@ -318,7 +323,7 @@ const TastingRoomCafe: React.FC = () => {
 
           {activeMenuTab === 'cocktails-flights' && (
             <div className="text-center mt-12">
-              <p className="text-gray-400 text-lg">
+              <p className="text-gray-600 text-lg">
                 Our cocktail and flight menu is coming soon! In the meantime, enjoy our extensive wine selection.
               </p>
             </div>
@@ -328,12 +333,12 @@ const TastingRoomCafe: React.FC = () => {
 
       {/* Menu Item Modal */}
       {selectedMenuItem && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
-          <div className="bg-gray-900 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
             <div className="relative">
               <button
                 onClick={closeMenuModal}
-                className="absolute top-4 right-4 z-10 bg-black bg-opacity-50 rounded-full p-2 text-white hover:bg-opacity-75 transition-all"
+                className="absolute top-4 right-4 z-10 bg-white bg-opacity-90 rounded-full p-2 text-amber-900 hover:bg-opacity-100 transition-all shadow-lg"
               >
                 <X size={24} />
               </button>
@@ -345,63 +350,66 @@ const TastingRoomCafe: React.FC = () => {
             </div>
             <div className="p-8">
               <div className="flex justify-between items-start mb-4">
-                <h3 className="text-2xl font-serif text-white">{selectedMenuItem.name}</h3>
-                <span className="text-amber-400 font-bold text-xl">{selectedMenuItem.price}</span>
+                <h3 className="text-2xl font-serif text-amber-900">{selectedMenuItem.name}</h3>
+                <span className="text-amber-700 font-bold text-xl">{selectedMenuItem.price}</span>
               </div>
-              <p className="text-gray-300 leading-relaxed">{selectedMenuItem.fullDescription}</p>
+              <p className="text-gray-700 leading-relaxed">{selectedMenuItem.fullDescription}</p>
             </div>
           </div>
         </div>
       )}
 
       {/* Tastings & Events Section */}
-      <section className="py-20 md:py-28 lg:py-36 bg-gray-900">
+      <section className="py-20 md:py-28 lg:py-36 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-white mb-6">
+            <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider mb-4 block">
+              SPECIAL EXPERIENCES
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-6">
               Tastings & Events
             </h2>
-            <p className="text-lg md:text-xl leading-relaxed text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl leading-relaxed text-gray-700 max-w-3xl mx-auto">
               Enhance your visit with our curated tasting experiences and special events.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-            <div className="bg-black rounded-2xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300">
-              <div className="w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Wine className="w-8 h-8 text-black" />
+            <div className="bg-cream rounded-2xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300 border border-amber-100">
+              <div className="w-16 h-16 bg-amber-700 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Wine className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-serif text-white mb-4">Wine & Chocolate Pairings</h3>
-              <p className="text-gray-400 mb-6 leading-relaxed">
+              <h3 className="text-xl font-serif text-amber-900 mb-4">Wine & Chocolate Pairings</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">
                 Indulge in a curated selection of our wines expertly paired with artisan chocolates from Hedonist.
               </p>
-              <a href="#" className="cafe-cta-button-small">
+              <a href="#" className="elementor-button">
                 Learn More
               </a>
             </div>
 
-            <div className="bg-black rounded-2xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300">
-              <div className="w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="w-8 h-8 text-black" />
+            <div className="bg-cream rounded-2xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300 border border-amber-100">
+              <div className="w-16 h-16 bg-amber-700 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-serif text-white mb-4">Celebrate with Us</h3>
-              <p className="text-gray-400 mb-6 leading-relaxed">
+              <h3 className="text-xl font-serif text-amber-900 mb-4">Celebrate with Us</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">
                 From birthdays to corporate events, we offer a variety of group tasting packages to make your celebration unforgettable.
               </p>
-              <a href="#" className="cafe-cta-button-small">
+              <a href="#" className="elementor-button">
                 Book an Event
               </a>
             </div>
 
-            <div className="bg-black rounded-2xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300">
-              <div className="w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Star className="w-8 h-8 text-black" />
+            <div className="bg-cream rounded-2xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300 border border-amber-100">
+              <div className="w-16 h-16 bg-amber-700 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Star className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-serif text-white mb-4">Join the Family</h3>
-              <p className="text-gray-400 mb-6 leading-relaxed">
+              <h3 className="text-xl font-serif text-amber-900 mb-4">Join the Family</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">
                 Become a member of our Wine Lover's Club and enjoy exclusive benefits, discounts, and events.
               </p>
-              <a href="#" className="cafe-cta-button-small">
+              <a href="#" className="elementor-button">
                 Discover the Club
               </a>
             </div>
@@ -410,13 +418,16 @@ const TastingRoomCafe: React.FC = () => {
       </section>
 
       {/* Photo Gallery Section */}
-      <section className="py-20 md:py-28 lg:py-36 bg-black">
+      <section className="py-20 md:py-28 lg:py-36 bg-cream">
         <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-white mb-6">
+            <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider mb-4 block">
+              GALLERY
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-6">
               A Glimpse into the Café
             </h2>
-            <p className="text-lg md:text-xl leading-relaxed text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl leading-relaxed text-gray-700 max-w-3xl mx-auto">
               Experience the warmth and elegance of our tasting room through these moments.
             </p>
           </div>
@@ -469,7 +480,7 @@ const TastingRoomCafe: React.FC = () => {
       </section>
 
       {/* Location & Hours Section */}
-      <section id="location" className="py-20 md:py-28 lg:py-36 bg-gray-900">
+      <section id="location" className="py-20 md:py-28 lg:py-36 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
             {/* Map */}
@@ -488,24 +499,27 @@ const TastingRoomCafe: React.FC = () => {
 
             {/* Information */}
             <div className="space-y-8">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-white mb-6">
+              <span className="text-sm md:text-base font-medium text-amber-700 uppercase tracking-wider mb-4 block">
+                VISIT US
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-serif text-amber-900 mb-6">
                 Visit Us
               </h2>
               
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <MapPin className="w-6 h-6 text-amber-400 mt-1 flex-shrink-0" />
+                  <MapPin className="w-6 h-6 text-amber-700 mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-white font-medium mb-1">Address</p>
-                    <p className="text-gray-300">2287 Turk Hill Rd<br />Fairport, NY 14450</p>
+                    <p className="text-amber-900 font-medium mb-1">Address</p>
+                    <p className="text-gray-700">2287 Turk Hill Rd<br />Fairport, NY 14450</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <Clock className="w-6 h-6 text-amber-400 mt-1 flex-shrink-0" />
+                  <Clock className="w-6 h-6 text-amber-700 mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-white font-medium mb-3">Hours of Operation</p>
-                    <div className="space-y-2 text-gray-300">
+                    <p className="text-amber-900 font-medium mb-3">Hours of Operation</p>
+                    <div className="space-y-2 text-gray-700">
                       <p><span className="font-medium">Monday-Thursday:</span> 11am - 6pm</p>
                       <p><span className="font-medium">Friday-Saturday:</span> 11am - 9pm</p>
                       <p><span className="font-medium">Sunday:</span> 11am - 6pm</p>
@@ -514,22 +528,22 @@ const TastingRoomCafe: React.FC = () => {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <Phone className="w-6 h-6 text-amber-400 mt-1 flex-shrink-0" />
+                  <Phone className="w-6 h-6 text-amber-700 mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-white font-medium mb-1">Contact</p>
-                    <p className="text-gray-300">(585) 223-4210</p>
-                    <p className="text-gray-300">info@casalarga.com</p>
+                    <p className="text-amber-900 font-medium mb-1">Contact</p>
+                    <p className="text-gray-700">(585) 223-4210</p>
+                    <p className="text-gray-700">info@casalarga.com</p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-6">
-                <p className="text-amber-400 font-medium mb-2">Please Note:</p>
-                <p className="text-gray-300">Please place your order at the bar. Our friendly staff will be happy to assist you with menu selections and wine pairings.</p>
+              <div className="bg-amber-50 border border-amber-200 rounded-xl p-6">
+                <p className="text-amber-700 font-medium mb-2">Please Note:</p>
+                <p className="text-gray-700">Please place your order at the bar. Our friendly staff will be happy to assist you with menu selections and wine pairings.</p>
               </div>
 
               <div className="pt-4">
-                <a href="#reservations" className="cafe-cta-button">
+                <a href="#reservations" className="elementor-button">
                   MAKE A RESERVATION
                 </a>
               </div>
