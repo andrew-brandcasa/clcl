@@ -125,32 +125,20 @@ const PetiteNoir: React.FC = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="hero-section relative h-screen overflow-hidden flex items-center justify-center">
-        <div
-          className="absolute inset-0 w-full h-full bg-cover bg-center z-[-2]"
-          style={{
-            backgroundImage: "url('https://images.pexels.com/photos/1407846/pexels-photo-1407846.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')"
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent z-[-1]"></div>
-        
-        <div className="text-center text-white z-10 px-6">
-          <span className="font-serif font-normal text-[15px] tracking-[0.3em] uppercase opacity-85 text-white mb-6 block">
-            FINGER LAKES ELEGANCE
-          </span>
-          <h1 className="font-serif font-normal text-[clamp(32px,6vw,72px)] leading-[1.1] text-shadow-sm text-white max-w-[20ch] mx-auto tracking-[0.02em] mb-6">
-            CASA LARGA PETITE NOIR
-          </h1>
-          <p className="font-sans font-normal text-[18px] leading-[1.4] text-white opacity-85 font-style-italic">
-            A taste of tradition in every bottle.
-          </p>
-        </div>
-      </section>
-
       {/* Main Product Section */}
-      <section className="py-20 md:py-28 lg:py-36 bg-white">
+      <section className="pt-32 pb-20 md:pt-40 md:pb-28 lg:pt-48 lg:pb-36 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+          {/* Breadcrumb */}
+          <nav className="mb-8">
+            <ol className="flex items-center space-x-2 text-sm text-gray-600">
+              <li><a href="/" className="hover:text-amber-700">Home</a></li>
+              <li className="text-gray-400">/</li>
+              <li><a href="#shop" className="hover:text-amber-700">Shop Wines</a></li>
+              <li className="text-gray-400">/</li>
+              <li className="text-amber-900 font-medium">Casa Larga Petite Noir</li>
+            </ol>
+          </nav>
+          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
             {/* Product Images */}
             <div className="space-y-6">
