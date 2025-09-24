@@ -50,6 +50,8 @@ const Hero: React.FC = () => {
                   <li><a href="#events">WINERY EVENTS</a></li>
                   <li><a href="/private-events">PRIVATE EVENTS</a></li>
                   <li><a href="/store-finder">STORE FINDER</a></li>
+                  <li><a href="/tasting-room-cafe">CAFÉ</a></li>
+                  <li><a href="/tasting-room-cafe" onClick={toggleMobileMenu}>CAFÉ</a></li>
                 </ul>
               </nav>
             </div>

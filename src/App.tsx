@@ -13,6 +13,7 @@ import About from './pages/About';
 import PrivateEvents from './pages/PrivateEvents';
 import PetiteNoir from './pages/PetiteNoir';
 import StoreFinder from './pages/StoreFinder';
+import TastingRoomCafe from './pages/TastingRoomCafe';
 import './App.css';
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
         <Route path="/private-events" element={<PrivateEvents />} />
         <Route path="/petite-noir" element={<PetiteNoir />} />
         <Route path="/store-finder" element={<StoreFinder />} />
+        <Route path="/tasting-room-cafe" element={<TastingRoomCafe />} />
       </Routes>
     </div>
   );

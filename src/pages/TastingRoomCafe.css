@@ -1,0 +1,239 @@
+/* Tasting Room Café Page Styles */
+
+/* Dark theme with golden accents */
+:root {
+  --cafe-gold: #F59E0B;
+  --cafe-gold-light: #FCD34D;
+  --cafe-dark: #111827;
+  --cafe-darker: #000000;
+  --cafe-gray: #374151;
+  --cafe-light-gray: #6B7280;
+}
+
+/* Text shadow utility */
+.text-shadow-sm {
+  text-shadow: 0 2px 4px rgba(0,0,0,.5);
+}
+
+/* Bounce animation for scroll indicator */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { 
+    transform: translateY(0); 
+  }
+  40% { 
+    transform: translateY(-10px); 
+  }
+  60% { 
+    transform: translateY(-5px); 
+  }
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+/* Custom CTA Button Styles */
+.cafe-cta-button {
+  display: inline-block;
+  padding: 18px 36px;
+  background: linear-gradient(135deg, var(--cafe-gold) 0%, var(--cafe-gold-light) 100%);
+  color: var(--cafe-darker);
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+}
+
+.cafe-cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--cafe-gold-light) 0%, var(--cafe-gold) 100%);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.cafe-cta-button:hover::before {
+  left: 0;
+}
+
+.cafe-cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+  color: var(--cafe-darker);
+}
+
+/* Small CTA Button */
+.cafe-cta-button-small {
+  display: inline-block;
+  padding: 12px 24px;
+  background: transparent;
+  color: var(--cafe-gold);
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border: 2px solid var(--cafe-gold);
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.cafe-cta-button-small:hover {
+  background: var(--cafe-gold);
+  color: var(--cafe-darker);
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Menu Item Cards */
+.menu-item-card {
+  background: var(--cafe-gray);
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(245, 158, 11, 0.1);
+}
+
+.menu-item-card:hover {
+  border-color: rgba(245, 158, 11, 0.3);
+  box-shadow: 0 10px 30px rgba(245, 158, 11, 0.2);
+}
+
+/* Gallery Items */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.gallery-item img {
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Typography Enhancements */
+.tasting-room-cafe-page h1,
+.tasting-room-cafe-page h2,
+.tasting-room-cafe-page h3 {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.tasting-room-cafe-page p,
+.tasting-room-cafe-page span,
+.tasting-room-cafe-page button {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+/* Custom Scrollbar for Modal */
+.tasting-room-cafe-page .modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tasting-room-cafe-page .modal-content::-webkit-scrollbar-track {
+  background: var(--cafe-gray);
+  border-radius: 4px;
+}
+
+.tasting-room-cafe-page .modal-content::-webkit-scrollbar-thumb {
+  background: var(--cafe-gold);
+  border-radius: 4px;
+}
+
+.tasting-room-cafe-page .modal-content::-webkit-scrollbar-thumb:hover {
+  background: var(--cafe-gold-light);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-section h1 {
+    font-size: clamp(28px, 5vw, 48px);
+  }
+  
+  .hero-section h2 {
+    font-size: clamp(16px, 3vw, 24px);
+  }
+}
+
+@media (max-width: 768px) {
+  .cafe-cta-button {
+    padding: 16px 32px;
+    font-size: 14px;
+  }
+  
+  .cafe-cta-button-small {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+  
+  .menu-item-card {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    height: 80vh;
+  }
+  
+  .cafe-cta-button {
+    padding: 14px 28px;
+    font-size: 13px;
+  }
+}
+
+/* Focus States for Accessibility */
+.cafe-cta-button:focus,
+.cafe-cta-button-small:focus,
+.menu-item-card:focus {
+  outline: 3px solid var(--cafe-gold);
+  outline-offset: 2px;
+}
+
+/* Animation for Menu Items */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-item-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Stagger animation for menu items */
+.menu-item-card:nth-child(1) { animation-delay: 0.1s; }
+.menu-item-card:nth-child(2) { animation-delay: 0.2s; }
+.menu-item-card:nth-child(3) { animation-delay: 0.3s; }
+.menu-item-card:nth-child(4) { animation-delay: 0.4s; }
+.menu-item-card:nth-child(5) { animation-delay: 0.5s; }
+.menu-item-card:nth-child(6) { animation-delay: 0.6s; }
